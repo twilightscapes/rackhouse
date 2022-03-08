@@ -154,7 +154,7 @@ const HomePage = ({ data }) => {
 
  
 
- const imageData = data.desktop.childImageSharp.fluid
+//  const imageData = data.desktop.childImageSharp.fluid
 
   // const { postcount } = useSiteMetadata()
   const { markdownRemark, posts } = data 
