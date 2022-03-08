@@ -55,7 +55,7 @@ const Characters = () => (
          height="100vh"
          playing={true}
             controls={false}
-            light={false}
+            light={true}
             loop={true}
             muted={true}
             config={{
@@ -71,25 +71,27 @@ const Characters = () => (
 
           playsinline
             playIcon={
-              <button aria-label="Click To Play" className="clickplay" style={{position:'', zIndex:'1', bottom:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'columh', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
-  
-          <div className="" style={{ textAlign:'center', animation:'fadeIn 3s'}}>
-            
+              <button aria-label="Click To Play" className="clickplay" style={{position:'', zIndex:'1', bottom:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'#111', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'columh', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
   
 
-        
-            <span style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem'}}>Click To Play</span>
-    <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} />
+  <div style={{position:'absolute', top:'0', right:'0', zIndex:'', width:'100vw', height:'100vh', border:'0px solid yellow', padding:'0', margin:'0'}}>
+<StaticImage className=""
+alt="Todd Lambert Web development for photographers" src="../../static/assets/rackhouse-header.jpg" style={{height:'100vh'}}  />
+</div>
+
+
+          <div className="tronText" style={{ textAlign:'center', position:'absolute', zIndex:'1', left:'', top:'25vh' }}>
+            <span style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem', }}>Click To Play</span>
+    <ImPlay className="tronText" style={{margin:'0 auto', width:'50%', fontSize:'60px', boxShadow:'0 0px 4px #E3272D', filter:'dropShadow(0px 0px 14px #E3272D)'}} />
             </div>
+
+            
             </button>}
          
           />
 
 
-{/* <div style={{position:'absolute', bottom:'0', left:'0', zIndex:'1', width:'100vw', height:'100%', border:'0px solid yellow', padding:'0', margin:'0'}}>
-<StaticImage className=""
-alt="Todd Lambert Web development for photographers" src="../../static/assets/shawshank-stuff.png" style={{height:'100vh'}}  />
-</div> */}
+
 
           {/* <Controls
             ref={controlsRef}
@@ -158,60 +160,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
             light="../assets/transparent.png"
           /> */}
     
-<div style={{display:'flex', flexDirection:'row', justifyContent:'space-around', zIndex:'-2', position:'relative' }}>
 
-    <div id="" className="" style={{position:'relative', display:'flex', justifyContent:'center', border:'0px solid red',}}>
-             <a href="https://tron.allin60.com" title="Sam Flynn"  aria-label="Sam Flynn">
-    {/* <SamFlynn className="character" style={{height:'100vh', width:'90%', margin:'0 0 0 0',}} /> */}
-    <StaticImage className="character"
-style={{height:'', width:'', margin:'0 0 0 0',}}
-alt="Todd Lambert Web development for photographers" src="../../static/assets/sam-flynn.png" />
-    </a>
-    </div>
-    
-    <div id="" className="" style={{position:'relative', transform:'', maxWidth:'', height:'100vh',
-     padding:' 0', display:'flex', justifyContent:'center', border:'0px solid red',}}>
-    <a href="https://tron.allin60.com" title="Quorra" aria-label="Quorra">
-      {/* <QuoraStand className="character" style={{height:'100%', width:'85%', margin:'0 0 0 10%', right:'', zIndex:''}} /> */}
-      <StaticImage className="character"
-style={{height:'', width:'', margin:'0 0 0 0',}}
-alt="Todd Lambert Web development for photographers" src="../../static/assets/quora-ass.png" />
-      </a>
-    </div>
-    
-    <div id="" className="" style={{position:'relative', transform:'', maxWidth:'', height:'100vh',
-     padding:' 0', display:'flex', justifyContent:'center',}}>
-<a href="https://tron.allin60.com" title="Kevin Flynn" aria-label="Kevin Flynn">
-    {/* <KevinFlynn className="character" style={{position:'relative', height:'100%', width:'130%', zIndex:'', margin:'0 0 0 -16%'}} /> */}
-    <StaticImage className="character"
-style={{height:'', width:'', margin:'0 0 0 0',}}
-alt="Todd Lambert Web development for photographers" src="../../static/assets/kevin-flynn.png" />
-    </a>
-    </div>
-    
-    <div id="" className="" style={{position:'relative', transform:'', maxWidth:'', height:'100vh',
-    display:'flex', flexDiection:'column', justifyContent:'center',
-    padding:'0', border:'0px solid red',}}>
-      <Link to="/tron/" title="Tron" aria-label="Tron">
-    {/* <TronGuy className="character" style={{height:'100%', width:'100%', margin:'0 0 0 0', transform: 'scaleX(-1)'}} /> */}
-    <StaticImage className="character"
-style={{height:'', width:'', margin:'0 0 0 0',}}
-alt="Todd Lambert Web development for photographers" src="../../static/assets/tron.png" />
-    </Link>
-    </div>
-    
-    <div srl_exclude="true" id="mylink15" className="donation2" style={{position:'relative', transform:'', maxWidth:'', height:'100vh', 
-    // background:'rgba(6, 70, 90, 0.6)', 
-    padding:' 0', display:'flex', justifyContent:'center', border:'0px solid red',}}>
-    <a href="https://tron.allin60.com" title="Clu" aria-label="Clu">
-    {/* <CluGuy className="character evil" style={{height:'100%', width:'100%', margin:'0 0 0 -20%',}} /> */}
-    <StaticImage className="character evil"
-style={{height:'', width:'', margin:'0 0 0 0',}}
-alt="Todd Lambert Web development for photographers" src="../../static/assets/clu.png" />
-    </a>
-    </div>
-    
-</div>
 
     </div> 
     

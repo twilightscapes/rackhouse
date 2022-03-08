@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player/lazy'
 import { Layout } from "../components/layout"
 import { Footer } from "../components/footer";
 import { Seo } from "../components/seo"
-// import { ImPlay } from "react-icons/im"
+import { ImPlay } from "react-icons/im"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { StaticImage } from "gatsby-plugin-image"
 // import Controls from "../components/Controls";
@@ -208,7 +208,7 @@ const HomePage = ({ data }) => {
     const [state, setState] = useState({
       playing: true,
       controls: false,
-      light: false,
+      light: true,
       muted: true,
       loop: true,
     });
@@ -279,21 +279,21 @@ function Iframer() {
     loop
     playing
     playsinline
-//       playIcon={
-//         <button aria-label="Click To Play" className="clickplay" style={{position:'absolute', zIndex:'5', top:'0', border:'0px solid red', width:'100vw', height:'100%', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
+      playIcon={
+        <button aria-label="Click To Play" className="clickplay" style={{position:'absolute', zIndex:'5', top:'0', border:'0px solid red', width:'100vw', height:'100%', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
 
-//     <div className="" style={{ textAlign:'center', animation:'fadeIn 3s', width:'80vw', margin:'0 auto'}}>
+    <div className="" style={{ textAlign:'center', animation:'fadeIn 3s', width:'80vw', margin:'0 auto'}}>
     
 
-//       <div style={{position:'relative', maxWidth:'100vw', margin:'4% 0', zIndex:'0', display:'flex', justifyContent:'center', background:'transparent !important',}}>
-// <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'100%', maxWidth:'30vw', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} />
-// </div>
+      <div style={{position:'relative', maxWidth:'100vw', margin:'4% 0', zIndex:'0', display:'flex', justifyContent:'center', background:'transparent !important',}}>
+<img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'100%', maxWidth:'30vw', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} />
+</div>
 
-//       <span style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem'}}>Click To Play</span>
-// <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} />
-//       </div>
-//       </button>}
-//         light="../assets/transparent.png"
+      <span style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem'}}>Click To Play</span>
+<ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} />
+      </div>
+      </button>}
+        light="../assets/transparent.png"
     />
   )
 }
@@ -1043,7 +1043,7 @@ Virtual Tour
   </div>
 
 <div className="virtualtour">
- <iframe className="" style={{width:'80%', margin:'0 auto', border:'10px solid #333', borderRadius:'12px'}} src="https://www.google.com/maps/embed?pb=!4v1646715550851!6m8!1m7!1sCAoSLEFGMVFpcFA5OWw5SHU3Y0RSMVMzYkxQWS1DS3hnWHhNMTFHQlhCN0l4UE9q!2m2!1d30.367306744074!2d-89.094062253672!3f340.80219860937757!4f-7.026614771956915!5f0.7820865974627469" width="800" height="600" allowFullScreen="" loading="lazy"></iframe>
+ <iframe title="Rack House Virtual Tour" className="" style={{width:'80%', margin:'0 auto', border:'10px solid #333', borderRadius:'12px'}} src="https://www.google.com/maps/embed?pb=!4v1646715550851!6m8!1m7!1sCAoSLEFGMVFpcFA5OWw5SHU3Y0RSMVMzYkxQWS1DS3hnWHhNMTFHQlhCN0l4UE9q!2m2!1d30.367306744074!2d-89.094062253672!3f340.80219860937757!4f-7.026614771956915!5f0.7820865974627469" width="800" height="600" allowFullScreen="" loading="lazy"></iframe>
       </div>
 <br /><br />
 

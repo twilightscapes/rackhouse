@@ -108,6 +108,7 @@ left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex
 
 
 <CookieConsent
+  id="consenter"
 	debug={false}
 	location="none"
   className=""
@@ -122,7 +123,7 @@ left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex
     buttonText="CLOSE"
 	buttonStyle={{ background: "transparent", textDecoration:'underline', textAlign:'center', fontSize: "16px", position:'relative', bottom:'20px',  right:'0', display:'flex', flexDirection:'column', justifyContent:'center', margin:'0 auto', color:'#fff', fontWeight:'normal', padding:'4px 50px', border:'0px solid #666'}}
     expires={1}
-    cookieName="rackhouse.netlify.app-install-cookie"
+    cookieName="rackhouse-app-install-cookie"
 >
 
 
