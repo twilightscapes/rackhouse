@@ -1,150 +1,74 @@
-import React, { useState, useRef } from "react";
+import * as React from "react"
 import { Layout } from "../components/layout"
-import { useSiteMetadata } from "../hooks/use-site-metadata"
-import {Link} from "gatsby"
-import ReactPlayer from "react-player/lazy";
-import { StaticImage } from "gatsby-plugin-image"
-import { ImPlay } from "react-icons/im"
-import Controls from "../components/Controls";
-import styled from "styled-components"
-const CustomBox = styled.div`
-
-.wrap-element {
-  position: relative;
-  overflow: ;
-  padding-bottom: 56.25%;
-  height:100vh;
-}
-
-.wrap-element iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 300%; 
-  left: -100%; 
-  border: 0;
-}
-
-@media (max-width: 48em) {
-  .wrap-element {
-    padding-bottom: 0;
-    height:300px;
-    overflow:visible;
-    border:0px solid red;
-  }
-}
-
-@media (min-width: 58em) {
-
-}
-`
-
-  export default function Terms() {
-
-    const [state, setState] = useState({
-      playing: true,
-      controls: true,
-      light: true,
-      muted: false,
-      loop: true,
-    });
-  
-    // const playerRef = useRef(null);
-    const controlsRef = useRef(null);
-
-    const {
-      playing,
-      controls,
-      light,
-      muted,
-      loop,
-      playbackRate,
-      pip,
-      played,
-      seeking,
-      volume,
-    } = state;
-  
-    const handlePlayPause = () => {
-      setState({ ...state, playing: !state.playing });
-    };
-  
-    const hanldeMute = () => {
-      setState({ ...state, muted: !state.muted });
-    };
-
-    const { iconimage } = useSiteMetadata()
 
 
-    return (
-    <CustomBox>
-<Layout className="page">
+import GoBack from "../components/goBack"
 
-      <div className="wrap-element" style={{overflow:'hidden'}}>
 
-          <ReactPlayer
-            width="100%"
-            height="100%"
-            url="https://youtu.be/6hB3S9bIaco"
-            playing={playing}
-            controls={true}
-            light={false}
-            loop={loop}
-            muted={muted}
-            config={{
-              file: {
-                attributes: {
-                  crossorigin: "anonymous",
-                },
-              },
-              youtube: {
-                playerVars: { showinfo:0, controls:0, start:20, end:68, mute:0 }
-              },
-            }}
 
-          playsinline
-            playIcon={
-              <button aria-label="Click To Play" className="clickplay" style={{position:'', zIndex:'5', bottom:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'columh', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
-  
-          <div className="" style={{ textAlign:'center', animation:'fadeIn 3s'}}>
-            
-  
-            <div style={{position:'relative', maxWidth:'100vw', margin:'10% 0', zIndex:'', display:'flex', justifyContent:'center', background:'transparent !important',}}>
-    <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'100%', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} />
-  </div>
+
+
+
+
+
+
+
+
+
+
+export default function TermsPage() {
+   return (
+
+
+    
+    <Layout className="thanks-page">
+
+{/* <Seo title={`Terms of Use`} /> */}
+
+    
+<section className="outer section section--gradient" >
+      <div className="container" style={{padding: '2rem 10%'}}>
         
-            <span style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem'}}>Click To Play</span>
-    <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} />
-            </div>
-            </button>}
-         
-          />
+      <div className="mobile"><GoBack /></div>
+
+<h1 className="title" style={{fontSize:'50px'}}>Terms of Service</h1>
+    
+
+<h3>1. Terms</h3>
+By accessing this web site (rackhousesteaks.com), you are agreeing to be bound by these<br />
+web site Terms and Conditions of Use, all applicable laws and regulations,<br />
+and agree that you are responsible for compliance with any applicable local<br />
+laws. If you do not agree with any of these terms, you are prohibited from<br />
+using or accessing this site. The materials contained in this web site are<br />
+protected by applicable copyright and trade mark law.
+<br /><br />
+<h3>2. Use License</h3>
+
+Permission is granted to temporarily download one copy of the materials<br />
+(information or software) on the rackhousesteaks.com web site for personal,<br />
+non-commercial transitory viewing only. This is the grant of a license,<br />
+not a transfer of title, and under this license you may not:
+<br /><br />
+<ol>
+<li>modify or copy the materials;</li>
+<li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
+<li>attempt to decompile or reverse engineer any software contained on rackhousesteaks.com;</li>
+<li>remove any copyright or other proprietary notations from the materials; or</li>
+<li>transfer the materials to another person or “mirror” the materials on any other server.</li>
+</ol>
+
+<p>This license shall automatically terminate if you violate any of these restrictions and may be terminated by All In 60 at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.</p>
 
 
-<div style={{position:'absolute', bottom:'0', left:'0', zIndex:'1', width:'100vw', height:'100%', border:'0px solid yellow', padding:'0', margin:'0'}}>
-<StaticImage className=""
-alt="Todd Lambert Web development for photographers" src="../../static/assets/shawshank-stuff.png" style={{height:'100vh'}}  />
-</div>
 
-          <Controls
-            ref={controlsRef}
-            onPlayPause={handlePlayPause}
-            playing={playing}
-            played={played}
-            onMute={hanldeMute}
-            muted={muted}
-          />
-        </div>
+    </div>
 
-<div className="contact" style={{position:'absolute', bottom:'30px', zIndex:'70',  left:'', right:'10%', display:'flex', justifyContent:'center', border:'0px solid red', width:''}}>
-  <Link href="/shawshank/" title="View This Project" className="navbar-item  button fire" style={{margin:'1rem 2rem 0 2rem', textDecoration:'none'}}>View This Project</Link>
-</div>
-
-
-
-      </Layout>
-      </CustomBox>
-
+    <GoBack />
+    <div className="spacer33"></div> 
+    </section>
+    
+    
+    </Layout>
 
   )
 }
