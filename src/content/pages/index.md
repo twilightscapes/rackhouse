@@ -8,6 +8,7 @@ underlayImage: /assets/transparent.png
 showInfo: true
 youtuber: ""
 youtubeautostart: "1"
+youtubeloop: ""
 title: The Rack House
 svgImage: /assets/null.svg
 showPosts: ""

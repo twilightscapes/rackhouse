@@ -1,9 +1,9 @@
 ---
 template: blog-post
-title: Shawshank Redemption
-slug: /shawshank
+title: Rack House
+slug: /testing
 date: 2022-02-19 01:43
-description: Shawshank Redemption
+description: Rack House
 youtuber: "6hB3S9bIaco"
 youtuber2: ""
 youtubeshoworiginal: ""
@@ -13,6 +13,7 @@ youtubersuggestion3: ""
 youtubestart: "20"
 youtubeend: "68"
 youtubemute: "0"
+youtubeloop: ""
 audiostart: "0"
 audioend: ""
 youtubecontrols: "0"
@@ -22,7 +23,7 @@ svgzindex: "0"
 comments: ""
 shareable: "1"
 underlayImage: /assets/transparent.png
-featuredImage: /assets/FILET-SMALL.jpg
+featuredImage: /assets/transparent.png
 svgImage: /assets/null.svg
 nftlink: ""
 nftdrop: ""
