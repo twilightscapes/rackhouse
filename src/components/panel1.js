@@ -9,7 +9,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 // import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 import ReactPlayer from 'react-player/lazy'
-import { ImPlay } from "react-icons/im"
+// import { ImPlay } from "react-icons/im"
 // import LightCycle from "../../static/assets/light-cycle.svg"
 // import QuoraStrike from "../../static/assets/quora-strike.svg"
 // import LoveSignal from "../../static/assets/love-signal.svg"
@@ -80,9 +80,9 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/ra
 </div>
 
 
-          <div className="tronText" style={{ textAlign:'center', position:'absolute', zIndex:'1', left:'', top:'25vh' }}>
+          <div className="tronText" style={{ textAlign:'center', position:'absolute', zIndex:'1', right:'10vw', top:'25%' }}>
             <span style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem', }}>Click To Play</span>
-    <ImPlay className="tronText" style={{margin:'0 auto', width:'50%', fontSize:'60px', boxShadow:'0 0px 4px #E3272D', filter:'dropShadow(0px 0px 14px #E3272D)'}} />
+    {/* <ImPlay className="tronText" style={{margin:'0 auto', width:'50%', fontSize:'60px', boxShadow:'0 0px 4px #E3272D', filter:'dropShadow(0px 0px 14px #E3272D)'}} /> */}
             </div>
 
             

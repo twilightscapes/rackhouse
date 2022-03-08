@@ -4,7 +4,7 @@ import React from 'react'
 // import { IoShareOutline } from 'react-icons/io5';
 // import { FaRegPlusSquare } from 'react-icons/fa';
 // import ScrollAnimation from 'react-animate-on-scroll'
-import CookieConsent from "react-cookie-consent"
+// import CookieConsent from "react-cookie-consent"
 // import { StaticImage } from "gatsby-plugin-image"
 // import ReactPlayer from 'react-player/lazy'
 import { Link } from "gatsby"
@@ -50,8 +50,8 @@ const InstallDiscount = () => (
 
 
 
-<div id="installer" className="popper1" style={{ display:'flex', justifyContent:'center', alignContent:'center', position: 'fixed', top:'60px',
-left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex:'15'}}>
+<div id="installer" className="popper1" style={{ display:'flex', justifyContent:'center', alignContent:'center', position: 'fixed', top:'10px',
+left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex:'15', maxWidth:'400px'}}>
 
 
 {/* <ReactPlayer
@@ -107,7 +107,7 @@ left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex
 
 
 
-<CookieConsent
+{/* <CookieConsent
   id="consenter"
 	debug={false}
 	location="none"
@@ -124,7 +124,7 @@ left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex
 	buttonStyle={{ background: "transparent", textDecoration:'underline', textAlign:'center', fontSize: "16px", position:'relative', bottom:'20px',  right:'0', display:'flex', flexDirection:'column', justifyContent:'center', margin:'0 auto', color:'#fff', fontWeight:'normal', padding:'4px 50px', border:'0px solid #666'}}
     expires={1}
     cookieName="rackhouse-app-install-cookie"
->
+> */}
 
 
 
@@ -189,7 +189,7 @@ Current Availability: &nbsp; {date}
     <br />
     </div>
     
-</CookieConsent>
+{/* </CookieConsent> */}
 
 
 </div>

@@ -4972,7 +4972,7 @@ cursor:pointer;
   } */
   .pagination{position:absolute; top:75vh;}
   .panelspacer{height:0 !important; padding-top:0 !important;}
-
+#homestart{height:60vh !important;}
 }
 
 /* @media (min-width: 1300px) {
