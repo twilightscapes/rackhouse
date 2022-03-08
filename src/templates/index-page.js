@@ -476,7 +476,7 @@ showCaption: false
 
 
 
-<div className="panelspacer" style={{position:'', border:'1px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'', height:'50%', paddingTop:'50%', background:''}}>
+<div className="panelspacer" style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'', height:'50%', paddingTop:'50%', background:''}}>
 
   
 </div>
@@ -1043,9 +1043,9 @@ position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px
 Virtual Tour
   </div>
 
-<div className="virtualtour">
+{/* <div className="virtualtour">
  <iframe title="Rack House Virtual Tour" className="" style={{width:'80%', margin:'0 auto', border:'10px solid #333', borderRadius:'12px'}} src="https://www.google.com/maps/embed?pb=!4v1646715550851!6m8!1m7!1sCAoSLEFGMVFpcFA5OWw5SHU3Y0RSMVMzYkxQWS1DS3hnWHhNMTFHQlhCN0l4UE9q!2m2!1d30.367306744074!2d-89.094062253672!3f340.80219860937757!4f-7.026614771956915!5f0.7820865974627469" width="800" height="600" allowFullScreen="" loading="lazy"></iframe>
-      </div>
+      </div> */}
 <br /><br />
 
 

@@ -71,16 +71,16 @@ const Characters = () => (
 
           playsinline
             playIcon={
-              <button aria-label="Click To Play" className="clickplay" style={{position:'', zIndex:'1', bottom:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'#111', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'columh', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
+              <button aria-label="Click To Play" className="clickplay" style={{position:'', zIndex:'', top:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'#111', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'columh', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
   
 
-  <div style={{position:'absolute', top:'0', right:'0', zIndex:'', width:'100vw', height:'100vh', border:'0px solid yellow', padding:'0', margin:'0'}}>
+  {/* <div style={{position:'absolute', top:'0', right:'0', zIndex:'', width:'100vw', height:'100vh', border:'0px solid yellow', padding:'0', margin:'0'}}> */}
 <StaticImage className=""
-alt="Todd Lambert Web development for photographers" src="../../static/assets/rackhouse-header.jpg" style={{height:'100vh'}}  />
-</div>
+alt="Todd Lambert Web development for photographers" src="../../static/assets/rackhouse-header.jpg" style={{height:'100vh', position:'relative', zIndex:'0'}}  />
+{/* </div> */}
 
 
-          <div className="tronText" style={{ textAlign:'center', position:'absolute', zIndex:'1', right:'10vw', top:'25%' }}>
+          <div className="tronText" style={{ textAlign:'center', position:'absolute', zIndex:'77', right:'10vw', top:'25%' }}>
             <span style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem', }}>Click To Play</span>
     {/* <ImPlay className="tronText" style={{margin:'0 auto', width:'50%', fontSize:'60px', boxShadow:'0 0px 4px #E3272D', filter:'dropShadow(0px 0px 14px #E3272D)'}} /> */}
             </div>
