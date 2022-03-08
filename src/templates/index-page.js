@@ -20,7 +20,14 @@ import Panel1 from "../components/panel1"
 // import Panel2 from "../pages/shawshank-trailer"
 
 
-
+const iframe = document.createElement('iframe');
+iframe.src = 'https://www.google.com/maps/embed?pb=!4v1646715550851!6m8!1m7!1sCAoSLEFGMVFpcFA5OWw5SHU3Y0RSMVMzYkxQWS1DS3hnWHhNMTFHQlhCN0l4UE9q!2m2!1d30.367306744074!2d-89.094062253672!3f340.80219860937757!4f-7.026614771956915!5f0.7820865974627469';
+iframe.loading = 'lazy';
+document.body.appendChild(iframe);
+// document.getElementsByTagName('body')
+// document.querySelector('virtualtour').appendChild(iframe)
+// document.querySelector(".virtualtour").appendChild(iframe);
+// document.getElementById("tour").appendChild(iframe);
 // import TimeAgo from 'react-timeago'
 // import Countdown from 'react-countdown'
 
@@ -1043,9 +1050,12 @@ position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px
 Virtual Tour
   </div>
 
-{/* <div className="virtualtour">
- <iframe title="Rack House Virtual Tour" className="" style={{width:'80%', margin:'0 auto', border:'10px solid #333', borderRadius:'12px'}} src="https://www.google.com/maps/embed?pb=!4v1646715550851!6m8!1m7!1sCAoSLEFGMVFpcFA5OWw5SHU3Y0RSMVMzYkxQWS1DS3hnWHhNMTFHQlhCN0l4UE9q!2m2!1d30.367306744074!2d-89.094062253672!3f340.80219860937757!4f-7.026614771956915!5f0.7820865974627469" width="800" height="600" allowFullScreen="" loading="lazy"></iframe>
-      </div> */}
+<div id="tour" className="virtualtour">
+<div style={{display:'block', height:'100%'}} ></div>
+
+
+ {/* <iframe title="Rack House Virtual Tour" className="" style={{maxWidth:'80%', margin:'0 auto', border:'10px solid #333', borderRadius:'12px'}} src="https://www.google.com/maps/embed?pb=!4v1646715550851!6m8!1m7!1sCAoSLEFGMVFpcFA5OWw5SHU3Y0RSMVMzYkxQWS1DS3hnWHhNMTFHQlhCN0l4UE9q!2m2!1d30.367306744074!2d-89.094062253672!3f340.80219860937757!4f-7.026614771956915!5f0.7820865974627469" width="800" height="600" allowFullScreen="" loading="lazy"></iframe> */}
+      </div>
 <br /><br />
 
 
