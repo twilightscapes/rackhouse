@@ -192,7 +192,7 @@ Contact Me<span>Ordering Questions?</span>
       </li>  */}
 
 
-<li className="carto" style={{textAlign:'center'}}>
+<li className="carto" style={{textAlign:'center', pointerEvents:'none'}}>
       <Link className="navbar-item txtshadow" to="/minutes/">
 
       Our Menu
@@ -200,7 +200,7 @@ Contact Me<span>Ordering Questions?</span>
         </Link>
 </li>
 
-<li className="carto" style={{textAlign:'center'}}>
+<li className="carto" style={{textAlign:'center', pointerEvents:'none'}}>
       <Link className="navbar-item txtshadow" to="/minutes/">
 
       Brunch
@@ -209,7 +209,7 @@ Contact Me<span>Ordering Questions?</span>
 </li>
 
 
-<li className="carto" style={{textAlign:'center'}}>
+<li className="carto" style={{textAlign:'center', pointerEvents:'none'}}>
       <Link className="navbar-item txtshadow" to="/minutes/">
 
       Libations
@@ -217,7 +217,7 @@ Contact Me<span>Ordering Questions?</span>
         </Link>
 </li>
 
-<li className="carto" style={{textAlign:'center'}}>
+<li className="carto" style={{textAlign:'center', pointerEvents:'none'}}>
       <Link className="navbar-item txtshadow" to="/minutes/">
 
       Bourbon Society
@@ -236,7 +236,7 @@ Contact Me<span>Ordering Questions?</span>
 </li> */}
 
 
-<li className="carto" style={{textAlign:'center'}}>
+<li className="carto" style={{textAlign:'center', pointerEvents:'none'}}>
               <Link className="navbar-item txtshadow" to="/about/">
 
               About Us

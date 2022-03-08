@@ -472,7 +472,15 @@ showCaption: false
 
 
 
-<div className="" style={{height:'50%', paddingTop:'50%'}}></div>
+
+
+
+<div className="panelspacer" style={{position:'', border:'1px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'', height:'50%', paddingTop:'50%', background:''}}>
+
+  
+</div>
+
+
 {/* <div></div> */}
 
 
@@ -630,10 +638,7 @@ alt="Mystery Science Theater 3000 - All In 60 Seconds" src="../../static/assets/
 
 
 
-<div className="allin60panel actionJackson frontdrop" style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'100vw', height:'100vh', paddingTop:'0', background:''}}>
 
-  spacer
-</div>
 
         
 </div>
@@ -730,7 +735,7 @@ alt="Mystery Science Theater 3000 - All In 60 Seconds" src="../../static/assets/
             ""
           )}
 
-<div style={{position:'absolute', bottom:'10vh', width:'100%', display:'flex', justifyContent:'space-between', padding:'4%', border:'0px solid', zIndex:'5'}}>
+<div className="specialfont" style={{position:'absolute', bottom:'10vh', width:'100%', display:'flex', justifyContent:'space-between', padding:'4%', border:'0px solid', zIndex:'5'}}>
 <div style={{fontSize:'3vw'}}>
 1301 26th Avenue
 <br />
@@ -777,18 +782,18 @@ Happy Hour 3-6pm
 
 
           <h1 className="title1">
-            {frontmatter.title}
+            {/* {frontmatter.title} */}
             {/* Today's Popular Subjects <br /> */}
-            {/* All In 60 Seconds */}
+            The Rack House
           </h1>
-          <h2
+          {/* <h2
             className="tagline1"
             sx={{
               color: "",
             }}
           >
             {frontmatter.tagline}
-          </h2>
+          </h2> */}
 
 
 
@@ -801,7 +806,7 @@ Happy Hour 3-6pm
           />
 
 
-  
+{/*   
   <br />
           <Link
             to={frontmatter.cta.ctaLink}
@@ -822,7 +827,7 @@ Happy Hour 3-6pm
             </span>
 
             
-          </Link>
+          </Link> */}
 
          
 
@@ -871,7 +876,7 @@ to="#experiences" title="See the new EXPERIENCES™" /> */}
             <GatsbyImage
               image={SecondaryImage}
               alt={frontmatter.title + " - Featured image"}
-              className="post-card"
+              className="post-card mobilehide"
               style={{border:'0px solid red', width:'100%', height:'', maxHeight:'70vh',  borderRadius:'12px !important', position:'absolute', backgroundSize:'cover', objectFit:'cover', top:'0', zIndex:'0'}}
             />
           ) : (
@@ -974,14 +979,7 @@ Through NFT
 
 
 
- <div style={{textAlign:'center', fontSize:'5vw', margin:'10vh 0 0 0'}}>
-Virtual Tour
-  </div>
 
-
- <iframe style={{width:'80%', margin:'0 auto', border:'3px solid #333', borderRadius:'12px'}} src="https://www.google.com/maps/embed?pb=!4v1646715550851!6m8!1m7!1sCAoSLEFGMVFpcFA5OWw5SHU3Y0RSMVMzYkxQWS1DS3hnWHhNMTFHQlhCN0l4UE9q!2m2!1d30.367306744074!2d-89.094062253672!3f340.80219860937757!4f-7.026614771956915!5f0.7820865974627469" width="800" height="600" allowFullScreen="" loading="lazy"></iframe>
-      
-<br /><br />
 
 
  {/* <h3 style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', margin:'0 auto 2rem auto'}}>Todd's Other Work</h3> */}
@@ -1003,7 +1001,7 @@ position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px
 
 
 
-<div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'flex-start',}}>
+<div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'flex-start', pointerEvents:'none'}}>
     <a className="noexit" href="https://toddlambert.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>
     <StaticImage src="../../static/assets/rackhouse-menu-button.jpg" alt="Todd Lambert is an independent artist, creator, design, developer and generally a unicorn" style={{borderRadius:'8px'}}  /></a>
     <br />
@@ -1014,7 +1012,7 @@ position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px
 
 
     
-    <div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'flex-start'}}>
+    <div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'flex-start', pointerEvents:'none'}}>
     <a className="noexit" href="https://urbanfetish.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>
     <StaticImage src="../../static/assets/rackhouse-libations-button.jpg" alt="Todd Lambert Night photos" style={{borderRadius:'8px'}}  /></a>
     <br />
@@ -1025,7 +1023,7 @@ position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px
 
 
 
-    <div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'flex-start'}}>
+    <div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'flex-start', pointerEvents:'none'}}>
     <a className="noexit" href="https://vidsocks.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit'}}>
     <StaticImage src="../../static/assets/rackhouse-bourbon-header.jpg" alt="Todd builds Web Apps"  style={{borderRadius:'8px'}} /></a>
     <br />
@@ -1035,18 +1033,19 @@ position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
 </div>
+
+
+
+
+<div className="specialfont" style={{textAlign:'center', fontSize:'5vw', margin:'10vh 0 0 0'}}>
+Virtual Tour
+  </div>
+
+<div className="virtualtour">
+ <iframe className="" style={{width:'80%', margin:'0 auto', border:'10px solid #333', borderRadius:'12px'}} src="https://www.google.com/maps/embed?pb=!4v1646715550851!6m8!1m7!1sCAoSLEFGMVFpcFA5OWw5SHU3Y0RSMVMzYkxQWS1DS3hnWHhNMTFHQlhCN0l4UE9q!2m2!1d30.367306744074!2d-89.094062253672!3f340.80219860937757!4f-7.026614771956915!5f0.7820865974627469" width="800" height="600" allowFullScreen="" loading="lazy"></iframe>
+      </div>
+<br /><br />
 
 
 <Footer />

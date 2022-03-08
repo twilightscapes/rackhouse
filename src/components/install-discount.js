@@ -119,10 +119,10 @@ left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex
   height:'auto',
   filter:' drop-shadow(0px 0px 10px rgba(0,0,0,.9))',
 }}
-    buttonText="HIDE THIS"
+    buttonText="CLOSE"
 	buttonStyle={{ background: "transparent", textDecoration:'underline', textAlign:'center', fontSize: "16px", position:'relative', bottom:'20px',  right:'0', display:'flex', flexDirection:'column', justifyContent:'center', margin:'0 auto', color:'#fff', fontWeight:'normal', padding:'4px 50px', border:'0px solid #666'}}
     expires={1}
-    cookieName="tron.allin60.com-install-cookie"
+    cookieName="rackhouse.netlify.app-install-cookie"
 >
 
 
@@ -133,18 +133,18 @@ left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex
 
 
 
-	
-	<p style={{textAlign:'center', fontSize:'clamp(1.3rem, 2.4vw, 2.5rem)', padding:'0', margin:'0 0 10px 0', overflowWrap:'break-word'}}>I'm Accepting New Clients <br /> <strong></strong></p>
+	<p style={{fontSize:'clamp(.9rem, 1.5vw, 2rem)', textAlign:'center'}}>
+Looking for innovative design in a top-performing website app?</p>
+	{/* <p style={{textAlign:'center', fontSize:'clamp(1.3rem, 2.4vw, 2.5rem)', padding:'0', margin:'0 0 10px 0', overflowWrap:'break-word'}}>Like This? <br /> <strong></strong></p> */}
 
 
     
-  <p style={{fontSize:'1.2rem', textAlign:'center', fontWeight:'bold'}}>
+  {/* <p style={{fontSize:'1.2rem', textAlign:'center', fontWeight:'bold'}}>
 Current Availability: &nbsp; {date}
-</p>
+</p> */}
 
 
-    <p style={{fontSize:'clamp(.9rem, 1.5vw, 2rem)', textAlign:'center'}}>
-Looking for innovative design in a top-performing website app?</p>
+    
 <p style={{fontSize:'clamp(1.2rem, 2.2vw, 3.8rem)', fontWeight:'bold', textAlign:'center', textShadow:'1px 1px 0 #666'}}>
   Let's create something <span>great together</span>.</p>
 

@@ -9,7 +9,7 @@ showInfo: true
 youtuber: ""
 youtubeautostart: "1"
 youtubeloop: ""
-title: The Rack House
+title: Best Steaks on the Coast
 svgImage: /assets/null.svg
 showPosts: ""
 cta:

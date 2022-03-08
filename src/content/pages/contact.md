@@ -1,7 +1,7 @@
 ---
 template: contact-page
 slug: /contact
-title: Contact All In 60 Seconds
+title: Contact
 ---
 
 <!-- If you’re looking for information about upcoming workshops, please mention the word “workshop” and that will add you to my list, so that I can contact you when I get dates set in your area.

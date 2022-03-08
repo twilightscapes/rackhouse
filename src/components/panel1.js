@@ -23,7 +23,7 @@ import { ImPlay } from "react-icons/im"
 // import QuoraStand from "../../static/assets/quora-ass.png"
 // import KevinFlynn from "../../static/assets/kevin-flynn.png"
 // import TronChick from "../../static/assets/tron-chick1.svg"
-import RackLogo from "../../static/assets/logo.svg"
+import RackLogo from "../../static/assets/logointro.svg"
 
 const CustomBox = styled.div`
 
@@ -114,7 +114,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
       </h1> */}
 
 <h1 className="tronText" style={{display:'flex', justifyContent:'center', textAlign:'center', fontSize:'14vw', position:'absolute', top:'0', marginTop:'', width:'100%', height:'70%', padding:'', opacity:'.6', zIndex:'', border:'0px solid blue'}}>
-<RackLogo style={{position:'absolute', top:'0', maxWidth:'600px'}} />
+<RackLogo style={{position:'absolute', top:'0', maxWidth:'100%'}} />
       </h1>
 
 
