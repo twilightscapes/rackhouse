@@ -15,7 +15,7 @@ import Newsignup from "../components/newssign"
 // import FrontLoader from "../../static/assets/grid-loader.svg"
 import { RiArrowRightSLine } from "react-icons/ri"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
-import BackgroundImage from 'gatsby-background-image'
+// import BackgroundImage from 'gatsby-background-image'
 import Panel1 from "../components/panel1"
 // import Panel2 from "../pages/shawshank-trailer"
 
@@ -515,39 +515,42 @@ showCaption: false
 
 
 <div>
-<Link title="Pulp Fiction by Quentin Tarantino - All In 60 Seconds"  to="/pulp-fiction-trailer/" className="navbar-item  button " style={{margin:'', height:'100%', textDecoration:'none'}}>
+{/* <Link title=""  to="/pulp-fiction-trailer/" className="navbar-item  button " style={{margin:'', height:'100%', textDecoration:'none'}}> */}
 {/* <Panel3 /> */}
 <StaticImage className=""
-alt="Pulp Fiction by Quentin Tarantino - All In 60 Seconds" src="../../static/assets/pulpfiction.jpg" />
-</Link>
+alt="Super Yummy" src="../../static/assets/FILET-SMALL.jpg" />
+{/* </Link> */}
 </div>
 
 
 <div>
-<Link title="Shawshank Redemption by Stephen King - All In 60 Seconds"  to="/shawshank-trailer/" className="navbar-item button " style={{margin:'', height:'100%', textDecoration:'none'}}>
-{/* <Panel3 /> */}
+{/* <Link title="Shawshank Redemption by Stephen King - All In 60 Seconds"  to="/shawshank-trailer/" className="navbar-item button " style={{margin:'', height:'100%', textDecoration:'none'}}> */}
+
 <StaticImage className=""
-alt="Shawshank Redemption by Stephen King - All In 60 Seconds" src="../../static/assets/shawshank.jpg" />
-</Link>
-</div>
-
-
-
-<div>
-<Link title="They Live by John Carpenter - All In 60 Seconds"  to="/they-live/" className="navbar-item  button " style={{margin:'', height:'100%', textDecoration:'none'}}>
-<StaticImage className=""
-alt="They Live by John Carpenter - All In 60 Seconds" src="../../static/assets/TheyLive-Header.jpg" />
-</Link>
+alt="Delicious!" src="../../static/assets/FAROE-ISLAND-SALMON-scaled.jpg" />
+{/* </Link> */}
 </div>
 
 
 
 <div>
-<Link title="They Live by John Carpenter - All In 60 Seconds"  to="/mystery-science-theater-3022/" className="navbar-item  button " style={{margin:'', height:'100%', textDecoration:'none'}}>
+{/* <Link title="They Live by John Carpenter - All In 60 Seconds"  to="/they-live/" className="navbar-item  button " style={{margin:'', height:'100%', textDecoration:'none'}}> */}
 <StaticImage className=""
-alt="Mystery Science Theater 3000 - All In 60 Seconds" src="../../static/assets/mystery-science.jpg" />
-</Link>
+alt="Get Racked at the Rack House" src="../../static/assets/NEW-ZEALAND-RACK.jpg" />
+{/* </Link> */}
 </div>
+
+
+
+<div>
+{/* <Link title="They Live by John Carpenter - All In 60 Seconds"  to="/mystery-science-theater-3022/" className="navbar-item  button " style={{margin:'', height:'100%', textDecoration:'none'}}> */}
+<StaticImage className=""
+alt="" src="../../static/assets/HICKORY-SMOKED-OF-WS.jpg" />
+{/* </Link> */}
+</div>
+
+
+
 
 
 
@@ -727,6 +730,23 @@ alt="Mystery Science Theater 3000 - All In 60 Seconds" src="../../static/assets/
             ""
           )}
 
+<div style={{position:'absolute', bottom:'10vh', width:'100%', display:'flex', justifyContent:'space-between', padding:'4%', border:'0px solid', zIndex:'5'}}>
+<div style={{fontSize:'3vw'}}>
+1301 26th Avenue
+<br />
+Gulfport, MS
+<br />
+<a className="call" href="tel:+2282062744">228-206-2744</a>
+</div>
+
+<div style={{fontSize:'3vw'}}>
+Open Daily At 11am
+<br />
+Saturday &amp; Sunday Brunch
+<br />
+Happy Hour 3-6pm
+</div>
+  </div>
 
 
 
@@ -752,7 +772,7 @@ alt="Mystery Science Theater 3000 - All In 60 Seconds" src="../../static/assets/
 
 <section style={{ display:'', height:'', overflow:''}}>
   <article>
-<div className="flexbutt" style={{display:'flex', gap:'30px'}}>
+<div className="flexbutt" style={{display:'flex', gap:'10px'}}>
       <div className="flexcheek " style={{padding:'1rem 2rem 0 2rem', maxHeight:'90vh',}}>
 
 
@@ -862,9 +882,9 @@ to="#experiences" title="See the new EXPERIENCES™" /> */}
 
 
 
-<div style={{position:'relative', top:'', margin:'0', padding:'25% 0',  width:'', zIndex:'1', textAlign:'', borderRadius:'12px',}}>
+{/* <div style={{position:'relative', top:'', margin:'0', padding:'25% 0',  width:'', zIndex:'1', textAlign:'', borderRadius:'12px',}}>
   <Newsignup />
-  </div>
+  </div> */}
 
 
 
@@ -916,7 +936,9 @@ Through NFT
 
 
 
-<div style={{textAlign:'center', fontSize:'5vw', margin:'10vh 0 0 0'}}>Latest Minutes:</div>
+<div style={{textAlign:'center', fontSize:'5vw', margin:'10vh 0 0 0'}}>
+  {/* Latest Minutes: */}
+  </div>
 
 
 
@@ -950,9 +972,19 @@ Through NFT
 
  </div>{/* end scooch */}
 
-      
 
- <h3 style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', margin:'0 auto 2rem auto'}}>Todd's Other Work</h3>
+
+ <div style={{textAlign:'center', fontSize:'5vw', margin:'10vh 0 0 0'}}>
+Virtual Tour
+  </div>
+
+
+ <iframe style={{width:'80%', margin:'0 auto', border:'3px solid #333', borderRadius:'12px'}} src="https://www.google.com/maps/embed?pb=!4v1646715550851!6m8!1m7!1sCAoSLEFGMVFpcFA5OWw5SHU3Y0RSMVMzYkxQWS1DS3hnWHhNMTFHQlhCN0l4UE9q!2m2!1d30.367306744074!2d-89.094062253672!3f340.80219860937757!4f-7.026614771956915!5f0.7820865974627469" width="800" height="600" allowFullScreen="" loading="lazy"></iframe>
+      
+<br /><br />
+
+
+ {/* <h3 style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', margin:'0 auto 2rem auto'}}>Todd's Other Work</h3> */}
  
  <div className="flexbutt noexit print" style={{padding:'0 4%',
 position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px', margin:'0 auto 2rem auto', }}>
@@ -969,37 +1001,37 @@ position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px
     </div> */}
 
 
-    
-    <div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
-    <a className="noexit" href="https://urbanfetish.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>
-    <StaticImage src="../../static/assets/urban-fetish-button.jpg" alt="Todd Lambert Night photos" style={{borderRadius:'8px'}}  /></a>
-    <br />
-    Take a walk on the wild side and follow along as Todd Lambert goes in search of the creepiest, freakiest, spookiest abandoned and desolate locations he can find. 
-    <br /><br />
-    <div style={{textAlign:'center',}}><a className="post-card button " href="https://urbanfetish.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>UrbanFetish.com</a></div>
-    </div>
 
 
-
-
-
-<div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'space-between',}}>
+<div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'flex-start',}}>
     <a className="noexit" href="https://toddlambert.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>
-    <StaticImage src="../../static/assets/toddlambert-promo-banner.png" alt="Todd Lambert is an independent artist, creator, design, developer and generally a unicorn" style={{borderRadius:'8px'}}  /></a>
+    <StaticImage src="../../static/assets/rackhouse-menu-button.jpg" alt="Todd Lambert is an independent artist, creator, design, developer and generally a unicorn" style={{borderRadius:'8px'}}  /></a>
     <br />
-    Todd Lambert excels in design, development, marketing, conceptual photography and online strategy that bring results. Learn more about Todd and maybe hire him to help you?
-    <br /><br />
-    <div style={{textAlign:'center',}}><a className="post-card button " href="https://toddlambert.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>ToddLambert.com</a></div>
+    Our menu is steep in the traditions of the great steakhouses of America, however at virtually every step we have added our own "Rack House style" flair. We focus on providing a fantastic steak.
+    {/* <br /><br />
+    <div style={{textAlign:'center',}}><a className="post-card button " href="https://toddlambert.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>ToddLambert.com</a></div> */}
     </div>
 
 
-    <div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
-    <a className="noexit" href="https://vidsocks.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit'}}>
-    <StaticImage src="../../static/assets/vidsock-promo.jpg" alt="Todd builds Web Apps"  style={{borderRadius:'8px'}} /></a>
+    
+    <div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'flex-start'}}>
+    <a className="noexit" href="https://urbanfetish.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>
+    <StaticImage src="../../static/assets/rackhouse-libations-button.jpg" alt="Todd Lambert Night photos" style={{borderRadius:'8px'}}  /></a>
     <br />
-Todd sells exceptionally fast and well-built multimedia web apps called VidSocks. They are a complete website solution that costs nothing to run and get top ranks in Google!
-    <br /><br />
-    <div style={{textAlign:'center',}}><a className="post-card button " href="https://vidsocks.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>VidSocks.com</a></div>
+    Our mezzanine level of the Rack House was designed to be a place to sit back in a comfy couch, leather chair, or at the bar with friends and enjoy a unique atmosphere and great libations.
+    {/* <br /><br />
+    <div style={{textAlign:'center',}}><a className="post-card button " href="https://urbanfetish.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>UrbanFetish.com</a></div> */}
+    </div>
+
+
+
+    <div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'flex-start'}}>
+    <a className="noexit" href="https://vidsocks.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit'}}>
+    <StaticImage src="../../static/assets/rackhouse-bourbon-header.jpg" alt="Todd builds Web Apps"  style={{borderRadius:'8px'}} /></a>
+    <br />
+    Join the Bourbon Society and you get to enjoy plenty of perks such as a personalized decanter, exclusive access to coveted bourbons, monthly tastings and so much more!
+    {/* <br /><br />
+    <div style={{textAlign:'center',}}><a className="post-card button " href="https://vidsocks.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>VidSocks.com</a></div> */}
     </div>
 
 

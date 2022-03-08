@@ -182,23 +182,50 @@ Contact Me<span>Ordering Questions?</span>
 
 
 
-<li className="carto" style={{textAlign:''}}>
-              <Link className="navbar-item txtshadow" to="/projects">
+{/* <li className="carto" style={{textAlign:''}}>
+
       <div style={{display:'flex', gap:'10px'}}>
-        {/* <AiOutlineFundProjectionScreen style={{fontSize:'2vw'}} /> */}
+
         View By Project
         </div>
-              </Link>
-      </li> 
+
+      </li>  */}
 
 
-<li className="carto">
+<li className="carto" style={{textAlign:'center'}}>
       <Link className="navbar-item txtshadow" to="/minutes/">
-      <div style={{display:'flex', gap:'10px'}}>
-      View All Minutes
-      </div>
+
+      Our Menu
+
         </Link>
 </li>
+
+<li className="carto" style={{textAlign:'center'}}>
+      <Link className="navbar-item txtshadow" to="/minutes/">
+
+      Brunch
+
+        </Link>
+</li>
+
+
+<li className="carto" style={{textAlign:'center'}}>
+      <Link className="navbar-item txtshadow" to="/minutes/">
+
+      Libations
+
+        </Link>
+</li>
+
+<li className="carto" style={{textAlign:'center'}}>
+      <Link className="navbar-item txtshadow" to="/minutes/">
+
+      Bourbon Society
+
+        </Link>
+</li>
+
+
 
 {/* <li className="carto" style={{textAlign:'center'}}>
       <Link className="navbar-item txtshadow" to="/minutes/">
@@ -211,10 +238,9 @@ Contact Me<span>Ordering Questions?</span>
 
 <li className="carto" style={{textAlign:'center'}}>
               <Link className="navbar-item txtshadow" to="/about/">
-              <div style={{display:'flex', gap:'10px'}}>
-              {/* <BiMoviePlay style={{fontSize:'2vw'}}  /> */}
-              About This Site
-              </div>
+
+              About Us
+
               </Link>
       </li> 
 
@@ -237,17 +263,17 @@ Contact Me<span>Ordering Questions?</span>
 
       
 
-      <li className="carto crypto" style={{border:'none', display:'flex', justifyContent:'space-around', verticalAlign:'center', padding:'5px 0 0 0' , background:'rgba(0,0,0,0)' }}>
+      {/* <li className="carto crypto" style={{border:'none', display:'flex', justifyContent:'space-around', verticalAlign:'center', padding:'5px 0 0 0' , background:'rgba(0,0,0,0)' }}>
   
-      {/* <Theme  style={{padding:'0'}} /> */}
-   {/* <Link className="sherlock" to="/search/" style={{marginRight:'0', marginTop:'5px'}}>
+      <Theme  style={{padding:'0'}} />
+   <Link className="sherlock" to="/search/" style={{marginRight:'0', marginTop:'5px'}}>
     <span className="carto"><SearchIcon /></span>
-   </Link> */}
+   </Link>
    
    <CartButton quantity={quantity} />
 
 
-        </li>
+        </li> */}
 
     
 
@@ -269,7 +295,7 @@ Contact Me<span>Ordering Questions?</span>
 
 
 
-      <Toast show={loading || didJustAddToCart} >
+      {/* <Toast show={loading || didJustAddToCart} >
         {!didJustAddToCart ? (
           "Updating…"
         ) : (
@@ -278,7 +304,7 @@ Contact Me<span>Ordering Questions?</span>
             <div style={{fontSize:'30px', marginLeft:'10px'}}><ImArrowRight /></div>
           </>
         )}
-      </Toast>
+      </Toast> */}
  
 
 

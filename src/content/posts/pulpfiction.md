@@ -22,8 +22,8 @@ svgzindex: "0"
 comments: "1"
 shareable: "1"
 underlayImage: /assets/transparent.png
-featuredImage: /assets/pulpfiction.jpg
-svgImage: /assets/Pulp-Loader.svg
+featuredImage: /assets/FAROE-ISLAND-SALMON-scaled.jpg
+svgImage: /assets/null.svg
 nftlink: ""
 nftdrop: ""
 nftredeem: ""

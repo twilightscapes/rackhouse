@@ -18,15 +18,15 @@ body {
 }
 
 
-body.homepage{
-  /* overflow-y: hidden !important; */
-  /* overflow-x: hidden !important; */
+/* body.homepage{
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
 }
 
 body.blogpost{
-  /* overflow-y: hidden !important;
-  overflow-x: hidden !important; */
-}
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+} */
 
 
 /* body.homepage, body.bloglist {
@@ -45,7 +45,7 @@ body.blogpost{
 
     #posts article{margin-bottom:4vh;}
 
-h1,h2,h3,h4,.h1,.h2,.h3,.h4, #menu, .header .menu-icon:before, input.special, .intro:after, .intro:before, .scrolldown, .font, .gatsby-image-wrapper, .full-width-image:after{font-family: Roboto,lucida grande,lucida sans unicode,Tahoma,Sans-Serif;
+h1,h2,h3,h4,.h1,.h2,.h3,.h4, #menu, .header .menu-icon:before, input.special, .intro:after, .intro:before, .scrolldown, .font, .gatsby-image-wrapper, .full-width-image:after{font-family: LibreBaskerville,lucida grande,lucida sans unicode,Tahoma,Sans-Serif !important;
    /* font-size: clamp(2.5rem, 5vw, 5rem); */
   }
 
@@ -1868,6 +1868,15 @@ body.homepage .mobilespace{
 
 @media (min-width: 48rem) {
   .item::before{bottom:-60px;}
+}
+
+
+a.call{text-decoration: none;}
+a[href^="tel:"]:before {
+  content: "📱";
+  margin-right: 10px;
+  text-decoration: 0px solid green !important;
+  border-bottom: 0 !important;
 }
 
 
@@ -4801,7 +4810,6 @@ height:100vh;
  /* HUD CONTROLS */
 
 
-DEFAULT
 .pagination a{ color:inherit !important;}
 .pagination {position:relative; right:2vw;}
 .pagination ul{

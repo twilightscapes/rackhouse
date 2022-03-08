@@ -123,7 +123,7 @@ const CustomBox = styled.div`
 
 <div style={{position:'absolute', bottom:'0', left:'0', zIndex:'1', width:'100vw', height:'100%', border:'0px solid yellow', padding:'0', margin:'0'}}>
 <StaticImage className=""
-alt="Todd Lambert Web development for photographers" src="../../static/assets/shawshank-stuff.png" style={{height:'100vh'}}  />
+alt="Todd Lambert Web development for photographers" src="../../static/assets/FILET-SMALL.png" style={{height:'100vh'}}  />
 </div>
 
           <Controls

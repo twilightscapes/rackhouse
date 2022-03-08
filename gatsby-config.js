@@ -44,15 +44,15 @@ module.exports = {
 
   
 
-  // {
-  //   resolve: "gatsby-plugin-web-font-loader",
-  //   options: {
-  //     custom: {
-  //       families: ['compacta'],
-  //       urls: ['/assets/fonts/fonts.css'],
-  //     },
-  //   },
-  // },
+  {
+    resolve: "gatsby-plugin-web-font-loader",
+    options: {
+      custom: {
+        families: ['LibreBaskerville'],
+        urls: ['/assets/fonts/fonts.css'],
+      },
+    },
+  },
 
   // {
   //   resolve: "gatsby-plugin-anchor-links",
@@ -231,8 +231,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://allin60.com',
-        sitemap: 'https://allin60.com/sitemap.xml',
+        host: 'https://rackhouse.netlify.app',
+        sitemap: 'https://rackhouse.netlify.app/sitemap.xml',
         resolveEnv: () => process.env.GATSBY_ENV,
         env: {
           development: {
@@ -247,10 +247,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `All in 60 Seconds`,
-        short_name: `All in 60`,
+        name: `The Rack House Steaks & Spirits`,
+        short_name: `RackHouse`,
         start_url: `/?user_mode=app`,
-        description: `All in ONLY 60 seconds`,
+        description: `The Rack House`,
         background_color: `#111`,
         lang: `en`,
         theme_color: `#111`,

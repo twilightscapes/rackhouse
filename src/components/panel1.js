@@ -23,17 +23,12 @@ import { ImPlay } from "react-icons/im"
 // import QuoraStand from "../../static/assets/quora-ass.png"
 // import KevinFlynn from "../../static/assets/kevin-flynn.png"
 // import TronChick from "../../static/assets/tron-chick1.svg"
-
+import RackLogo from "../../static/assets/logo.svg"
 
 const CustomBox = styled.div`
-.frontbg iframe{
-  opacity:.4;
-}
 
 
-*{
-  cursor: url('data:image/svg+xml,%3Csvg id="ebnjYAzfMro1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"%3E%3Cdefs%3E%3Cfilter id="ebnjYAzfMro2-filter" x="-400%25" width="600%25" y="-400%25" height="600%25"%3E%3CfeGaussianBlur id="ebnjYAzfMro2-filter-drop-shadow-0-blur" in="SourceAlpha" stdDeviation="0,0"/%3E%3CfeOffset id="ebnjYAzfMro2-filter-drop-shadow-0-offset" dx="0" dy="0" result="tmp"/%3E%3CfeFlood id="ebnjYAzfMro2-filter-drop-shadow-0-flood" flood-color="%23000"/%3E%3CfeComposite id="ebnjYAzfMro2-filter-drop-shadow-0-composite" operator="in" in2="tmp"/%3E%3CfeMerge id="ebnjYAzfMro2-filter-drop-shadow-0-merge"%3E%3CfeMergeNode id="ebnjYAzfMro2-filter-drop-shadow-0-merge-node-1"/%3E%3CfeMergeNode id="ebnjYAzfMro2-filter-drop-shadow-0-merge-node-2" in="SourceGraphic"/%3E%3C/feMerge%3E%3CfeGaussianBlur id="ebnjYAzfMro2-filter-blur-0" stdDeviation="2,2" result="result"/%3E%3C/filter%3E%3C/defs%3E%3Cellipse rx="4.492195" ry="4.730719" transform="translate(31.021128 30.644481)" filter="url(%23ebnjYAzfMro2-filter)" fill="%2300ebff" stroke-width="0"/%3E%3C/svg%3E') 32 32, pointer !important;
-}
+
 
 
 
@@ -54,8 +49,8 @@ const Characters = () => (
 
 <div id="" className="wrap-element tronpanel" style={{overflow:'hidden', height:'',}}>
 <ReactPlayer
-         className='frontbg'
-         url="https://www.youtube.com/embed/c_V1iD6F1kk"
+         className=''
+         url="https://youtu.be/14zqZsUzplg"
          width="100%"
          height="100vh"
          playing={true}
@@ -70,7 +65,7 @@ const Characters = () => (
                 },
               },
               youtube: {
-                playerVars: { showinfo:0, controls:0, start:20, end:500, mute:1 }
+                playerVars: { showinfo:0, controls:0, start:5, end:34, mute:1, loop:0, rel:0 }
               },
             }}
 
@@ -117,17 +112,14 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
 {/* <h1 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'14vw', position:'absolute', top:'0', marginTop:'', width:'100%', padding:'0 30%', opacity:'1', zIndex:'0'}}>
         <div className="TRON" style={{fontWeight:'normal', fontFamily:'TronType'}}>TRON</div>
       </h1> */}
-<a href="https://tron.allin60.com" title="TRON in 60 Seconds" aria-label="TRON in 60 Seconds">
-<h1 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'14vw', position:'absolute', top:'0', marginTop:'2rem', width:'100%', padding:'0', opacity:'.7', zIndex:''}}>
-        {/* <div className="" style={{fontWeight:'bold', fontFamily:'Roboto'}}>TRON</div> */}
-        <StaticImage className=""
-style={{height:'', width:'', margin:'0 0 0 0',}}
-alt="Todd Lambert Web development for photographers" src="../../static/assets/tron-logo.png" />
+
+<h1 className="tronText" style={{display:'flex', justifyContent:'center', textAlign:'center', fontSize:'14vw', position:'absolute', top:'0', marginTop:'', width:'100%', height:'70%', padding:'', opacity:'.6', zIndex:'', border:'0px solid blue'}}>
+<RackLogo style={{position:'absolute', top:'0', maxWidth:'600px'}} />
       </h1>
- </a>
 
 
- <div id="characters" className="characters" style={{position:'absolute', zIndex:'0', width:'', bottom:'0', height:'100%', top:'0', background:'none', filter:'none', boxShadow:'none', padding:'20vh 0 0 0',}}>
+
+ <div id="characters" className="characters" style={{position:'absolute', zIndex:'0', width:'', bottom:'0', height:'100%', top:'0', background:'none', filter:'none', boxShadow:'none', padding:'20vh 0 0 0', display:'none'}}>
 
  {/* <ReactPlayer
           className='playerpp'

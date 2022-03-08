@@ -21,9 +21,9 @@ isnftforsale: ""
 svgzindex: "0"
 comments: ""
 shareable: "1"
-underlayImage: /assets/shawshank-stuff.png
-featuredImage: /assets/shawshank-redemption-in-60seconds.jpg
-svgImage: /assets/ShawshankLoader.svg
+underlayImage: /assets/transparent.png
+featuredImage: /assets/FILET-SMALL.jpg
+svgImage: /assets/null.svg
 nftlink: ""
 nftdrop: ""
 nftredeem: ""

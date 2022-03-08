@@ -1,18 +1,18 @@
 ---
 slug: /
-tagline: ""
-description: "Everything cool in ONLY 60 seconds"
-featuredImage: /assets/allin60seconds.jpg
-secondaryImage: /assets/transparent.png
+tagline: "Steaks & Spirits"
+description: "Great fine dining with a wonderful atmosphere"
+featuredImage: /assets/rackhouse-barrel.jpg
+secondaryImage: /assets/inside-dining-vert.jpg
 underlayImage: /assets/transparent.png
 showInfo: true
 youtuber: ""
 youtubeautostart: "1"
-title: All In 60 Seconds
+title: The Rack House
 svgImage: /assets/null.svg
-showPosts: "1"
+showPosts: ""
 cta:
-  ctaText: How does this work?
+  ctaText: View Our Menu
   ctaLink: /howitworks/
 youtubeend: ""
 showFeature: "1"
@@ -24,8 +24,8 @@ svgzindex: ""
 youtubestart: ""
 ---
 
-Today's most popular subjects are recreated in a dynamic multimedia format and it's all in 60 seconds (a "Minute").
+A Rack House, by definition, is a warehouse which distillers use to store and age their hundreds and thousands of barrels of these wonderful libations.
 
-<em>New Minutes are released at 3p.m. CST.</em>
+We have also started the first Bourbon Society on the Gulf Coast which brings its members together to share their love of the various bourbons, ryes, whiskeys and scotches which don our shelves.
 
-Be sure to sign up for notifications so you won't miss a Minute.
+We have decorated the restaurant to capture the look and feel of a Rack House and hope you enjoy the terrific ambiance it creates.

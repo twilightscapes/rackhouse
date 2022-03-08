@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import { graphql } from "gatsby"
-import { RiSendPlane2Line } from "react-icons/ri"
+// import { RiSendPlane2Line } from "react-icons/ri"
 import { Seo } from "../components/seo"
 import { Layout } from "../components/layout"
 import { Helmet } from "react-helmet"
@@ -91,7 +91,7 @@ const Contact = ({ data }) => {
             >
               Send Message{" "}
               <span className="icon -right">
-                <RiSendPlane2Line />
+                {/* <RiSendPlane2Line /> */}
               </span>
             </button>
           </p>
