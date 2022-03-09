@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import { Link, graphql } from "gatsby"
 // import ReactPlayer from 'react-player/lazy'
 import { Layout } from "../components/layout"
@@ -174,11 +174,11 @@ const HomePage = ({ data }) => {
     // const imageData = data.desktop.childImageSharp.fluid
     const { siteUrl } = useSiteMetadata()
 
-    const YouTubeStart = frontmatter.youtubestart
-    const YouTubeEnd = frontmatter.youtubeend
-    const YouTubeMute = frontmatter.youtubemute
-    const YouTubeControls = frontmatter.youtubecontrols
-    const YouTubeAutostart = frontmatter.youtubeautostart
+    // const YouTubeStart = frontmatter.youtubestart
+    // const YouTubeEnd = frontmatter.youtubeend
+    // const YouTubeMute = frontmatter.youtubemute
+    // const YouTubeControls = frontmatter.youtubecontrols
+    // const YouTubeAutostart = frontmatter.youtubeautostart
 
     const ShowFeature = frontmatter.showFeature
     const ShowInfo = frontmatter.showInfo
@@ -203,38 +203,38 @@ const HomePage = ({ data }) => {
 
 
 
-    const [state, setState] = useState({
-      playing: true,
-      controls: false,
-      light: true,
-      muted: true,
-      loop: true,
-    });
+    // const [state, setState] = useState({
+    //   playing: true,
+    //   controls: false,
+    //   light: true,
+    //   muted: true,
+    //   loop: true,
+    // });
     // const playerRef = useRef(null);
-    const controlsRef = useRef(null);
+    // const controlsRef = useRef(null);
     
-    const {
-      playing,
-      controls,
-      light,
-      muted,
-      loop,
-      playbackRate,
-      pip,
-      played,
-      seeking,
-      volume,
-    } = state;
+    // const {
+    //   playing,
+    //   controls,
+    //   light,
+    //   muted,
+    //   loop,
+    //   playbackRate,
+    //   pip,
+    //   played,
+    //   seeking,
+    //   volume,
+    // } = state;
     
-    const handlePlayPause = () => {
-      setState({ ...state, playing: !state.playing });
-    };
+    // const handlePlayPause = () => {
+    //   setState({ ...state, playing: !state.playing });
+    // };
     
-    const hanldeMute = () => {
-      setState({ ...state, muted: !state.muted });
-    };
+    // const hanldeMute = () => {
+    //   setState({ ...state, muted: !state.muted });
+    // };
     
-    const { iconimage } = useSiteMetadata()
+    // const { iconimage } = useSiteMetadata()
 
  
 
@@ -254,7 +254,7 @@ else{
 function Iframer() {
   
 
-  const Url = "https://www.youtube.com/embed/" + frontmatter.youtuber + "?controls=" + frontmatter.youtubecontrols + "&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;start=" + frontmatter.youtubestart + "&amp;end=" + frontmatter.youtubeend + "&amp;loop=1&amp;mute=" + frontmatter.youtubemute + "&amp;playsinline=1&amp;playlist=" + frontmatter.youtuber + ""
+  // const Url = "https://www.youtube.com/embed/" + frontmatter.youtuber + "?controls=" + frontmatter.youtubecontrols + "&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;start=" + frontmatter.youtubestart + "&amp;end=" + frontmatter.youtubeend + "&amp;loop=1&amp;mute=" + frontmatter.youtubemute + "&amp;playsinline=1&amp;playlist=" + frontmatter.youtuber + ""
   return (
 //     <ReactPlayer
 //     className='react-player66'
@@ -298,65 +298,65 @@ function Iframer() {
 }
 
 
-const options = {
-  settings: {
-    autoplaySpeed: 4000,
-    boxShadow: '0px 0px 20px #000',
-    disableKeyboardControls: false,
-    disablePanzoom: false,
-    disableWheelControls: true,
-    hideControlsAfter: false,
-    lightboxTransitionSpeed: 0.3,
-    lightboxTransitionTimingFunction: 'linear',
-    overlayColor: 'rgba(0, 0, 0, 0.8)',
-    slideAnimationType: 'slide',
-    slideSpringValues: [300, 50],
-    slideTransitionSpeed: 0.6,
-    slideTransitionTimingFunction: 'linear',
-    usingPreact: false
-  },
-  buttons: {
-    backgroundColor: '#FA02B7',
-    iconColor: 'rgba(255, 255, 255, 0.8)',
-    iconPadding: '10px',
-    showAutoplayButton: false,
-    showCloseButton: true,
-    showDownloadButton: false,
-    showFullscreenButton: false,
-    showNextButton: false,
-    showPrevButton: false,
-    showThumbnailsButton: false,
-    size: '40px'
-  },
-  caption: {
-captionAlignment: 'start',
-captionColor: '#FFFFFF',
-captionContainerPadding: '20px 12% 30px 12%',
-captionFontFamily: 'inherit',
-captionFontSize: 'inherit',
-captionFontStyle: 'inherit',
-captionFontWeight: 'inherit',
-captionTextTransform: 'inherit',
-showCaption: false
-  },
-  thumbnails: {
-    showThumbnails: false,
-    thumbnailsAlignment: 'center',
-    thumbnailsContainerBackgroundColor: '#111',
-    thumbnailsContainerPadding: '0',
-    thumbnailsGap: '0 2px',
-    thumbnailsIconColor: '#ffffff',
-    thumbnailsOpacity: 0.4,
-    thumbnailsPosition: 'bottom',
-    thumbnailsSize: ['100px', '80px']
-  },
-  progressBar: {
-    backgroundColor: '#000',
-    fillColor: '#333',
-    height: '3px',
-    showProgressBar: true
-  },
-};
+// const options = {
+//   settings: {
+//     autoplaySpeed: 4000,
+//     boxShadow: '0px 0px 20px #000',
+//     disableKeyboardControls: false,
+//     disablePanzoom: false,
+//     disableWheelControls: true,
+//     hideControlsAfter: false,
+//     lightboxTransitionSpeed: 0.3,
+//     lightboxTransitionTimingFunction: 'linear',
+//     overlayColor: 'rgba(0, 0, 0, 0.8)',
+//     slideAnimationType: 'slide',
+//     slideSpringValues: [300, 50],
+//     slideTransitionSpeed: 0.6,
+//     slideTransitionTimingFunction: 'linear',
+//     usingPreact: false
+//   },
+//   buttons: {
+//     backgroundColor: '#FA02B7',
+//     iconColor: 'rgba(255, 255, 255, 0.8)',
+//     iconPadding: '10px',
+//     showAutoplayButton: false,
+//     showCloseButton: true,
+//     showDownloadButton: false,
+//     showFullscreenButton: false,
+//     showNextButton: false,
+//     showPrevButton: false,
+//     showThumbnailsButton: false,
+//     size: '40px'
+//   },
+//   caption: {
+// captionAlignment: 'start',
+// captionColor: '#FFFFFF',
+// captionContainerPadding: '20px 12% 30px 12%',
+// captionFontFamily: 'inherit',
+// captionFontSize: 'inherit',
+// captionFontStyle: 'inherit',
+// captionFontWeight: 'inherit',
+// captionTextTransform: 'inherit',
+// showCaption: false
+//   },
+//   thumbnails: {
+//     showThumbnails: false,
+//     thumbnailsAlignment: 'center',
+//     thumbnailsContainerBackgroundColor: '#111',
+//     thumbnailsContainerPadding: '0',
+//     thumbnailsGap: '0 2px',
+//     thumbnailsIconColor: '#ffffff',
+//     thumbnailsOpacity: 0.4,
+//     thumbnailsPosition: 'bottom',
+//     thumbnailsSize: ['100px', '80px']
+//   },
+//   progressBar: {
+//     backgroundColor: '#000',
+//     fillColor: '#333',
+//     height: '3px',
+//     showProgressBar: true
+//   },
+// };
   
   return (
 

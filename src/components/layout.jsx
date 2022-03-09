@@ -112,19 +112,20 @@ export function Layout({ children }) {
   </label> */}
 
 
+
+
+
+  
+  <label htmlFor="openSidebarMenu" className="backdrop1" ><input type="checkbox" /></label>
+
 <label id="menuicon" htmlFor="openSidebarMenu" className="sidebarIconToggle">
 <div style={{textAlign:'center', opacity:'1', textShadow:'2px 2px 10px 2px #000', maxWidth:'500px', color:'#fff', border:'0px solid blue'}}>
 {/* <img className="" src={iconimage} alt="Logo" style={{borderRadius:'12px'}} /> */}
-
 <Bug className="bug" style={{fontSize:'38px', maxWidth:'', opacity:'1', margin:'0 0 0 0', width:'100%' }}/> 
 {/* <object className="" id="logo" data={iconimage} type="image/svg+xml" style={{  overflow:'hidden', border:'0px solid red', zIndex:'0', width:'100%', maxWidth:'', height:'', background:'transparent'  }} alt="Animated Logo" title="Animated Logo" >Animated Logo</object> */}
 </div>
   </label>
-
-
-  <label htmlFor="openSidebarMenu" className="backdrop1" ></label>
-
-
+  
    <div id="sidebarMenu" style={{minWidth:'', width:''}}>
   
 {/* <div className="no-app promocode">

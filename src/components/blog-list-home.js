@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import React from "react"
+// import React from "react"
 // import { Link } from "gatsby"
 // import { RiArrowDownLine, RiArrowRightSLine } from "react-icons/ri"
 

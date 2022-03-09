@@ -39,8 +39,8 @@ const CustomBox = styled.div`
 
 `
 
-const current = new Date();
-const date = `${current.getMonth()+2}/${current.getDate()+2}/${current.getFullYear()}`;
+// const current = new Date();
+// const date = `${current.getMonth()+2}/${current.getDate()+2}/${current.getFullYear()}`;
 
 const InstallDiscount = () => (
 <>

@@ -23,7 +23,7 @@ import { Footer } from "../components/footer"
 import {CopyToClipboard} from 'react-copy-to-clipboard'
 import ReactPlayer from 'react-player/lazy'
 
-import YouTubed from "../pages/youtube"
+// import YouTubed from "../pages/youtube"
 import { Seo } from "../components/seo"
 import { Layout } from "../components/layout"
 import ShareSocial from '../components/share' 
@@ -155,13 +155,13 @@ const Post = ({ data, pageContext }) => {
     : ""
 
 
-    const NftLink = frontmatter.nftlink
-    const NftRedeem = frontmatter.nftredeem
-    const NftDrop = frontmatter.nftdrop
+  //   const NftLink = frontmatter.nftlink
+  //   const NftRedeem = frontmatter.nftredeem
+  //   const NftDrop = frontmatter.nftdrop
 
 
 
-  const Svg = frontmatter.svgImage
+  // const Svg = frontmatter.svgImage
   // const svgZindex = frontmatter.svgzindex
 
 // function AddSvg(){
@@ -172,7 +172,7 @@ const Post = ({ data, pageContext }) => {
 // }
 
 
-const IsNft = frontmatter.isnftforsale
+// const IsNft = frontmatter.isnftforsale
 const ShowOriginal = frontmatter.youtubeshoworiginal
 const ShareThis = frontmatter.shareable
 const Comments = frontmatter.comments
@@ -244,7 +244,7 @@ const YoutuberSuggestion1 = frontmatter.youtubersuggestion1
 const YoutuberSuggestion2 = frontmatter.youtubersuggestion2
 const YoutuberSuggestion3 = frontmatter.youtubersuggestion3
 const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
-  const YouTube = frontmatter.youtuber
+  // const YouTube = frontmatter.youtuber
 
 
 
@@ -438,9 +438,9 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-  const [showControls, setShowControls] = useState(false);
+  // const [showControls, setShowControls] = useState(false);
   // const [count, setCount] = useState(0);
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  // const [anchorEl, setAnchorEl] = React.useState(null);
   const [timeDisplayFormat, setTimeDisplayFormat] = React.useState("normal");
   const [bookmarks, setBookmarks] = useState([]);
   const [state, setState] = useState({
@@ -470,15 +470,15 @@ const svgUrl = frontmatter.svgImage.publicURL
   const canvasRef = useRef(null);
   const {
     playing,
-    controls,
+    // controls,
     light,
     url,
     muted,
-    loop,
+    // loop,
     playbackRate,
     pip,
     played,
-    seeking,
+    // seeking,
     volume,
   } = state;
 
@@ -499,7 +499,7 @@ const svgUrl = frontmatter.svgImage.publicURL
       controlsRef.current.style.visibility = "visible";
       count = 0;
     }
-    if (controlsRef.current.style.visibility == "visible") {
+    if (controlsRef.current.style.visibility === "visible") {
       count += 1;
     }
     if (!state.seeking) {
@@ -556,7 +556,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
   const handleDisplayFormat = () => {
     setTimeDisplayFormat(
-      timeDisplayFormat == "normal" ? "remaining" : "normal"
+      timeDisplayFormat === "normal" ? "remaining" : "normal"
     );
   };
 
@@ -601,7 +601,7 @@ const svgUrl = frontmatter.svgImage.publicURL
   const duration =
     playerRef && playerRef.current ? playerRef.current.getDuration() : "00:00";
   const elapsedTime =
-    timeDisplayFormat == "normal"
+    timeDisplayFormat === "normal"
       ? format(currentTime)
       : `-${format(duration - currentTime)}`;
 
@@ -721,7 +721,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-<div
+<button
           onMouseMove={handleMouseMove}
           onMouseLeave={hanldeMouseLeave}
           ref={playerContainerRef}
@@ -829,7 +829,7 @@ const svgUrl = frontmatter.svgImage.publicURL
             volume={volume}
             onBookmark={addBookmark}
           />
-</div>
+</button>
 
 
 

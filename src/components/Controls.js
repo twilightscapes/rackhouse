@@ -6,7 +6,7 @@ import { MdVolumeOff } from "react-icons/md"
 import { MdVolumeDown } from "react-icons/md"
 import { MdVolumeUp } from "react-icons/md"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
 
 
@@ -86,56 +86,56 @@ import { Link } from "gatsby"
 //   },
 // })(Slider);
 
-function ValueLabelComponent(props) {
-  const { children, open, value } = props;
+// function ValueLabelComponent(props) {
+//   const { children, open, value } = props;
 
-  return (
-    // <Tooltip open={open} enterTouchDelay={0} placement="top" title={value}>
-    //   {children}
-    // </Tooltip>
-    ""
-  );
-}
+//   return (
+//     <Tooltip open={open} enterTouchDelay={0} placement="top" title={value}>
+//       {children}
+//     </Tooltip>
+
+//   );
+// }
 
 const Controls = forwardRef(
   (
     {
-      onSeek,
-      onSeekMouseDown,
-      onSeekMouseUp,
-      onDuration,
-      onRewind,
+      // onSeek,
+      // onSeekMouseDown,
+      // onSeekMouseUp,
+      // onDuration,
+      // onRewind,
       onPlayPause,
-      onFastForward,
+      // onFastForward,
       playing,
-      played,
-      elapsedTime,
-      totalDuration,
+      // played,
+      // elapsedTime,
+      // totalDuration,
       onMute,
       muted,
-      onVolumeSeekDown,
-      onChangeDispayFormat,
-      playbackRate,
-      onPlaybackRateChange,
-      onToggleFullScreen,
+      // onVolumeSeekDown,
+      // onChangeDispayFormat,
+      // playbackRate,
+      // onPlaybackRateChange,
+      // onToggleFullScreen,
       volume,
-      onVolumeChange,
-      onBookmark,
+      // onVolumeChange,
+      // onBookmark,
     },
     ref
   ) => {
     // const classes = useStyles();
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const handleClick = (event) => {
-      setAnchorEl(event.currentTarget);
-    };
+    // const [anchorEl, setAnchorEl] = React.useState(null);
+    // const handleClick = (event) => {
+    //   setAnchorEl(event.currentTarget);
+    // };
 
-    const handleClose = () => {
-      setAnchorEl(null);
-    };
+    // const handleClose = () => {
+    //   setAnchorEl(null);
+    // };
 
-    const open = Boolean(anchorEl);
-    const id = open ? "simple-popover" : undefined;
+    // const open = Boolean(anchorEl);
+    // const id = open ? "simple-popover" : undefined;
 
     const { iconimage } = useSiteMetadata()
 
@@ -204,7 +204,7 @@ const Controls = forwardRef(
   <>
       <div style={{position:'absolute', display:'block', background:'#000', height:'60px', width:'100%', zIndex:'', top:'0', right:'0', textAlign:'center', paddingTop:'10px' }}>allin60.com</div>
 
-  <div style={{position:'absolute', display:'block', background:'#111', height:'100vh', width:'100%', zIndex:'1', top:'0', right:'0', textAlign:'center', display:'grid', placeContent:'center' }}>
+  <div style={{position:'absolute', background:'#111', height:'100vh', width:'100%', zIndex:'1', top:'0', right:'0', textAlign:'center', display:'grid', placeContent:'center' }}>
  
   <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'30vw', height:'', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important', position:'relative', bottom:'20vh'}} />
 
@@ -223,7 +223,7 @@ const Controls = forwardRef(
       {/* <div className="contact" style={{position:'', bottom:'', zIndex:'',  left:'0', right:'0', display:'flex', justifyContent:'center', width:'200px', margin:'0 auto'}}>
   <Link state={{modal: true}}  to="/contact/" className="navbar-item  button fire" style={{margin:'', textDecoration:'none'}}>Contact Me</Link>
 </div> */}
-                <div
+                <button
                   onClick={onPlayPause}
                   className="controls actionJackson" 
                   style={{
@@ -254,7 +254,7 @@ const Controls = forwardRef(
               <MdPlayArrow className="hudicon" style={{}}  />
               </>
                   )}
-                </div>
+                </button>
 
 
 
@@ -263,7 +263,7 @@ const Controls = forwardRef(
 
 
 
-                <div
+                <button
                   // onClick={() => setState({ ...state, muted: !state.muted })}
                   onClick={onMute}
                   className="controls actionJackson"
@@ -287,7 +287,7 @@ const Controls = forwardRef(
                   ) : (
                     <MdVolumeDown className="hudicon" fontSize="large" style={{}}  />
                   )}
-                </div>
+                </button>
 
       </div>
       
