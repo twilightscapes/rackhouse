@@ -193,7 +193,7 @@ module.exports = {
         enableIdentityWidget: true,
         publicPath: `admin`,
         htmlTitle: `All in 60 CMS`,
-        htmlFavicon: `static/siteimages/manifest-icon-192.png`,
+        htmlFavicon: `static/icons/manifest-icon-192.png`,
         includeRobots: false,
         logo_url: 'https://twilightscapes.com/assets/tw-logo-white.svg'
       },

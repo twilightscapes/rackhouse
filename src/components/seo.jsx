@@ -75,18 +75,18 @@ export function Seo({
         rel="icon"
         type="image/png"
         sizes="32x32"
-        href="/icons/icon-192x192.png"
+        href="/icons/manifest-icon-192.png"
       />
       <link
         rel="icon"
         type="image/png"
         sizes="16x16"
-        href="/icons/icon-192x192.png"
+        href="/icons/manifest-192x192.png"
       />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href="/icons/icon-192x192.png"
+        href="/icons/manifest-192x192.png"
       />
 
 <link rel="apple-touch-icon" sizes="180x180" href="/siteimages/apple-splashapple-icon-180.png" />
