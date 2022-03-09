@@ -746,7 +746,7 @@ Gulfport, MS
 <div style={{fontSize:'3vw'}}>
 Open Daily At 11am
 <br />
-Saturday &amp; Sunday Brunch
+Sat &amp; Sun Brunch
 <br />
 Happy Hour 3-6pm
 </div>
@@ -1054,4 +1054,3 @@ Virtual Tour
 
 export default HomePage
   
-

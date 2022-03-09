@@ -9,7 +9,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 // import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 import ReactPlayer from 'react-player/lazy'
-// import { ImPlay } from "react-icons/im"
+import { ImPlay } from "react-icons/im"
 // import LightCycle from "../../static/assets/light-cycle.svg"
 // import QuoraStrike from "../../static/assets/quora-strike.svg"
 // import LoveSignal from "../../static/assets/love-signal.svg"
@@ -40,7 +40,7 @@ const Characters = () => (
 <CustomBox style={{}}>
 
 {/* GRID INTRO */}
-<div className="" id="" style={{display:'',  padding:'0', outline:'0px solid yellow', height:'100%', width:'100vw', position:'relative', overflow:'hidden'}}>
+<div className="" id="" style={{display:'',  padding:'0', outline:'0px solid yellow', height:'100%', width:'100%', position:'relative', overflow:'hidden'}}>
 
 {/* <div style={{position:'absolute', right:'20vh', top:'0', width:'300px', height:'200px', background:'red', color:'#fff'}}>DAMN</div> */}
 
@@ -55,7 +55,7 @@ const Characters = () => (
          height="100vh"
          playing={true}
             controls={false}
-            light={true}
+            light={false}
             loop={true}
             muted={true}
             config={{
@@ -71,18 +71,18 @@ const Characters = () => (
 
           playsinline
             playIcon={
-              <button aria-label="Click To Play" className="clickplay" style={{position:'', zIndex:'', top:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'#111', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'columh', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
+              <button aria-label="Click To Play" className="clickplay" style={{position:'', zIndex:'', top:'0', border:'0px solid red', width:'100vw', height:'100%', background:'#111', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'columh', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
   
 
   {/* <div style={{position:'absolute', top:'0', right:'0', zIndex:'', width:'100vw', height:'100vh', border:'0px solid yellow', padding:'0', margin:'0'}}> */}
 <StaticImage className=""
-alt="Todd Lambert Web development for photographers" src="../../static/assets/rackhouse-header.jpg" style={{height:'100vh', position:'relative', zIndex:'0'}}  />
+alt="Todd Lambert Web development for photographers" src="../../static/assets/rackhouse-header.jpg" style={{height:'100%', position:'absolute', zIndex:'0'}}  />
 {/* </div> */}
 
 
-          <div className="tronText" style={{ textAlign:'center', position:'absolute', zIndex:'77', right:'10vw', top:'25%' }}>
+          <div className="tronText" style={{position:'absolute', zIndex:'2', right:'15vw', top:'15%' }}>
             <span style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem', }}>Click To Play</span>
-    {/* <ImPlay className="tronText" style={{margin:'0 auto', width:'50%', fontSize:'60px', boxShadow:'0 0px 4px #E3272D', filter:'dropShadow(0px 0px 14px #E3272D)'}} /> */}
+    <ImPlay className="tronText" style={{margin:'0 auto', width:'50%', fontSize:'60px', boxShadow:'0 0px 4px #E3272D', filter:'dropShadow(0px 0px 14px #E3272D)'}} />
             </div>
 
             
@@ -115,7 +115,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/ra
         <div className="TRON" style={{fontWeight:'normal', fontFamily:'TronType'}}>TRON</div>
       </h1> */}
 
-<h1 className="tronText" style={{display:'flex', justifyContent:'center', textAlign:'center', fontSize:'14vw', position:'absolute', top:'0', marginTop:'', width:'100%', height:'70%', padding:'', opacity:'.6', zIndex:'', border:'0px solid blue'}}>
+<h1 className="tronText" style={{display:'flex', justifyContent:'center', textAlign:'center', fontSize:'14vw', position:'absolute', top:'0', marginTop:'', width:'100%', height:'100%', padding:'', opacity:'.6', zIndex:'', border:'0px solid blue'}}>
 <RackLogo style={{position:'absolute', top:'0', maxWidth:'100%'}} />
       </h1>
 
