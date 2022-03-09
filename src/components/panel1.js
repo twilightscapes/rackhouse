@@ -76,7 +76,7 @@ function Characters() {
                 },
               },
               youtube: {
-                playerVars: { showinfo:0, controls:0, start:7, end:34, mute:1, loop:0, rel:0 }
+                playerVars: { showinfo:0, controls:0, start:7, end:34, mute:1, loop:0, rel:0, origin:"http://rackspace.netlify.app" }
               },
             }}
 
