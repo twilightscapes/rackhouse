@@ -13,15 +13,15 @@ import { AiOutlineClose } from "react-icons/ai"
 
 
 // import TwilightLogo from "../../static/assets/TSidebarHover.svg"
-import { StoreContext } from "../context/store-context"
-import { Toast } from "./toast"
+// import { StoreContext } from "../context/store-context"
+// import { Toast } from "./toast"
 import Bug from "../../static/assets/logo.svg"
 import SiteLogo from "../../static/assets/logo.svg"
 // import { FiShare } from 'react-icons/fi';
 // import { FaRegPlusSquare } from 'react-icons/fa';
 // import Fullscreen from "../components/FullScreen"
-import { ImArrowRight } from "react-icons/im"
-import { CartButton } from "./cart-button"
+// import { ImArrowRight } from "react-icons/im"
+// import { CartButton } from "./cart-button"
 // import SearchIcon from "../../static/assets/search"
 // import Theme from "../components/theme"
 // import Audio from '../assets/audio.mp3'
@@ -42,13 +42,13 @@ import { navigate } from "gatsby";
 export function Layout({ children }) {
 
   // const { iconimage } = useSiteMetadata()
-  const { checkout, loading, didJustAddToCart } = React.useContext(StoreContext)
+  // const { checkout, loading, didJustAddToCart } = React.useContext(StoreContext)
 
-  const items = checkout ? checkout.lineItems : []
+  // const items = checkout ? checkout.lineItems : []
 
-  const quantity = items.reduce((total, item) => {
-    return total + item.quantity
-  }, 0)
+  // const quantity = items.reduce((total, item) => {
+  //   return total + item.quantity
+  // }, 0)
 
   return (
     <div style={{display:''}}> 

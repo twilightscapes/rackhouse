@@ -14,7 +14,7 @@ const netlifyCmsPaths = {
 const settings = require("./src/util/site.json")
 
 module.exports = {
-  flags: { PRESERVE_WEBPACK_CACHE: false },
+  flags: { PRESERVE_WEBPACK_CACHE: true },
   siteMetadata: settings.meta,
   plugins: [
     // {
@@ -144,24 +144,7 @@ module.exports = {
             }
           },
           
-          {
-            resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
-            options: {
-              // Fields to index
-              fields: [`title`, `template`, `slug`],
-              // How to resolve each field`s value for a supported node type
-              resolvers: {
-                // For any node of type MarkdownRemark, list how to resolve the fields` values
-                MarkdownRemark: {
-                  template: node => node.frontmatter.template,
-                  title: node => node.frontmatter.title,
-                  slug: node => node.frontmatter.slug,
-                },
-              },
-              // Optional filter to limit indexed nodes
-              filter: (node, getNode) => node.frontmatter.tags !== "exempt",
-            },
-          },
+
           `gatsby-remark-responsive-iframe`,
           {
             resolve: `gatsby-remark-prismjs`,
@@ -209,14 +192,14 @@ module.exports = {
 
 
  
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: [
-          settings.ga, // Google Analytics / GA
-        ],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-gtag`,
+    //   options: {
+    //     trackingIds: [
+    //       settings.ga,
+    //     ],
+    //   },
+    // },
 
     
     // {
