@@ -1,5 +1,6 @@
 
-import * as React from "react"
+
+import React, { useRef } from "react";
 import styled from "styled-components"
 
 import { Link } from "gatsby"
@@ -34,7 +35,16 @@ const CustomBox = styled.div`
 
 `
 
-const Characters = () => (
+
+
+
+function Characters() {
+
+
+  const playerRef = useRef(null);
+  const playerContainerRef = useRef(null);
+
+  return (
 
   
 <CustomBox style={{}}>
@@ -47,8 +57,9 @@ const Characters = () => (
 
 
 
-<div id="" className="wrap-element tronpanel" style={{overflow:'hidden', height:'',}}>
+<div id="" className="wrap-element tronpanel" style={{overflow:'hidden', height:'',}} ref={playerContainerRef}>
 <ReactPlayer
+        ref={playerRef}
          className=''
          url="https://youtu.be/14zqZsUzplg"
          width="100%"
@@ -212,5 +223,6 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/ra
 
 
 </CustomBox>
-)
+  )
+}
 export default Characters
