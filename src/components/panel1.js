@@ -89,7 +89,7 @@ function Characters() {
 alt="Todd Lambert Web development for photographers" src="../../static/assets/rackhouse-header.jpg" style={{height:'', position:'absolute', top:'0', zIndex:'-1'}}  />
 
 
-<div className="tronText" style={{position:'absolute', zIndex:'3', right:'10px', bottom:'-20vh' }}>
+<div className="specialfont" style={{position:'absolute', zIndex:'3', right:'10px', bottom:'-20vh' }}>
             <div style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'1.4rem', }}>Click To Play</div>
     <ImPlay className="" style={{margin:'0 auto', width:'50%', fontSize:'30px', filter:'dropShadow(0px 0px 14px #E3272D)'}} />
             </div>

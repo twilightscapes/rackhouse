@@ -11,7 +11,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Helmet } from "react-helmet"
 import { getSrc } from "gatsby-plugin-image"
 import BlogListHome from "../components/blog-list-home"
-// import Newsignup from "../components/newssign"
+import Newsignup from "../components/newssign"
 // import FrontLoader from "../../static/assets/grid-loader.svg"
 import { RiArrowRightSLine } from "react-icons/ri"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
@@ -559,6 +559,12 @@ alt="" src="../../static/assets/HICKORY-SMOKED-OF-WS.jpg" />
 
 
 
+<div className="allin60panel" style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'100vw', height:'100%', margin:'0', background:''}}>
+<div style={{ background:'rgba(0,0,0,0.10)', width:'90vw', position:'relative', top:'', margin:'0 auto', padding:'4% 5%', zIndex:'1', textAlign:'', border:'1px solid #000', borderRadius:'12px', textDecoration:'none', color:'#cccc'}}>
+  <Newsignup />
+  </div>
+</div>
+
 
 
 {/* <div>
@@ -628,11 +634,7 @@ alt="Mystery Science Theater 3000 - All In 60 Seconds" src="../../static/assets/
 </div> */}
 
 
-{/* <div className="allin60panel actionJackson custom-cursor" style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'100vw', height:'100vh', paddingTop:'0', background:''}}>
-<div style={{ background:'rgba(0,0,0,0.10)', width:'80vw', position:'relative', top:'', margin:'5vh auto', padding:'4% 5%', zIndex:'1', textAlign:'', border:'1px solid #000', borderRadius:'12px', textDecoration:'none', color:'#cccc'}}>
-  <Newsignup />
-  </div>
-</div> */}
+
 
 
 

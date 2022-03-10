@@ -54,9 +54,9 @@ const NewsletterPage = () => (
 
 
             
-              <div className="txtshadow" style={{fontSize:'120%', textAlign:'center', marginTop:'10px'}}><strong>Get All The Latest Minutes</strong></div>
+              <div className="txtshadow specialfont" style={{fontSize:'120%', textAlign:'center', marginTop:'10px'}}><strong>Join The Rack Club!</strong></div>
               <br />
-              <span className="txtshadow" style={{fontSize:'95%'}}>Get notified when NEW Minutes drop </span>
+              <span className="txtshadow" style={{fontSize:'95%'}}>Get exclusive deals and perks</span>
 
              <div className="signbox" style={{display:'flex', gap:'10px'}}>
              
@@ -75,12 +75,12 @@ const NewsletterPage = () => (
             
 
             <button
-              className="button"
+              className="button actionJackson specialfont"
               
               type="submit"
               style={{marginTop:'-8px', fontSize:'clamp(1rem, 1.5vw, 1.5rem)', whiteSpace:'nowrap'}}
             >
-              Notify Me&nbsp;{" "}
+             I like deals&nbsp;{" "}
               <span className="icon -right">
                 <RiSendPlane2Line />
               </span>
