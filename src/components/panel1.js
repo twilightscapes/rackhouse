@@ -105,7 +105,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/ra
           />
 
 
-
+<RackLogo className="racklogo" style={{position:'absolute', top:'0', maxHeight:''}} />
 
 
 </div>

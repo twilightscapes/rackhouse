@@ -4976,6 +4976,7 @@ display:block;
   .frontvideo{max-height:35vh !important}
   .react-player iframe{position:relative; top:0 !important;}
   #homestart{height:35vh !important}
+  .racklogo {height: 35vh !important; }
 /* #homestart{height:60vh !important;} */
 }
 
