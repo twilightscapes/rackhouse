@@ -745,7 +745,7 @@ Order Online Now
 
 
 <div className="specialfont" style={{position:'absolute', bottom:'10vh', width:'100%', display:'flex', justifyContent:'space-between', padding:'4%', border:'0px solid', zIndex:'5'}}>
-<div style={{fontSize:'3vw'}}>
+<div style={{fontSize:'clamp(1.2rem, 3vw, 3.8rem)', textShadow:'1px 1px 1px #111'}}>
 1301 26th Avenue
 <br />
 Gulfport, MS
@@ -753,7 +753,7 @@ Gulfport, MS
 <a className="call" href="tel:+2282062744">228-206-2744</a>
 </div>
 
-<div style={{fontSize:'3vw'}}>
+<div style={{fontSize:'clamp(1.2rem, 3vw, 3.8rem)', textShadow:'1px 1px 1px #111'}}>
 Open Daily At 11am
 <br />
 Sat &amp; Sun Brunch
@@ -792,7 +792,7 @@ Happy Hour 3-6pm
       <div className="flexcheek " style={{padding:'1rem 2rem 0 2rem', maxHeight:'90vh',}}>
 
 
-          <h1 className="title1">
+          <h1 className="title1" style={{textAlign:'left', marginLeft:'1rem'}}>
             {/* {frontmatter.title} */}
             {/* Today's Popular Subjects <br /> */}
             The Rack House
