@@ -91,9 +91,9 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/ra
 {/* </div> */}
 
 
-          <div className="tronText" style={{position:'absolute', zIndex:'2', right:'15vw', top:'15%' }}>
+          <div className="tronText" style={{position:'absolute', zIndex:'2', right:'15vw', top:'25%' }}>
             <span style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem', }}>Click To Play</span>
-    <ImPlay className="tronText" style={{margin:'0 auto', width:'50%', fontSize:'60px', boxShadow:'0 0px 4px #E3272D', filter:'dropShadow(0px 0px 14px #E3272D)'}} />
+    <ImPlay className="tronText" style={{margin:'0 auto', width:'50%', fontSize:'60px', filter:'dropShadow(0px 0px 14px #E3272D)'}} />
             </div>
 
             
