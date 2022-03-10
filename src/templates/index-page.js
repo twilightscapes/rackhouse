@@ -645,7 +645,7 @@ alt="Mystery Science Theater 3000 - All In 60 Seconds" src="../../static/assets/
 </div>
 
 
-<div className="actionJackson specialfont" style={{display:'grid', placeContent:'center', margin:'15vh auto 0 auto', padding:'0 2rem', maxWidth:'400px', fontSize:'clamp(1rem, 2vw, 2.8rem)', position:'relative', zIndex:'2'}}>
+<div className="actionJackson specialfont" style={{display:'grid', placeContent:'center', margin:'15vh auto 0 auto', padding:'2rem', maxWidth:'400px', fontSize:'clamp(1rem, 2vw, 2.8rem)', position:'relative', zIndex:'2'}}>
 <a aria-label="Order Online Now" title="Order Online Now" rel="noreferrer" target="_blank" href="https://www.toasttab.com/rackhousegulfport/v3/" style={{ textDecoration:'none'}}>
 Order Online Now
 </a>
