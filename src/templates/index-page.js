@@ -69,7 +69,7 @@ export const pageQuery = graphql`
         featuredImage {
           publicURL
           childImageSharp {
-            gatsbyImageData( layout: FULL_WIDTH)
+            gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
           }
         }
         secondaryImage {
@@ -670,12 +670,16 @@ alt="Mystery Science Theater 3000 - All In 60 Seconds" src="../../static/assets/
 
 
 {Image ? (
-            <GatsbyImage
-              image={Image}
-              alt={frontmatter.title + " - Featured image"}
-              className="featured-image1 layer1"
-              style={{height:'auto', width:'100vw', maxHeight:'', position:'absolute', top:'', zIndex:'0', objectFit:'contain', overflow:'', border:'0px solid red !important'}}
-            />
+            // <GatsbyImage
+            //   image={Image}
+            //   alt={frontmatter.title + " - Featured image"}
+            //   className="featured-image1 layer1"
+            //   style={{height:'auto', width:'100vw', maxHeight:'', position:'absolute', top:'', zIndex:'0', objectFit:'contain', overflow:'', border:'0px solid red !important'}}
+            // />
+
+            // <StaticImage src="../../static/assets/rackhouse-barrel.jpg" alt="Twilightscapes Default Image" style={{height:'auto', maxHeight:'100vh', position:'absolute', zIndex:'0', top:'0',border:'0px solid !important', objectFit:'contain',}} />
+
+            <img src="assets/rackhouse-barrel.jpg" alt="" style={{height:'auto', maxHeight:'100vh', position:'absolute', zIndex:'0', top:'0',border:'0px solid !important', objectFit:'contain',}} />
             
           ) : (
 
