@@ -746,8 +746,8 @@ Order Online Now
 
 
 
-<div className="specialfont" style={{position:'absolute', bottom:'5%', width:'100%', display:'flex', justifyContent:'space-between', padding:'10%', border:'0px solid', zIndex:'5'}}>
-<div style={{fontSize:'clamp(1.1rem, 3vw, 3.8rem)', textShadow:'1px 1px 1px #111'}}>
+<div className="specialfont" style={{position:'absolute', bottom:'5%', width:'100%', display:'flex', justifyContent:'space-between', gap:'20px', padding:'10%', border:'0px solid', zIndex:'5'}}>
+<div style={{fontSize:'clamp(1rem, 3vw, 3.8rem)', textShadow:'1px 1px 1px #111', width:'50%'}}>
 1301 26th Avenue
 <br />
 Gulfport, MS
@@ -755,7 +755,7 @@ Gulfport, MS
 <a className="call" href="tel:+2282062744">228-206-2744</a>
 </div>
 
-<div style={{fontSize:'clamp(1.1rem, 3vw, 3.8rem)', textShadow:'1px 1px 1px #111'}}>
+<div style={{fontSize:'clamp(.9rem, 3vw, 3.8rem)', textShadow:'1px 1px 1px #111', width:'50%', textAlign:'right'}}>
 Open Daily At 11am
 <br />
 Sat &amp; Sun Brunch
@@ -1053,8 +1053,8 @@ position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px
 
 <div className="specialfont" style={{textAlign:'center', fontSize:'5vw', margin:'10vh auto 0 auto', maxWidth:'80vw'}}>
 Virtual Tour
-  <Link state={{modal: true}} to="/virtual-tour/" className="navbar-item   fire" style={{margin:'2rem 2rem 0 2rem', textDecoration:'none'}}>
-  <StaticImage src="../../static/assets/virtual-tour.jpg" alt="Twilightscapes Default Image" style={{height:'auto', position:'', zIndex:'', top:'',border:'0px solid !important', objectFit:'contain',}} />
+  <Link state={{modal: true}} to="/virtual-tour/" className="" style={{margin:'2rem 2rem 0 2rem', textDecoration:'none'}}>
+  <StaticImage src="../../static/assets/virtual-tour.jpg" alt="Twilightscapes Default Image" style={{height:'auto', position:'', zIndex:'', top:'',border:'10px solid !important', borderRadius:'12px', objectFit:'contain',}} />
 </Link>
 </div>
 <br /><br />

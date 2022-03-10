@@ -1376,7 +1376,7 @@ height:100%;
               } */
 
               .horizontal-scroll::before{
-                content:'  \2329\2329  swipe for SPECIALS ';
+                content:'  \2329\2329 SPECIALS ';
                 position:absolute;
                 z-index:2;
                 display: inline-block;
@@ -1408,10 +1408,10 @@ height:100%;
 
              @media (hover: hover) {
 .horizontal-scroll-wrapper::before, .sliderholder1::before{
-                content:' scroll \276F \276F ' !important;
+                content:' SPECIALS \276F \276F ' !important;
               }
 .horizontal-scroll::before, .sliderholder1::before{
-                content:'Scroll for SPECIALS \276F \276F ' !important;
+                content:'SPECIALS \276F \276F ' !important;
               }
 
              }
