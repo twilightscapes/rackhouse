@@ -3,7 +3,7 @@ import { useSiteMetadata } from "../hooks/use-site-metadata"
 
 // import Theme from "../components/theme"
 import Consent from "../components/Consent"
-// import Install from "../components/Install-footer"
+import Install from "../components/Install-footer"
 import Icons from "../util/socialmedia.json"
 import {
   RiFacebookBoxFill,
@@ -199,7 +199,10 @@ export function Footer() {
       <footer className="" style={{display:'flex', flexDirection:'column', padding:'1rem 0', marginTop:'0', position:'relative'}}>
 
     <Consent />
+<br />
 
+    <Install />
+<br />
     
       <div className="" style={{textAlign:'center'}}>
 
