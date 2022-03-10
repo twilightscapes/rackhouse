@@ -1091,7 +1091,7 @@ body.homepage .ReactModalPortal .nextbutt {display: none !important;}
 .nextbutt .backbutton {display: flex; align-self: center; justify-content: center; margin-top:10px; text-align:center;}
 
 
-.ReactModalPortal div.toppad{border:0px solid blue !important; display: none !important;}
+/* .ReactModalPortal div.toppad{border:0px solid blue !important; display: none !important;} */
 
 /* .ReactModalPortal {margin:0 19% !important; width:80% !important; z-index: 2;} */
 
