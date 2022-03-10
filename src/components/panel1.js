@@ -91,7 +91,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/ra
 
 <div className="specialfont" style={{position:'absolute', zIndex:'3', right:'10px', top:'150px' , background:'rgba(0, 0, 0, .5)', padding:'5px', borderRadius:'12px', textShadow:'2px 2px 2px #333', backdropFilter:'blur(4px)'}}>
             <div style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'1.4rem', }}>Click To Play</div>
-    <ImPlay className="" style={{margin:'0 auto', width:'50%', fontSize:'30px', filter:'dropShadow(0px 0px 14px #E3272D)'}} />
+    <ImPlay className="" style={{margin:'0 auto', width:'', fontSize:'30px', filter:'dropShadow(0px 0px 14px #E3272D)'}} />
             </div>
 
    

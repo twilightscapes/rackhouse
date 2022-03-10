@@ -80,7 +80,7 @@ const NewsletterPage = () => (
               type="submit"
               style={{marginTop:'-8px', fontSize:'clamp(1rem, 1.5vw, 1.5rem)', whiteSpace:'nowrap'}}
             >
-             I like deals&nbsp;{" "}
+             I like deals and perks&nbsp;{" "}
               <span className="icon -right">
                 <RiSendPlane2Line />
               </span>
