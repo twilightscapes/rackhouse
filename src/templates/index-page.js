@@ -70,7 +70,7 @@ export const pageQuery = graphql`
         featuredImage {
           publicURL
           childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
         secondaryImage {
@@ -105,6 +105,29 @@ export const pageQuery = graphql`
       }
     }
 
+    menuimage: file(relativePath: { eq: "rackhouse-menu-button.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED)
+      }
+    }
+
+    
+    libationsimage: file(relativePath: { eq: "rackhouse-libations-button.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED)
+      }
+    }
+
+
+
+    bourbonimage: file(relativePath: { eq: "rackhouse-bourbon-header.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED)
+      }
+    }
+
+    
+
 
     
 
@@ -129,7 +152,7 @@ export const pageQuery = graphql`
             featuredImage {
               publicURL
               childImageSharp {
-                gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+                gatsbyImageData( layout: FULL_WIDTH)
               }
             }
           }
@@ -150,10 +173,13 @@ export const pageQuery = graphql`
 
 const HomePage = ({ data }) => {
 
-
+  
  
 
-//  const imageData = data.desktop.childImageSharp.fluid
+ const MenuImage = data.menuimage.childImageSharp.gatsbyImageData
+ const LibationsImage = data.libationsimage.childImageSharp.gatsbyImageData
+ const BourbonImage = data.bourbonimage.childImageSharp.gatsbyImageData
+
 
   // const { postcount } = useSiteMetadata()
   const { markdownRemark, posts } = data 
@@ -161,6 +187,8 @@ const HomePage = ({ data }) => {
   const Image = frontmatter.featuredImage
     ? frontmatter.featuredImage.childImageSharp.gatsbyImageData
     : ""
+  
+  
 
     const SecondaryImage = frontmatter.secondaryImage
     ? frontmatter.secondaryImage.childImageSharp.gatsbyImageData
@@ -677,14 +705,14 @@ Order Online Now
 
 
 {Image ? (
-            // <GatsbyImage
-            //   image={Image}
-            //   alt={frontmatter.title + " - Featured image"}
-            //   className="featured-image1 layer1"
-            //   style={{height:'auto', width:'100vw', maxHeight:'', position:'absolute', top:'', zIndex:'0', objectFit:'contain', overflow:'', border:'0px solid red !important'}}
-            // />
+            <GatsbyImage loading="eager"
+              image={Image}
+              alt={frontmatter.title + " - Featured image"}
+              className="featured-image1 layer1"
+              style={{height:'auto', width:'100vw', maxHeight:'', position:'absolute', top:'', zIndex:'0', objectFit:'contain', overflow:'', border:'0px solid red !important'}}
+            />
 
-            <StaticImage loading="eager" src="../../static/assets/rackhouse-barrel.jpg" alt="Default Image" style={{height:'auto', maxHeight:'100vh', position:'relative', zIndex:'0', top:'0', border:'0px solid !important', objectFit:'cover',}} />
+            // <StaticImage loading="eager" src="../../static/assets/rackhouse-barrel.jpg" alt="Default Image" style={{height:'auto', maxHeight:'100vh', position:'relative', zIndex:'0', top:'0', border:'0px solid !important', objectFit:'cover',}} />
 
             // <img src="assets/rackhouse-barrel.jpg" alt="" style={{height:'auto', maxHeight:'100vh', position:'absolute', zIndex:'0', top:'0',border:'0px solid !important', objectFit:'contain',}} />
             
@@ -1017,7 +1045,22 @@ position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px
 
 <div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'flex-start', pointerEvents:'none'}}>
     <a className="noexit" href="https://toddlambert.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>
-    <StaticImage src="../../static/assets/rackhouse-menu-button.jpg" alt="Todd Lambert is an independent artist, creator, design, developer and generally a unicorn" style={{borderRadius:'8px'}}  /></a>
+    {/* <StaticImage src="../../static/assets/rackhouse-menu-button.jpg" alt="Todd Lambert is an independent artist, creator, design, developer and generally a unicorn" style={{borderRadius:'8px'}}  /> */}
+
+    {MenuImage ? (
+            <GatsbyImage
+              image={MenuImage}
+              alt="Image Alt Text"
+              className=""
+              style={{borderRadius:'8px'}}
+            />
+          ) : (
+            ""
+          )}
+
+
+
+    </a>
     <br />
     Our menu is steep in the traditions of the great steakhouses of America, however at virtually every step we have added our own "Rack House style" flair. We focus on providing a fantastic steak.
     {/* <br /><br />
@@ -1028,22 +1071,40 @@ position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px
     
     <div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'flex-start', pointerEvents:'none'}}>
     <a className="noexit" href="https://urbanfetish.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>
-    <StaticImage src="../../static/assets/rackhouse-libations-button.jpg" alt="Todd Lambert Night photos" style={{borderRadius:'8px'}}  /></a>
+    {/* <StaticImage src="../../static/assets/rackhouse-libations-button.jpg" alt="Todd Lambert Night photos" style={{borderRadius:'8px'}}  /> */}
+    {LibationsImage ? (
+            <GatsbyImage
+              image={LibationsImage}
+              alt="Image Alt Text"
+              className=""
+              style={{borderRadius:'8px'}}
+            />
+          ) : (
+            ""
+          )}
+    </a>
     <br />
     Our mezzanine level of the Rack House was designed to be a place to sit back in a comfy couch, leather chair, or at the bar with friends and enjoy a unique atmosphere and great libations.
-    {/* <br /><br />
-    <div style={{textAlign:'center',}}><a className="post-card button " href="https://urbanfetish.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>UrbanFetish.com</a></div> */}
     </div>
 
 
 
     <div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'flex-start', pointerEvents:'none'}}>
     <a className="noexit" href="https://vidsocks.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit'}}>
-    <StaticImage src="../../static/assets/rackhouse-bourbon-header.jpg" alt="Todd builds Web Apps"  style={{borderRadius:'8px'}} /></a>
+    {/* <StaticImage src="../../static/assets/rackhouse-bourbon-header.jpg" alt="Todd builds Web Apps"  style={{borderRadius:'8px'}} /> */}
+    {BourbonImage ? (
+            <GatsbyImage
+              image={BourbonImage}
+              alt="Image Alt Text"
+              className=""
+              style={{borderRadius:'8px'}}
+            />
+          ) : (
+            ""
+          )}
+    </a>
     <br />
     Join the Bourbon Society and you get to enjoy plenty of perks such as a personalized decanter, exclusive access to coveted bourbons, monthly tastings and so much more!
-    {/* <br /><br />
-    <div style={{textAlign:'center',}}><a className="post-card button " href="https://vidsocks.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>VidSocks.com</a></div> */}
     </div>
 
 
