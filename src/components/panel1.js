@@ -66,7 +66,7 @@ function Characters() {
          height="100vh"
          playing={true}
             controls={false}
-            light={false}
+            light={true}
             loop={true}
             muted={true}
             config={{
