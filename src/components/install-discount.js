@@ -130,7 +130,7 @@ left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex
 
 
 
-<div className="container" style={{padding:'1rem 2rem', border:'0px solid #555',  color:'#fff', textAlign:'center', position:'relative', textShadow:'2px 2px 0 #000', overflow:'hidden', borderRadius:'12px', background:'rgb(0, 0, 0, .5)' }}>
+<div className="container" style={{padding:'0 2rem', border:'0px solid #555',  color:'#fff', textAlign:'center', position:'relative', textShadow:'2px 2px 0 #000', overflow:'hidden', borderRadius:'12px', background:'rgb(0, 0, 0, .5)' }}>
 
 
 
@@ -146,8 +146,8 @@ Current Availability: &nbsp; {date}
 
 
     
-<p style={{fontSize:'clamp(1.2rem, 2.2vw, 3.8rem)', fontWeight:'bold', textAlign:'center', textShadow:'1px 1px 0 #666'}}>
-  Let's create something <span>great together</span>.</p>
+<p style={{fontSize:'clamp(1.2rem, 2vw, 3.8rem)', fontWeight:'bold', textAlign:'center', textShadow:'1px 1px 0 #666'}}>
+  Let's create something <span>great together</span></p>
 
 
 
@@ -172,7 +172,7 @@ Current Availability: &nbsp; {date}
 
  <div className="" style={{display:'grid', flexDiection:'', placeContent:'center', height:'', position:'absolute', left:'', right:'', top:'', width:'500px'}}> */}
 
-<button aria-label="Click To Play" className="actionJackson tronText" style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'100%', borderRadius:'50px',fontSize:'2vw', padding:'5% 8%', }}>
+<button aria-label="Click To Play" className="actionJackson tronText" style={{display:'flex', justifyContent:'center', zIndex:'2', filter:'drop-shadow(2px 2px 2px #000)', width:'100%', borderRadius:'50px',fontSize:'3vw', padding:'5% 8%', }}>
   
   <Link state={{modal: true}} to="/contact/" style={{color:''}}>HIRE ME!</Link>
   

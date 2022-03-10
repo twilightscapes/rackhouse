@@ -197,7 +197,7 @@ const HomePage = ({ data }) => {
     function AddSvg(){
       const svgUrl = "../assets/" + frontmatter.svgImage.relativePath + ""
       return (
-        <object title="Animation: Milky Way rotating over Todd Lambert while he is camping in front of a campfire" className={svgZindex + " " + svgZindex} id="svg1" data={svgUrl} type="image/svg+xml" style={{position:'absolute', top:'', left:'0', right:'0', bottom:'0', overflow:'hidden', border:'0px solid red', zIndex:'2', width:'100vw', height:'auto',  }} alt="Animation: Milky Way rotating over Todd Lambert while he is camping in front of a campfire" >You need a new browser</object>
+        <object title="Animation: Milky Way rotating over Todd Lambert while he is camping in front of a campfire" className={svgZindex + " " + svgZindex} id="svg1" data={svgUrl} type="image/svg+xml" style={{position:'absolute', top:'', left:'0', right:'0', bottom:'0', overflow:'hidden', border:'0px solid red', zIndex:'2', width:'100vw', height:'auto',  }} alt="Animation: Milky Way rotating over Todd Lambert while he is camping in front of a campfire" ></object>
       )
     }
 
@@ -645,11 +645,7 @@ alt="Mystery Science Theater 3000 - All In 60 Seconds" src="../../static/assets/
 </div>
 
 
-<div className="actionJackson specialfont" style={{display:'grid', placeContent:'center', margin:'15vh auto 15vh auto', padding:'1rem', maxWidth:'400px', fontSize:'clamp(1rem, 2vw, 2.8rem)', position:'relative', zIndex:'2'}}>
-<a aria-label="Order Online Now" title="Order Online Now" rel="noreferrer" target="_blank" href="https://www.toasttab.com/rackhousegulfport/v3/" style={{ textDecoration:'none', padding:'1rem'}}>
-Order Online Now
-</a>
-</div>
+
 
 
 <div name="container21" className="container21" style={{marginTop:'',}}>
@@ -672,14 +668,14 @@ Order Online Now
 
 
 {Image ? (
-            // <GatsbyImage
-            //   image={Image}
-            //   alt={frontmatter.title + " - Featured image"}
-            //   className="featured-image1 layer1"
-            //   style={{height:'auto', width:'100vw', maxHeight:'', position:'absolute', top:'', zIndex:'0', objectFit:'contain', overflow:'', border:'0px solid red !important'}}
-            // />
+            <GatsbyImage
+              image={Image}
+              alt={frontmatter.title + " - Featured image"}
+              className="featured-image1 layer1"
+              style={{height:'auto', width:'100vw', maxHeight:'', position:'absolute', top:'', zIndex:'0', objectFit:'contain', overflow:'', border:'0px solid red !important'}}
+            />
 
-            <StaticImage src="../../static/assets/rackhouse-barrel.jpg" alt="Twilightscapes Default Image" style={{height:'auto', maxHeight:'100vh', position:'relative', zIndex:'0', top:'0',border:'0px solid !important', objectFit:'contain',}} />
+            // <StaticImage src="../../static/assets/rackhouse-barrel.jpg" alt="Twilightscapes Default Image" style={{height:'auto', maxHeight:'100vh', position:'relative', zIndex:'0', top:'0',border:'0px solid !important', objectFit:'contain',}} />
 
             // <img src="assets/rackhouse-barrel.jpg" alt="" style={{height:'auto', maxHeight:'100vh', position:'absolute', zIndex:'0', top:'0',border:'0px solid !important', objectFit:'contain',}} />
             
@@ -739,6 +735,12 @@ Order Online Now
           ) : (
             ""
           )}
+
+<div className="actionJackson specialfont" style={{display:'flex', justifyContent:'', alignSelf:'', margin:'0 25%', padding:'1rem', maxWidth:'', fontSize:'clamp(1rem, 2vw, 2.8rem)', position:'relative', bottom:'40%', zIndex:'2'}}>
+<a aria-label="Order Online Now" title="Order Online Now" rel="noreferrer" target="_blank" href="https://www.toasttab.com/rackhousegulfport/v3/" style={{ textDecoration:'none', padding:'2rem', textShadow:'1px 1px 0 #333'}}>
+Order Online Now
+</a>
+</div>
 
 <div className="specialfont" style={{position:'absolute', bottom:'10vh', width:'100%', display:'flex', justifyContent:'space-between', padding:'4%', border:'0px solid', zIndex:'5'}}>
 <div style={{fontSize:'3vw'}}>
