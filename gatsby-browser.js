@@ -1,9 +1,9 @@
 // import * as React from "react"
 // import { StoreProvider } from "./src/context/store-context"
-import "./src/styles/reset.css"
-import "./src/styles/variables.css"
-import "./src/styles/global.css"
-import "./src/assets/scss/style.scss"
+import "./src/assets/scss/reset.scss"
+import "./src/assets/scss/global.scss"
+import "./src/styles/styles.css"
+
 
 // import SimpleReactLightbox from 'simple-react-lightbox'
 

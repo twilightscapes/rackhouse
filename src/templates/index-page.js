@@ -17,6 +17,7 @@ import { RiArrowRightSLine } from "react-icons/ri"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 // import BackgroundImage from 'gatsby-background-image'
 import Panel1 from "../components/panel1"
+import SocialMe from "../components/share"
 // import Panel2 from "../pages/shawshank-trailer"
 
 
@@ -1059,6 +1060,8 @@ Virtual Tour
 </div>
 <br /><br />
 
+
+<SocialMe />
 
 <Footer />
     </Layout>

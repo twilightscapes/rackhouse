@@ -20,7 +20,7 @@ youtubecontrols: "0"
 youtubeautostart: "1"
 isnftforsale: ""
 svgzindex: "0"
-comments: ""
+comments: "1"
 shareable: "1"
 underlayImage: /assets/transparent.png
 featuredImage: /assets/transparent.png

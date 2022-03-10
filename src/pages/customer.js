@@ -4,7 +4,7 @@ import { Layout } from "../components/layout"
 
 import { Link } from "gatsby"
 
-import { StaticImage } from "gatsby-plugin-image"
+// import { StaticImage } from "gatsby-plugin-image"
 
 
 
@@ -39,7 +39,6 @@ export default function CustomerPage() {
     
   
 
-    <StaticImage src="../img/toddlambert.jpg" alt="Todd Travels" />
     <br />
      <p>If you should ever have any questions or concerns, please feel free to drop me a line anytime.</p>
 
