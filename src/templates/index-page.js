@@ -647,6 +647,13 @@ alt="Mystery Science Theater 3000 - All In 60 Seconds" src="../../static/assets/
 
 
 
+<div className="specialfont" style={{display:'flex', justifyContent:'center', alignSelf:'center', width:'100vw', margin:'0', padding:'1rem 20%', maxWidth:'', fontSize:'clamp(1rem, 2vw, 2.8rem)', position:'relative', top:'0', zIndex:'2', background:'transparent'}}>
+<a className="button actionJackson" aria-label="Order Online Now" title="Order Online Now" rel="noreferrer" target="_blank" href="https://www.toasttab.com/rackhousegulfport/v3/" style={{ textDecoration:'none', padding:'2rem', textShadow:'1px 1px 0 #333'}}>
+Order Online Now
+</a>
+</div>
+
+
 
 <div name="container21" className="container21" style={{marginTop:'',}}>
 
@@ -663,7 +670,6 @@ alt="Mystery Science Theater 3000 - All In 60 Seconds" src="../../static/assets/
   <article>
 
   <div className='stack-layout' style={{ display:'', position:'relative', top:'0', zIndex:'0', height:'', overflow:'hidden', filter: 'drop-shadow(0 0 20px #000)' }}>
-
 
 
 
@@ -704,8 +710,8 @@ alt="Mystery Science Theater 3000 - All In 60 Seconds" src="../../static/assets/
  
 
   {Svg ? (
-            <AddSvg />
-       
+            // <AddSvg />
+       ""
           ) : (
             ""
           )}
@@ -736,11 +742,7 @@ alt="Mystery Science Theater 3000 - All In 60 Seconds" src="../../static/assets/
             ""
           )}
 
-<div className="actionJackson specialfont" style={{display:'flex', justifyContent:'', alignSelf:'', margin:'0 25%', padding:'1rem', maxWidth:'', fontSize:'clamp(1rem, 2vw, 2.8rem)', position:'relative', bottom:'40%', zIndex:'2'}}>
-<a aria-label="Order Online Now" title="Order Online Now" rel="noreferrer" target="_blank" href="https://www.toasttab.com/rackhousegulfport/v3/" style={{ textDecoration:'none', padding:'2rem', textShadow:'1px 1px 0 #333'}}>
-Order Online Now
-</a>
-</div>
+
 
 <div className="specialfont" style={{position:'absolute', bottom:'10vh', width:'100%', display:'flex', justifyContent:'space-between', padding:'4%', border:'0px solid', zIndex:'5'}}>
 <div style={{fontSize:'3vw'}}>
@@ -763,6 +765,8 @@ Happy Hour 3-6pm
 
 
       </div>
+
+
   </article>
 </section>
 
