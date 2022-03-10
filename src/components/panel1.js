@@ -24,7 +24,7 @@ import { ImPlay } from "react-icons/im"
 // import QuoraStand from "../../static/assets/quora-ass.png"
 // import KevinFlynn from "../../static/assets/kevin-flynn.png"
 // import TronChick from "../../static/assets/tron-chick1.svg"
-import RackLogo from "../../static/assets/logointro.svg"
+// import RackLogo from "../../static/assets/logointro.svg"
 
 const CustomBox = styled.div`
 

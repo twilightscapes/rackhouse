@@ -165,9 +165,9 @@ const HomePage = ({ data }) => {
     ? frontmatter.secondaryImage.childImageSharp.gatsbyImageData
     : ""
   
-    const UnderlayImage = frontmatter.underlayImage
-    ? frontmatter.underlayImage.childImageSharp.gatsbyImageData
-    : ""
+    // const UnderlayImage = frontmatter.underlayImage
+    // ? frontmatter.underlayImage.childImageSharp.gatsbyImageData
+    // : ""
 
     // const { iconimage } = useSiteMetadata()
 
@@ -720,7 +720,7 @@ Order Online Now
 
 
 
-{UnderlayImage ? (
+{/* {UnderlayImage ? (
             <GatsbyImage
               image={UnderlayImage}
               alt={frontmatter.title + " - image"}
@@ -731,7 +731,7 @@ Order Online Now
             
           ) : (
             ""
-          )}
+          )} */}
 
 
   

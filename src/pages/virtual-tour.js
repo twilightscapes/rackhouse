@@ -2,7 +2,7 @@ import * as React from "react"
 import { Layout } from "../components/layout"
 
 
-import GoBack from "../components/goBack"
+// import GoBack from "../components/goBack"
 
 
 
