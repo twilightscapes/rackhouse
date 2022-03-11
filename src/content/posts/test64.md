@@ -1,10 +1,10 @@
 ---
 template: blog-post
-title: Fuck Year
-slug: /test32
+title: Testing this byotch!
+slug: /test64
 date: 2022-03-11 01:43
 description: Test Description
-youtuber: "iHxmNzMfDj4"
+youtuber: "nJ38P5elTkg"
 youtuber2: ""
 youtubeshoworiginal: ""
 youtubersuggestion1: ""
@@ -22,7 +22,7 @@ isnftforsale: ""
 svgzindex: "0"
 comments: "1"
 shareable: "1"
-underlayImage: /assets/swd-foreground.png
+underlayImage: /assets/transparent.png
 featuredImage: /assets/rackhouse-bourbon-header.jpg
 svgImage: /assets/campfire.svg
 nftlink: ""
@@ -33,15 +33,20 @@ nftredeem: ""
 <!-- lYGald0tFro -->
 
 
-<h2 class="tronText" style="display:grid; place-content:center; text-align:center; font-size:12vw;">
-        <div class="">Coming Soon!</div>
-      </h2>
+<div class="specialfont" style="display:flex; justify-content:center; font-size:6vw; width:100vw; height:; border:0px solid yellow; position:absolute; bottom:0; left:0; ">
+        <h2 class="">Coming Soon!</h2>
+      </div>
 
 
 
 <!-- 6hB3S9bIaco -->
 
+<!-- 
+/assets/swd-foreground.png
 
+/assets/transparent.png
+
+ -->
 
 
 

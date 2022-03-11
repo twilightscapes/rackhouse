@@ -23,7 +23,7 @@ import { Footer } from "../components/footer"
 import {CopyToClipboard} from 'react-copy-to-clipboard'
 import ReactPlayer from 'react-player/lazy'
 
-// import YouTubed from "../pages/youtube"
+import YouTubed from "../pages/youtube"
 import { Seo } from "../components/seo"
 import { Layout } from "../components/layout"
 import ShareSocial from '../components/share' 
@@ -842,14 +842,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-{/* {Suggestion1 ? (
-            <div style={{position:'absolute', top:'-130px', left:'0', bottom:'', zIndex:'', maxWidth:'100vw', height:'85vh'}}>
-            <YouTubed />
-            </div>
-       
-          ) : (
-            ""
-          )} */}
+
 
 
 
@@ -877,7 +870,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
         <div
-        className="blog-post-content" style={{ fontSize:'1.1rem', textAlign:'left', aspectRatio:'16/9', padding:'10vh 0', margin:'0 auto', color:'inherit !important', border:'0px solid yellow', position:'absolute', top:'0', left:'0', zindex:'1', display:'grid', placeContent:'center'}}
+        className="blog-post-content" style={{ fontSize:'1.1rem', textAlign:'left', aspectRatio:'16/9', padding:'10vh 0', margin:'0 auto', color:'inherit !important', border:'0px solid yellow', position:'', top:'0', left:'0', zindex:'1', display:'grid', placeContent:'center'}}
         dangerouslySetInnerHTML={{ __html: html }}
       >
 
@@ -899,14 +892,21 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
       
+      {Suggestion1 ? (
+            <div style={{position:'relative', top:'0', left:'', bottom:'', zIndex:'', maxWidth:'100vw', height:'85vh'}}>
+            <YouTubed />
+            </div>
+       
+          ) : (
+            ""
+          )}
 
-
-{/* {Suggestion1 ? (
+{Suggestion1 ? (
             <ShowSuggestion style={{position:'relative', top:'', zIndex:'0',}} />
        
           ) : (
             ""
-          )} */}
+          )}
 
 { !YouTube2 ? (
             ""
