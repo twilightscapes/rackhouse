@@ -11,7 +11,7 @@ const CustomBox = styled.div`
 
 .resp-sharing-button__link {
   text-decoration: none;
-  color: #ccc;
+
   margin: 0.5em
 }
 
@@ -38,14 +38,14 @@ const CustomBox = styled.div`
 
 /* Non solid icons get a stroke */
 .resp-sharing-button__icon {
-  stroke: #fff;
+  stroke: #555;
   fill: none
 }
 
 /* Solid icons get a fill */
 .resp-sharing-button__icon--solid,
 .resp-sharing-button__icon--solidcircle {
-  fill: #fff;
+  fill: #555;
   stroke: none
 }
 

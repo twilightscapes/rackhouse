@@ -1,43 +1,23 @@
 import React, { } from "react"
-// import { SkipNavContent, SkipNavLink } from "./skip-nav"
-// import { Header } from "./header"
-// import { Footer } from "./footer"
 import { Seo } from "./seo"
 import { Link } from 'gatsby-plugin-modal-routing-3'
 import { ModalRoutingContext } from 'gatsby-plugin-modal-routing-3'
 import { AiOutlineClose } from "react-icons/ai"
-// import { AiOutlineFundProjectionScreen } from "react-icons/ai"
-// import { GiBackwardTime } from "react-icons/gi"
-// import { BsStopwatch } from "react-icons/bs"
-// import { BiMoviePlay } from "react-icons/bi"
 
-
-// import TwilightLogo from "../../static/assets/TSidebarHover.svg"
 // import { StoreContext } from "../context/store-context"
 // import { Toast } from "./toast"
 import Bug from "../../static/assets/logo.svg"
 import SiteLogo from "../../static/assets/logo.svg"
-// import { FiShare } from 'react-icons/fi';
-// import { FaRegPlusSquare } from 'react-icons/fa';
-// import Fullscreen from "../components/FullScreen"
-// import { ImArrowRight } from "react-icons/im"
+
 // import { CartButton } from "./cart-button"
 // import SearchIcon from "../../static/assets/search"
-// import Theme from "../components/theme"
-// import Audio from '../assets/audio.mp3'
-// import TouchUp from '../components/TouchUp'
-// import { IoMdFingerPrint } from 'react-icons/io'
+import Theme from "../components/theme"
+
 // import { Link } from "gatsby-plugin-anchor-links"
-
 // import { StaticImage } from "gatsby-plugin-image"
-// import Consent from './Consent'
+
 import Install from './install-discount'
-// import { useSiteMetadata } from "../hooks/use-site-metadata"
-// 
-// import { BiLeftArrow } from "react-icons/bi"
-import { navigate } from "gatsby";
-
-
+// import { navigate } from "gatsby";
 
 export function Layout({ children }) {
 
@@ -54,10 +34,7 @@ export function Layout({ children }) {
     <div style={{display:''}}> 
 <>
       <Seo />
-      {/* <SkipNavLink /> */}
 
-
-      
       <ModalRoutingContext.Consumer closeTimeoutMS={300} >
     {({ modal, closeTo }) => (
       <div style={{overflow:''}}>
@@ -81,41 +58,13 @@ export function Layout({ children }) {
   </ModalRoutingContext.Consumer>
 
 
-      {/* <Header /> */}
-
-      
-      
-      {/* <audio controls="controls" autoplay="false" src={Audio}>
-    Your browser does not support the HTML5 Audio element.
-</audio> */}
-
-{/* <Fullscreen /> */}
 
 <header name="pagetop" style={{}} >
-
-{/* <Link to="/"><img id="logo" className="twlogo1" src={twLogo} alt="Twilightscapes Logo" style={{margin:'16px 0 40px 4vw', minWidth:'100px', maxWidth:'100px', height:'auto', padding:'0', border:'0px solid red', position:'fixed', zIndex:'2'}} /></Link> */}
-
-
-
-
 
 
 
       <input type="checkbox" className="openSidebarMenu" id="openSidebarMenu" />
 
-
-      {/* <label id="menuicon" htmlFor="openSidebarMenu" className="sidebarIconToggle" style={{display:''}}>
-<div style={{textAlign:'center'}}>MENU</div>
-    <div className="spinner diagonal part-1"></div>
-    <div className="spinner horizontal"></div>
-    <div className="spinner diagonal part-2"></div>
-  </label> */}
-
-
-
-
-
-  
   <label htmlFor="openSidebarMenu" className="backdrop1" ><input type="checkbox" /></label>
 
 <label id="menuicon" htmlFor="openSidebarMenu" className="sidebarIconToggle">
@@ -126,71 +75,20 @@ export function Layout({ children }) {
 </div>
   </label>
   
-   <div id="sidebarMenu" style={{minWidth:'', width:''}}>
+   <div id="sidebarMenu" style={{minWidth:'', width:'',}}>
   
 {/* <div className="no-app promocode">
 30% OFF CODE: <span style={{color:'var(--primary-color)', fontWeight:'bold'}}>LoveTheNight</span>
 </div> */}
 
-
-
-
-
-
-
-
-
-
   <Install />
-
-
-
-	
-
-    
-
-
-
 
     <ul className="sidebarMenuInner post-card" style={{maxWidth:'400px', position:'absolute', right:'0', display:'', justifyContent:''}}>
 
-
-
-
     <li className="carto" style={{border:'none', margin:' 0', textAlign:'center'}}>
     <Link to="/" name="homereturn" title="return to home" style={{position:'absolute', display:'block', width:'180px', height:'180px', border:'0px solid'}}></Link>
-{/* <img src={iconimage} alt="Logo" width="100%" height="100%" /> */}
 <SiteLogo />
-{/* <object className="" id="logo" data={iconimage} type="image/svg+xml" style={{  overflow:'hidden', border:'0px solid red', zIndex:'0', width:'100%', maxWidth:'', height:'', background:'transparent'  }} alt="Animated Logo" title="Animated Logo" >Animated Logo</object> */}
-{/* <Link to="/">
-<LogoText style={{width:'100%', height:''}} />
-</Link> */}
  </li>
-
-
-
-<li className="carta">
- <Link className="navbar-item txtshadow" to="/contact/">
-Contact Me<span>Ordering Questions?</span>
-</Link>
-</li>
-
-
-
-
-
-
-
-
-
-{/* <li className="carto" style={{textAlign:''}}>
-
-      <div style={{display:'flex', gap:'10px'}}>
-
-        View By Project
-        </div>
-
-      </li>  */}
 
 
 <li className="carto" style={{textAlign:'', pointerEvents:'none'}}>
@@ -227,16 +125,6 @@ Contact Me<span>Ordering Questions?</span>
 </li>
 
 
-
-{/* <li className="carto" style={{textAlign:'center'}}>
-      <Link className="navbar-item txtshadow" to="/minutes/">
-      <div style={{display:'flex', gap:'10px'}}>
-      Current Minutes
-      </div>
-        </Link>
-</li> */}
-
-
 <li className="carto" style={{textAlign:'', pointerEvents:'none'}}>
               <Link className="navbar-item txtshadow" to="/about/">
 
@@ -247,64 +135,29 @@ Contact Me<span>Ordering Questions?</span>
 
 
 
-<li className="carto" style={{textAlign:'', pointerEvents:'none'}}>
-      <Link className="navbar-item txtshadow" to="/locations/">
+<li className="carto" style={{textAlign:'', pointerEvents:''}}>
+      <Link className="navbar-item txtshadow" to="/minutes/">
 
       Our Locations
 
         </Link>
 </li>
 
-
-
-
-
-      
-    
-      <li className="carta">
-      <div style={{display:'flex', justifyContent:'center'}}>
-<button className="back" onClick={()=>navigate(-1)} style={{padding:'4px 8px', borderRadius:'12px'}}>
-        {/* <span className="icon -left" style={{paddingRight:'1rem'}}>
-                <BiLeftArrow />
-        </span>  */}
-        {" "} Continue Choosing 
-</button>
-</div>
-      </li>
-
-      
-
-      {/* <li className="carto crypto" style={{border:'none', display:'flex', justifyContent:'space-around', verticalAlign:'center', padding:'5px 0 0 0' , background:'rgba(0,0,0,0)' }}>
+      <li className="carto crypto" style={{border:'none', display:'flex', justifyContent:'space-around', verticalAlign:'center', padding:'5px 0 0 0' , background:'rgba(0,0,0,0)' }}>
   
       <Theme  style={{padding:'0'}} />
-   <Link className="sherlock" to="/search/" style={{marginRight:'0', marginTop:'5px'}}>
+   {/* <Link className="sherlock" to="/search/" style={{marginRight:'0', marginTop:'5px'}}>
     <span className="carto"><SearchIcon /></span>
    </Link>
    
-   <CartButton quantity={quantity} />
+   <CartButton quantity={quantity} /> */}
 
 
-        </li> */}
-
-    
+        </li>
 
     </ul>
 
-
-
-
-
-
   </div>
-
-
-
-
-
-
-
-
-
 
       {/* <Toast show={loading || didJustAddToCart} >
         {!didJustAddToCart ? (
@@ -317,32 +170,15 @@ Contact Me<span>Ordering Questions?</span>
         )}
       </Toast> */}
  
-
-
-
       {/* <Link to="/search" style={{display:'flex', verticalAlign:'center', marginTop:'12px', marginRight:'20px'}}>
     <span><SearchIcon /></span>
    </Link>
 
   <div style={{marginTop:'5px'}}><CartButton quantity={quantity} /></div> */}
      
-
-
-     
-
 </header>
+{children}
 
-
-
-{/* <div className="toppad" style={{display:'block', height:'20px', border:'0px solid yellow'}}></div> */}
-
-
-
-      {/* <SkipNavContent className="intro"> */}
-
-        {children}
-        
-        {/* </SkipNavContent> */}
       
       
       {/* <Consent /> */}

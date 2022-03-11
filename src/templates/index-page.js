@@ -463,7 +463,12 @@ function Iframer() {
 <div className="custom-cursor " style={{margin:'', height:'100%', textDecoration:'none'}}>
 
   <Panel1 />
-
+  {Svg ? (
+            <AddSvg />
+ 
+          ) : (
+            ""
+          )}
 </div>
 
 
@@ -522,11 +527,11 @@ alt="" src="../../static/assets/HICKORY-SMOKED-OF-WS.jpg" />
 
 
 
-<div className="specialfont" style={{display:'flex', justifyContent:'center', alignSelf:'center', width:'100vw', margin:'0', padding:'1rem 20%', maxWidth:'', fontSize:'clamp(1rem, 2vw, 2.8rem)', position:'relative', top:'0', zIndex:'2', background:'transparent'}}>
-<a className="button actionJackson" aria-label="Order Online Now" title="Order Online Now" rel="noreferrer" target="_blank" href="https://www.toasttab.com/rackhousegulfport/v3/" style={{ textDecoration:'none', padding:'2rem', textShadow:'1px 1px 0 #333'}}>
+{/* <div className="specialfont" style={{display:'flex', justifyContent:'center', alignSelf:'center', width:'100vw', margin:'0', padding:'1rem 20%', maxWidth:'', position:'relative', top:'0', zIndex:'2',}}> */}
+<a className="button actionJacksons specialfont" aria-label="Order Online Now" title="Order Online Now" rel="noreferrer" target="_blank" href="https://www.toasttab.com/rackhousegulfport/v3/" style={{ textDecoration:'none', padding:'.5rem', textShadow:'1px 1px 0 #333', borderRadius:'8px', fontSize:'clamp(1rem, 2vw, 2.8rem)', textAlign:'center', display:'flex', justifyContent:'center', maxWidth:'', margin:'1rem 30%'}}>
 Order Online Now
 </a>
-</div>
+{/* </div> */}
 
 
 
@@ -548,7 +553,7 @@ Order Online Now
               image={Image}
               alt={frontmatter.title + " - Featured image"}
               className="featured-image1 layer1"
-              style={{height:'auto', width:'100vw', maxHeight:'', position:'absolute', top:'', zIndex:'0', objectFit:'contain', overflow:'', border:'0px solid red !important'}}
+              style={{height:'auto', width:'100vw', maxHeight:'', position:'', top:'', zIndex:'0', objectFit:'contain', overflow:'', border:'0px solid red !important'}}
             />
 
             // <StaticImage loading="eager" src="../../static/assets/rackhouse-barrel.jpg" alt="Default Image" style={{height:'auto', maxHeight:'100vh', position:'relative', zIndex:'0', top:'0', border:'0px solid !important', objectFit:'cover',}} />
@@ -579,12 +584,7 @@ Order Online Now
 
  
 
-  {Svg ? (
-            // <AddSvg />
-       ""
-          ) : (
-            ""
-          )}
+
 
 
 
@@ -614,7 +614,7 @@ Order Online Now
 
 
 
-<div className="specialfont" style={{position:'absolute', bottom:'5%', width:'100%', display:'flex', justifyContent:'space-between', gap:'20px', padding:'10%', border:'0px solid', zIndex:'5'}}>
+<div className="specialfont" style={{position:'absolute', bottom:'5%', width:'100%', display:'flex', justifyContent:'space-between', gap:'20px', padding:'10%', border:'0px solid', zIndex:'5', color:'#fff'}}>
 <div style={{fontSize:'clamp(1rem, 3vw, 3.8rem)', textShadow:'1px 1px 1px #111', width:'50%'}}>
 1301 26th Avenue
 <br />
@@ -648,7 +648,7 @@ Happy Hour 3-6pm
 
 
 
-<br />
+<br /><br />
 
 {/* show Info */}
 {ShowInfo ? (
@@ -930,8 +930,8 @@ position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px
 
 <div className="specialfont" style={{textAlign:'center', fontSize:'5vw', margin:'10vh auto 0 auto', maxWidth:'80vw'}}>
 Virtual Tour
-  <Link state={{modal: true}} to="/virtual-tour/" className="" style={{margin:'2rem 2rem 0 2rem', textDecoration:'none'}}>
-  <StaticImage src="../../static/assets/virtual-tour.jpg" alt="Twilightscapes Default Image" style={{height:'auto', position:'', zIndex:'', top:'',border:'10px solid !important', borderRadius:'12px', objectFit:'contain',}} />
+  <Link state={{modal: true}} to="/virtual-tour/" className="" style={{margin:'', textDecoration:'none'}}>
+  <StaticImage src="../../static/assets/virtual-tour.jpg" alt="Twilightscapes Default Image" style={{height:'auto', position:'', zIndex:'', top:'',border:'6px solid !important', borderRadius:'12px', objectFit:'contain',}} />
 </Link>
 </div>
 <br /><br />

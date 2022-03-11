@@ -11,7 +11,7 @@ import { Link, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { getSrc } from "gatsby-plugin-image"
-import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri"
+// import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri"
 import CommentBox from "../components/commentbox"
 // import { StaticImage } from "gatsby-plugin-image"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
@@ -85,20 +85,14 @@ const CustomBox = styled.div`
 
 
 const Pagination = props => (
-  <div className="pagination -post1" style={{position:'fixed', bottom:'10px'}}>
+  <div className="pagination -post1" style={{position:'fixed', bottom:'20px'}}>
     <ul className="" style={{}}>
       {props.previous && props.previous.frontmatter.template === "blog-post" && (
         // <li style={{border:'1px solid', borderRadius:'12px', filter:'drop-shadow(0 0px 6px rgba(0, 0, 0, 1))'}}>
         <li style={{}}>
           <Link style={{}}  to= {props.previous.frontmatter.slug + "/"} rel="prev">
-          <button className="">
-              <span className="TronType icon -left">
-                <RiArrowLeftLine />
-            
-              </span>{" "}
-             
-            
-            <span className="page-title">
+          <button className="" style={{display:'flex', justifyContent:'flex-end'}}>
+&#10094; &nbsp; {" "} <span className="page-title">
               {props.previous.frontmatter.title}
             </span></button>
           </Link>
@@ -107,13 +101,9 @@ const Pagination = props => (
       {props.next && props.next.frontmatter.template === "blog-post" && (
         <li style={{}}>
           <Link to={props.next.frontmatter.slug + "/"} rel="next">
-          <button className="">
-            
-            
-            <span className="page-title">{props.next.frontmatter.title}</span> {" "}
-              <span className="icon -right">
-                <RiArrowRightLine />
-              </span></button>
+          <button className="" style={{display:'flex', justifyContent:'flex-start'}}>
+            <span className="page-title">{props.next.frontmatter.title}</span> {" "} &nbsp; &#10095;
+          </button>
           </Link>
         </li>
       )}
@@ -146,7 +136,7 @@ const Post = ({ data, pageContext }) => {
   const { frontmatter, html, excerpt } = markdownRemark
 
 
-  const Image = frontmatter.featuredImage
+  const FrontImage = frontmatter.featuredImage
     ? frontmatter.featuredImage.childImageSharp.gatsbyImageData
     : ""
   
@@ -688,12 +678,12 @@ const svgUrl = frontmatter.svgImage.publicURL
   
   }}>
 
-{Image ? (
+{FrontImage ? (
             <GatsbyImage
-              image={Image}
+              image={FrontImage}
               alt={frontmatter.title + " - Featured image"}
               className="featured-image1 layer1"
-              style={{ width:'100vw', position:'absolute', top:'-1', zIndex:'',  border:'0px solid red !important', paddingBottom:'',}}
+              style={{ width:'100vw',  top:'0', zIndex:'-2',  border:'2px solid red !important', paddingBottom:'',}}
             />
 
           ) : (
@@ -789,17 +779,17 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-{Image ? (
+{/* {Image ? (
             <GatsbyImage
               image={Image}
               alt={frontmatter.title + " - Featured image"}
               className="featured-image1 layer1"
-              style={{ width:'100vw', position:'absolute', top:'0', zIndex:'',  border:'0px solid red !important', paddingBottom:'', height:'100vh'}}
+              style={{ width:'100vw', position:'absolute', top:'0', zIndex:'',  border:'0px solid red !important', paddingBottom:'', height:'100vh', background:'#111'}}
             />
 
           ) : (
           ""
-          )}
+          )} */}
         
             <div style={{display:'grid', placeContent:'center', fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem', width:'100%', position:'absolute', zIndex:'2', top:'30%'}}>Click To Play
 

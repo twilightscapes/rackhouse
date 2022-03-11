@@ -10,7 +10,7 @@ youtuber: ""
 youtubeautostart: "1"
 youtubeloop: ""
 title: Best Steaks on the Coast
-svgImage: /assets/null.svg
+svgImage: /assets/logointro.svg
 showPosts: ""
 cta:
   ctaText: View Our Menu

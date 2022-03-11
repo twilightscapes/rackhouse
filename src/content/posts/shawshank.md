@@ -4,7 +4,7 @@ title: Test this mofo
 slug: /testthismofo
 date: 2022-02-12 01:43
 description: Rack House
-youtuber: "c_V1iD6F1kk"
+youtuber: ""
 youtuber2: ""
 youtubeshoworiginal: ""
 youtubersuggestion1: ""
@@ -23,7 +23,7 @@ svgzindex: "0"
 comments: "1"
 shareable: "1"
 underlayImage: /assets/transparent.png
-featuredImage: /assets/transparent.png
+featuredImage: /assets/rackhouse-bourbon-header.jpg
 svgImage: /assets/null.svg
 nftlink: ""
 nftdrop: ""
@@ -48,6 +48,11 @@ nftredeem: ""
  
 
  
+<!-- 6hB3S9bIaco -->
 
-<!-- lYGald0tFro SOUNDTRACK 45> -->
-<!-- qzuM2XTnpSA OPERA 32-45 -->
+<!-- 
+/assets/swd-foreground.png
+
+/assets/transparent.png
+
+ -->
