@@ -98,14 +98,14 @@ p{
 	outline:1px rgb(0, 0, 0);
 }
 .button {
-	--padding: 15px;
-	--margin: 20px;
+padding: 15px;
+margin: 20px;
 	display: inline-flex;
 	align-items: center;
 	color:#fff !important;
 	background: linear-gradient(180deg, rgb(34, 26, 32) 1%, #111 99%);
 	align-self: center;
-	padding: var(--space-sm) var(--space-xl);
+	padding: 15px 20px;
 	border-radius: var(--radius-md);
 	border:1px solid rgb(104, 87, 102);
 	font-weight: var(--bold);
@@ -1121,9 +1121,10 @@ footer{
 
 @media (max-width: 48em) {
 	#controls{
-		position:absolute;
-		right:2vw;
-    bottom:-10% !important;
+		// position:absolute;
+		// right:2vw;
+    // bottom:-10% !important;
+    // z-index:10 !important;
 	}
 }
 
@@ -1237,7 +1238,7 @@ footer{
 // }
 
 .button {
-	--padding: "15px";
+	padding: 15px;
 	display: inline-flex;
 	align-items: center;
 	color:rgb(236, 228, 228) !important;

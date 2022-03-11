@@ -666,7 +666,31 @@ const svgUrl = frontmatter.svgImage.publicURL
 
         
 
-
+<Controls
+            ref={controlsRef}
+            onSeek={handleSeekChange}
+            onSeekMouseDown={handleSeekMouseDown}
+            onSeekMouseUp={handleSeekMouseUp}
+            onDuration={handleDuration}
+            onRewind={handleRewind}
+            onPlayPause={handlePlayPause}
+            onFastForward={handleFastForward}
+            playing={playing}
+            played={played}
+            elapsedTime={elapsedTime}
+            totalDuration={totalDuration}
+            onMute={hanldeMute}
+            muted={muted}
+            onVolumeChange={handleVolumeChange}
+            onVolumeSeekDown={handleVolumeSeekDown}
+            onChangeDispayFormat={handleDisplayFormat}
+            playbackRate={playbackRate}
+            onPlaybackRateChange={handlePlaybackRate}
+            // onToggleFullScreen={toggleFullScreen}
+            volume={volume}
+            onBookmark={addBookmark}
+            style={{positon:'absolute', top:'0', zIndex:'900'}}
+          />
 
 
 
@@ -674,9 +698,10 @@ const svgUrl = frontmatter.svgImage.publicURL
   overflow:'hidden',
   // height:'clamp(30vh, 80vh, 100vh)'
   aspectRatio:'16/9',
- 
-  
   }}>
+
+
+
 
 {FrontImage ? (
             <GatsbyImage
@@ -768,7 +793,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
           playsinline
             playIcon={
-              <button aria-label="Click To Play" className="clickplay" style={{position:'absolute', zIndex:'5', top:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'', justifyContent:'center', alignItem:'center', paddingTop:''}}>
+              <button aria-label="Click To Play" className="clickplay" style={{position:'absolute', zIndex:'5', top:'0', border:'0px solid red', width:'100vw', height:'100%', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'', justifyContent:'center', alignItem:'center', paddingTop:''}}>
 {/*   
           <div className="" style={{ textAlign:'center', display:'flex', justifyContent:'center', flexDirection:'column', animation:'fadeIn 3s',}}> */}
             
@@ -791,7 +816,7 @@ const svgUrl = frontmatter.svgImage.publicURL
           ""
           )} */}
         
-            <div style={{display:'grid', placeContent:'center', fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem', width:'100%', position:'absolute', zIndex:'2', top:'30%'}}>Click To Play
+            <div style={{display:'grid', placeContent:'center', fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem', width:'100%', position:'absolute', zIndex:'2', top:''}}>Click To Play
 
     <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} /></div>
             {/* </div> */}
@@ -804,30 +829,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-<Controls
-            ref={controlsRef}
-            onSeek={handleSeekChange}
-            onSeekMouseDown={handleSeekMouseDown}
-            onSeekMouseUp={handleSeekMouseUp}
-            onDuration={handleDuration}
-            onRewind={handleRewind}
-            onPlayPause={handlePlayPause}
-            onFastForward={handleFastForward}
-            playing={playing}
-            played={played}
-            elapsedTime={elapsedTime}
-            totalDuration={totalDuration}
-            onMute={hanldeMute}
-            muted={muted}
-            onVolumeChange={handleVolumeChange}
-            onVolumeSeekDown={handleVolumeSeekDown}
-            onChangeDispayFormat={handleDisplayFormat}
-            playbackRate={playbackRate}
-            onPlaybackRateChange={handlePlaybackRate}
-            // onToggleFullScreen={toggleFullScreen}
-            volume={volume}
-            onBookmark={addBookmark}
-          />
+
 </button>
 
 

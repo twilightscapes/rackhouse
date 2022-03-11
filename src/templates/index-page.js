@@ -187,7 +187,7 @@ const HomePage = ({ data }) => {
     function AddSvg(){
       const svgUrl = "../assets/" + frontmatter.svgImage.relativePath + ""
       return (
-        <object title="Animation: Milky Way rotating over Todd Lambert while he is camping in front of a campfire" className={svgZindex + " " + svgZindex} id="svg1" data={svgUrl} type="image/svg+xml" style={{position:'absolute', top:'', left:'0', right:'0', bottom:'0', overflow:'hidden', border:'0px solid red', zIndex:'2', width:'100vw', height:'auto',  }} alt="Animation: Milky Way rotating over Todd Lambert while he is camping in front of a campfire" ></object>
+        <object title="Animation: Milky Way rotating over Todd Lambert while he is camping in front of a campfire" className={svgZindex + " " + svgZindex} id="svg1" data={svgUrl} type="image/svg+xml" style={{position:'absolute', top:'', left:'', right:'', bottom:'0', overflow:'hidden', border:'0px solid red', zIndex:'3', width:'100vw', height:'auto',  }} alt="Animation: Milky Way rotating over Todd Lambert while he is camping in front of a campfire" ></object>
       )
     }
 
@@ -463,12 +463,8 @@ function Iframer() {
 <div className="custom-cursor " style={{margin:'', height:'100%', textDecoration:'none'}}>
 
   <Panel1 />
-  {Svg ? (
-            <AddSvg />
- 
-          ) : (
-            ""
-          )}
+
+
 </div>
 
 

@@ -24,13 +24,15 @@ import { ImPlay } from "react-icons/im"
 // import QuoraStand from "../../static/assets/quora-ass.png"
 // import KevinFlynn from "../../static/assets/kevin-flynn.png"
 // import TronChick from "../../static/assets/tron-chick1.svg"
-// import RackLogo from "../../static/assets/logointro.svg"
+import RackLogo from "../../static/assets/logointro.svg"
 
 const CustomBox = styled.div`
 
 
 
-
+.frontvideo iframe{
+  z-index:-2 !important;
+}
 
 
 `
@@ -54,7 +56,7 @@ function Characters() {
 
 
 
-<div id="" className="wrap-element tronpanel" style={{overflow:'', height:'',}} ref={playerContainerRef}>
+<div id="" className="wrap-element tronpanel" style={{overflow:'', height:'', position:'relative', zIndex:'0' }} ref={playerContainerRef}>
 <ReactPlayer
         ref={playerRef}
          className='frontvideo'
@@ -104,9 +106,9 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/ra
          
           />
 
-
-{/* <RackLogo className="racklogo" style={{position:'absolute', top:'0', maxHeight:''}} /> */}
-
+<div style={{position:'absolute', top:'0', width:'100vw', height:'100vh', zIndex:'2'}}>
+<RackLogo className="racklogo"  />
+</div>
 
 </div>
 
