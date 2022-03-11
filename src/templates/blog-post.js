@@ -641,7 +641,10 @@ const svgUrl = frontmatter.svgImage.publicURL
 {/* <div className='player-wrapper intro' style={{position:'relative', bottom:'0', zIndex:'', height:'100vh', maxHeight:'', overflow:'', filter: 'drop-shadow(0 0 20px #000)',  }}> */}
 
 
-<div className="contact" style={{position:'fixed', bottom:'20px', zIndex:'1',  left:'20px', right:'', display:'flex', justifyContent:'center', width:'400px', margin:'0 auto', gap:'30px'}}>
+<div className="contact" style={{position:'fixed', bottom:'20px', zIndex:'1',  left:'20px', right:'', display:'flex', justifyContent:'center', width:'', margin:'0 auto', gap:'30px'}}>
+
+<label id="menuicon1" htmlFor="openSidebarMenu" className="sidebarIconToggle1" style={{textDecoration:'2px underline #07f8f8', color:'#fff'}}>menu</label>
+
 
   <Link state={{modal: true}}  to="/contact/" className=" " style={{margin:'', textDecoration:''}}>contact</Link>
 
@@ -677,14 +680,20 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-<div className="wrap-element" style={{overflow:'hidden', height:'50vh'}}>
+<div className="wrap-element" style={{
+  overflow:'hidden',
+  // height:'clamp(30vh, 80vh, 100vh)'
+  aspectRatio:'16/9',
+ 
+  
+  }}>
 
 {Image ? (
             <GatsbyImage
               image={Image}
               alt={frontmatter.title + " - Featured image"}
               className="featured-image1 layer1"
-              style={{ width:'100vw', position:'absolute', top:'-1', zIndex:'-2',  border:'0px solid red !important', paddingBottom:'',}}
+              style={{ width:'100vw', position:'absolute', top:'-1', zIndex:'',  border:'0px solid red !important', paddingBottom:'',}}
             />
 
           ) : (
@@ -849,7 +858,7 @@ const svgUrl = frontmatter.svgImage.publicURL
               image={UnderlayImage}
               alt={frontmatter.title + " - image"}
               className="mcboaty"
-              style={{height:'auto', width:'100%', maxHeight:'100%', overflow:'hidden', position:'absolute', top:'0', zIndex:'',
+              style={{height:'auto', width:'100%', maxHeight:'100%', overflow:'hidden', position:'absolute', bottom:'0', zIndex:'',
              objectFit:'contain', border:'0px solid red !important'}}
             />
             
@@ -858,7 +867,7 @@ const svgUrl = frontmatter.svgImage.publicURL
           )}
 
           
-<object className="" id="svg1" data={svgUrl} type="image/svg+xml" style={{position:'absolute', top:'0', left:'', right:'', bottom:'', overflow:'', border:'0px solid red', zIndex:'', width:'100vw', height:'100%', background:'transparent', objectFit:'contain'   }} alt="animated content" title="animated content" ></object>
+<object className="" id="svg1" data={svgUrl} type="image/svg+xml" style={{position:'absolute', top:'', left:'', right:'', bottom:'0', overflow:'', border:'0px solid red', zIndex:'', aspectRatio:'', width:'100vw', background:'transparent', objectFit:'cover'   }} alt="animated content" title="animated content" ></object>
 
 
 
@@ -868,7 +877,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
         <div
-        className="blog-post-content" style={{ fontSize:'1.1rem', textAlign:'left', width:'100%', maxWidth:'', height:'100vh', padding:'10vh 0', margin:'0 auto', color:'inherit !important', border:'0px solid yellow', position:'absolute', top:'0', left:'0', zindex:'1', display:'grid', placeContent:'center'}}
+        className="blog-post-content" style={{ fontSize:'1.1rem', textAlign:'left', aspectRatio:'16/9', padding:'10vh 0', margin:'0 auto', color:'inherit !important', border:'0px solid yellow', position:'absolute', top:'0', left:'0', zindex:'1', display:'grid', placeContent:'center'}}
         dangerouslySetInnerHTML={{ __html: html }}
       >
 

@@ -207,7 +207,7 @@ export function Footer() {
       <div className="" style={{textAlign:'center'}}>
 
 
-      <Link state={{modal: true}} to="/contact/" className="navbar-item  button fire specialfont" style={{margin:'2rem 2rem 0 2rem', textDecoration:'none'}}>Contact Us - We&nbsp;<FaHeart />&nbsp;Feedback!</Link>
+      <Link state={{modal: true}} to="/contact/" className="button fire specialfont" style={{margin:'2rem 2rem', textDecoration:'none', fontSize:'clamp(1rem, 2vw, 2.8rem)', padding:'1rem 2rem', borderRadius:'8px'}}>Contact Us - We&nbsp;<FaHeart />&nbsp;Feedback!</Link>
 
  <div >
      
@@ -216,8 +216,8 @@ export function Footer() {
     ""
 
   ) : (
-    <div className="social-icons" style={{textAlign:'center', justifyContent:'center', display:'flex', alignItems:'center'}}>
-       <div className="socialtext" style={{fontSize:'14px',}}>Social<br />Links</div> {sIcons}
+    <div className="social-icons" style={{textAlign:'center', justifyContent:'center', display:'flex', alignItems:'center', margin:'3rem 0'}}>
+       <div className="socialtext" style={{fontSize:'14px',}}>We're<br />Social</div> {sIcons}
         </div>
   )}
   

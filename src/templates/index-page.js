@@ -1,31 +1,30 @@
 import React from "react";
 import { Link, graphql } from "gatsby"
-// import ReactPlayer from 'react-player/lazy'
 import { Layout } from "../components/layout"
 import { Footer } from "../components/footer";
 import { Seo } from "../components/seo"
-// import { ImPlay } from "react-icons/im"
+import { Helmet } from "react-helmet"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { StaticImage } from "gatsby-plugin-image"
-// import Controls from "../components/Controls";
-import { Helmet } from "react-helmet"
 import { getSrc } from "gatsby-plugin-image"
 import BlogListHome from "../components/blog-list-home"
 import Newsignup from "../components/newssign"
-// import FrontLoader from "../../static/assets/grid-loader.svg"
-import { RiArrowRightSLine } from "react-icons/ri"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
-// import BackgroundImage from 'gatsby-background-image'
-import Panel1 from "../components/panel1"
+import { RiArrowRightSLine } from "react-icons/ri"
+
 import SocialMe from "../components/share"
+
+// import ReactPlayer from 'react-player/lazy'
+// import { ImPlay } from "react-icons/im"
+// import Controls from "../components/Controls";
+
+
+import Panel1 from "../components/panel1"
+// import FrontLoader from "../../static/assets/grid-loader.svg"
 // import Panel2 from "../pages/shawshank-trailer"
-
-
-
 
 export const pageQuery = graphql`
   query HomeQueryHomeQuery($id: String! ) {
-    
     
     site {
       siteMetadata {
@@ -39,12 +38,6 @@ export const pageQuery = graphql`
         showfooter
       }
 
-
-
-
-      
-
-      
 
     }
     markdownRemark(id: { eq: $id }) {
@@ -94,44 +87,29 @@ export const pageQuery = graphql`
     }
 
 
-
-
-
-  
-
     desktop: file(relativePath: { eq: "curtains.jpg" }) {
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
       }
     }
 
+    
     menuimage: file(relativePath: { eq: "rackhouse-menu-button.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED)
+        gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED,)
       }
     }
-
-    
     libationsimage: file(relativePath: { eq: "rackhouse-libations-button.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED)
+        gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
       }
     }
-
-
-
     bourbonimage: file(relativePath: { eq: "rackhouse-bourbon-header.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED)
+        gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
       }
     }
 
-    
-
-
-    
-
-    
 
     posts: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
@@ -162,33 +140,16 @@ export const pageQuery = graphql`
   }
 `
 
-
-
-
-
-
-
-
-
-
 const HomePage = ({ data }) => {
-
-  
- 
-
  const MenuImage = data.menuimage.childImageSharp.gatsbyImageData
  const LibationsImage = data.libationsimage.childImageSharp.gatsbyImageData
  const BourbonImage = data.bourbonimage.childImageSharp.gatsbyImageData
-
-
   // const { postcount } = useSiteMetadata()
   const { markdownRemark, posts } = data 
   const { frontmatter, html, excerpt } = markdownRemark
   const Image = frontmatter.featuredImage
     ? frontmatter.featuredImage.childImageSharp.gatsbyImageData
     : ""
-  
-  
 
     const SecondaryImage = frontmatter.secondaryImage
     ? frontmatter.secondaryImage.childImageSharp.gatsbyImageData
@@ -264,11 +225,6 @@ const HomePage = ({ data }) => {
     // };
     
     // const { iconimage } = useSiteMetadata()
-
- 
-
-
-
 
 const YouTube = frontmatter.youtuber
 
@@ -408,29 +364,18 @@ function Iframer() {
 
    image={ siteUrl + getSrc(frontmatter.featuredImage) }
 />
-      
+        
 
 
 
 
-{/* VIDEO URLS */}
-
-
-
-{/* uCf3Q43fC_4 cool train */}
-
+<div id="homestart" className="horizontal-holder allin60panel" style={{position:'relative', height:'80vh', overflow:'hidden' }}>
 
 
 
 
 
-{/* <HomeHolder /> */}
-
-<div id="homestart" className="horizontal-holder allin60panel" style={{position:'relative', height:'70vh', overflow:'hidden' }}>
-{/* <div className="RArrow"><span></span></div> */}
-
-
-<div id="" className="wrap-element " style={{overflow:'hidden', width:'100vw', height:'', position:'relative', top:'0', zIndex:''}}>
+{/* <div id="" className="wrap-element " style={{overflow:'hidden', width:'100vw', height:'', position:'relative', top:'0', zIndex:''}}> */}
 
 
 
@@ -482,7 +427,7 @@ function Iframer() {
           
           
           
-          </div>
+          {/* </div> */}
 
 
 
@@ -496,46 +441,22 @@ function Iframer() {
           /> */}
 
           
-<div className="horizontal-scroll panels sitegrad movingBG" style={{}}>
+<div className="horizontal-scroll panels" style={{}}>
 
-
-
-
-
-
-<div className="panelspacer" style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'', height:'50%', paddingTop:'50%', background:''}}>
-
-  
-</div>
-
-
-{/* <div></div> */}
-
-
-
-{/* <GridLoader /> */}
+<div className="panelspacer" style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'', height:'50%', paddingTop:'50%', background:''}}></div>
 
 
 {/* <div id="homestart"><Panel1 /></div> */}
 
-{/* <BackgroundImage
-      Tag="section"
-      className=""
-      fluid={imageData}
-      backgroundColor={`#111`}
-      style={{}}
-     >
 
 
-
-
-<div className="donation2" style={{display:'grid',
+{/* <div className="donation2" style={{display:'grid',
   placeContent:'center', width:'100vw', height:'100vh', justifyContent:'center', position:'relative', background:'rgba(0,0,0,0.50)', webkitBackdropFilter:'blur(10px)', backdropFilter:'blur(14px)'}}>
 
   <h1 className="tronText " style={{fontSize:'7vw', padding:'3vh 5vw 20vh 5vw', position:'', top:'', border:'0px solid', diplay:'', placeContent:'center', maxWidth:'80vw', fontFamily:'inherit'}}><div className="lineOne">All that's cool </div> <div className="lineTwo">in 60 seconds</div><br /><span style={{fontSize:'2rem'}}>allin60.com</span></h1>
   
-</div>
-</BackgroundImage> */}
+</div> */}
+
 
 
 
@@ -547,12 +468,11 @@ function Iframer() {
 
 
 
-{/* <Panel2 /> */}
+
 
 
 <div>
 {/* <Link title=""  to="/pulp-fiction-trailer/" className="navbar-item  button " style={{margin:'', height:'100%', textDecoration:'none'}}> */}
-{/* <Panel3 /> */}
 <StaticImage className=""
 alt="Super Yummy" src="../../static/assets/FILET-SMALL.jpg" />
 {/* </Link> */}
@@ -561,7 +481,6 @@ alt="Super Yummy" src="../../static/assets/FILET-SMALL.jpg" />
 
 <div>
 {/* <Link title="Shawshank Redemption by Stephen King - All In 60 Seconds"  to="/shawshank-trailer/" className="navbar-item button " style={{margin:'', height:'100%', textDecoration:'none'}}> */}
-
 <StaticImage className=""
 alt="Delicious!" src="../../static/assets/FAROE-ISLAND-SALMON-scaled.jpg" />
 {/* </Link> */}
@@ -594,84 +513,9 @@ alt="" src="../../static/assets/HICKORY-SMOKED-OF-WS.jpg" />
   </div>
 </div>
 
-
-
-{/* <div>
-<Link title="Shawshank Redemption by Stephen King - All In 60 Seconds"  to="/shawshank-trailer/" className="navbar-item button fire" style={{margin:'', height:'100%', textDecoration:'none'}}>
-<Panel3 />
-<StaticImage className=""
-alt="Shawshank Redemption by Stephen King - All In 60 Seconds" src="../../static/assets/shawshank.jpg" />
-</Link>
-</div> */}
-
-
-
-{/* <div>
-<Link title="Pulp Fiction by Quentin Tarantino - All In 60 Seconds"  to="/pulp-fiction-trailer/" className="navbar-item  button fire" style={{margin:'', height:'100%', textDecoration:'none'}}>
-<Panel3 />
-<StaticImage className=""
-alt="Pulp Fiction by Quentin Tarantino - All In 60 Seconds" src="../../static/assets/pulpfiction.jpg" />
-</Link>
-</div> */}
-
-
-{/* <a href="https://tron.allin60.com/">
-<StaticImage className=""
-alt="Shawshank Redemption by Stephen King - All In 60 Seconds" src="../../static/assets/shawshank.jpg" />
-</a> */}
-
-
-{/* <div>
-<Link title="They Live by John Carpenter - All In 60 Seconds"  to="/they-live/" className="navbar-item  button fire" style={{margin:'', height:'100%', textDecoration:'none'}}>
-<StaticImage className=""
-alt="They Live by John Carpenter - All In 60 Seconds" src="../../static/assets/TheyLive-Header.jpg" />
-</Link>
-</div> */}
-
-
-{/* <a href="https://tron.allin60.com/">
-<StaticImage className=""
-alt="Pulp Fiction by Quentin Tarantino - All In 60 Seconds" src="../../static/assets/pulpfiction.jpg" />
-</a> */}
-
-
-{/* <div>
-<Link title="They Live by John Carpenter - All In 60 Seconds"  to="/mystery-science-theater-3022/" className="navbar-item  button fire" style={{margin:'', height:'100%', textDecoration:'none'}}>
-<StaticImage className=""
-alt="Mystery Science Theater 3000 - All In 60 Seconds" src="../../static/assets/mystery-science.jpg" />
-</Link>
-</div> */}
-
-
-{/* <BlogListHome data={posts} /> */}
-
-
-{/* <div style={{overflow:'hidden'}}>
-<VideoPage />
-</div> */}
-
-{/* <div className="pagination tronpanel" style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'100vw', height:'100vh', paddingTop:'1vh', background:''}}>
-<Link to="/minutes/2/" title="View Archives">
-  <div  className="tronText" style={{fontSize:'3vw', marginTop:'1rem', lineHeight:'130%'}}><span style={{fontSize:'65%'}}>viewing:</span><br />Lastest Minutes</div>
-
-   
-    <div  className="tronText " style={{ background:'rgba(0,0,0,0.10)', width:'80vw', position:'relative', top:'', margin:'10vh auto', padding:'10% 10%', zIndex:'1', textAlign:'', border:'1px solid #000', borderRadius:'12px', textDecoration:'none', color:'#cccc'}}>
-    <h1 className="">View All Minutes?</h1>
-    </div>
-</Link>
-
-</div> */}
-
-
-
-
-
-
-
-
-
-        
+ 
 </div>
+
 
 </div>
 
@@ -688,15 +532,10 @@ Order Online Now
 
 <div name="container21" className="container21" style={{marginTop:'',}}>
 
-
 {/* show feature */}
         {ShowFeature ? (
             
        
-          
-
-
-        
 <section style={{ display:'',}}>
   <article>
 
@@ -887,14 +726,6 @@ to="#experiences" title="See the new EXPERIENCES™" /> */}
 
 
 
-{/* <span className="actionJackson txtshadow"> <span className="icon -right">
-              <FaHandPointDown />
-            </span> &nbsp;&nbsp;All New EXPERIENCES &nbsp;&nbsp;<span className="icon -right">
-              <FaHandPointDown />
-            </span></span> */}
-          
-
-
       </div>
 
 
@@ -1024,29 +855,20 @@ Through NFT
 
 
 
- {/* <h3 style={{textAlign:'center', fontSize:'clamp(1.3rem, 1.1vw + 1.5rem, 3rem)', margin:'0 auto 2rem auto'}}>Todd's Other Work</h3> */}
+
  
  <div className="flexbutt noexit print" style={{padding:'0 4%',
 position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px', margin:'0 auto 2rem auto', }}>
 
 
 
-{/* <div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'space-between',}}>
-    <a className="noexit" href="https://twilightscapes.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>
-    <StaticImage src="../../static/assets/twilightscapes-button.jpg" alt="Todd Lambert Night photos"  /></a>
-    <br />
-    Experience a new style of landscape photography all through the eyes of Todd Lambert. Explore the unusual and see the night like you&apos;ve never seen it before.
-    <br /><br />
-    <div style={{textAlign:'center',}}><a className="post-card button " href="https://twilightscapes.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>Twilightscapes.com</a></div>
-    </div> */}
+
 
 
 
 
 <div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'flex-start', pointerEvents:'none'}}>
     <a className="noexit" href="https://toddlambert.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>
-    {/* <StaticImage src="../../static/assets/rackhouse-menu-button.jpg" alt="Todd Lambert is an independent artist, creator, design, developer and generally a unicorn" style={{borderRadius:'8px'}}  /> */}
-
     {MenuImage ? (
             <GatsbyImage
               image={MenuImage}
@@ -1057,21 +879,15 @@ position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px
           ) : (
             ""
           )}
-
-
-
     </a>
     <br />
     Our menu is steep in the traditions of the great steakhouses of America, however at virtually every step we have added our own "Rack House style" flair. We focus on providing a fantastic steak.
-    {/* <br /><br />
-    <div style={{textAlign:'center',}}><a className="post-card button " href="https://toddlambert.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>ToddLambert.com</a></div> */}
     </div>
 
 
     
     <div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'flex-start', pointerEvents:'none'}}>
     <a className="noexit" href="https://urbanfetish.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>
-    {/* <StaticImage src="../../static/assets/rackhouse-libations-button.jpg" alt="Todd Lambert Night photos" style={{borderRadius:'8px'}}  /> */}
     {LibationsImage ? (
             <GatsbyImage
               image={LibationsImage}
@@ -1091,7 +907,6 @@ position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px
 
     <div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'flex-start', pointerEvents:'none'}}>
     <a className="noexit" href="https://vidsocks.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit'}}>
-    {/* <StaticImage src="../../static/assets/rackhouse-bourbon-header.jpg" alt="Todd builds Web Apps"  style={{borderRadius:'8px'}} /> */}
     {BourbonImage ? (
             <GatsbyImage
               image={BourbonImage}
