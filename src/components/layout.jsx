@@ -40,7 +40,7 @@ export function Layout({ children }) {
       <div style={{overflow:''}}>
         {modal ? (
           <>
-          <div style={{display:'', position:'fixed', top:'3%', right:'3%', padding:'0px', fontSize:'2rem', background:'#111 !important', opacity:'1 !important', zIndex:'55 !important',  filter:' drop-shadow(0px 4px 3px #000)',}}>
+          <div style={{display:'', position:'fixed', top:'3%', right:'3%', padding:'0px', fontSize:'2rem', background:'#111 !important', opacity:'1 !important', zIndex:'5',  filter:' drop-shadow(0px 4px 3px #000)',}}>
           <Link state={{noScroll: true }} to={closeTo} style={{fontSize:'2rem',  textDecoration:'none', lineHeight:'', display:'flex', flexDirection:'column', color:'', cursor:'pointer'}}>
             <AiOutlineClose />
             {/* <span className="TRON">[</span> */}
@@ -65,8 +65,8 @@ export function Layout({ children }) {
 
       <input type="checkbox" className="openSidebarMenu" id="openSidebarMenu" />
 
-<div id="secondMenu" className="" style={{marginTop:'5rem'}}>
-<ul className="sidebarMenuInner post-card" style={{}}>
+<div id="secondMenu" className="" style={{}}>
+<ul className="sidebarMenuInner post-card" style={{maxWidth:'400px', position:'absolute', left:'0',}}>
 <Install />
 {/* <li className="carto" style={{border:'none', margin:' 0', textAlign:'center'}}>
 Woot

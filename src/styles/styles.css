@@ -16,14 +16,14 @@
 /* #sidebarMenu button.menutheme div:nth-child(2){
 	display: none !important;
 } */
-/* .sidebarMenuInner{
+.sidebarMenuInner{
 	margin:0 0 0 0;
 	padding:75vh 0 0 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	background-color:#111;
-	background-color:rgba(32, 140, 146, 0.493);
+	/* background-color:#111;
+	background-color:rgba(32, 140, 146, 0.493); */
 	border-left:1px solid rgba(255, 255, 255, 0.1);
 	border-radius: 12px 0 0 12px !important;
 	min-width: 220px;
@@ -31,7 +31,7 @@
 }
 .sidebarMenuInner {
 	transition: all .8s ease-in-out;
-	background-color: #111;
+	/* background-color: #111; */
 }
 .sidebarMenuInner li{
 	list-style: none;
@@ -48,7 +48,7 @@
 	font-weight: bold;
 	cursor: pointer;
 	text-decoration: none;
-} */
+}
 
 
 

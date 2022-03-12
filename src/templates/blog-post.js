@@ -85,13 +85,13 @@ const CustomBox = styled.div`
 
 
 const Pagination = props => (
-  <div className="pagination -post1" style={{position:'fixed', bottom:'20px',}}>
+  <div className="pagination -post1" style={{position:'fixed', bottom:'20px'}}>
     <ul className="" style={{}}>
       {props.previous && props.previous.frontmatter.template === "blog-post" && (
         // <li style={{border:'1px solid', borderRadius:'12px', filter:'drop-shadow(0 0px 6px rgba(0, 0, 0, 1))'}}>
         <li style={{}}>
           <Link style={{}}  to= {props.previous.frontmatter.slug + "/"} rel="prev">
-          <button className="" style={{display:'flex', justifyContent:'flex-end', textShadow:'2px 2px 0 #222', filter:'drop-shadow(0px 0px 5px rgba(155,155,155,1))', color:'#fff'}}>
+          <button className="" style={{display:'flex', justifyContent:'flex-end'}}>
 &#10094; &nbsp; {" "} <span className="page-title">
               {props.previous.frontmatter.title}
             </span></button>
@@ -101,7 +101,7 @@ const Pagination = props => (
       {props.next && props.next.frontmatter.template === "blog-post" && (
         <li style={{}}>
           <Link to={props.next.frontmatter.slug + "/"} rel="next">
-          <button className="" style={{display:'flex', justifyContent:'flex-start', textShadow:'2px 2px 0 #222', filter:'drop-shadow(0px 0px 5px rgba(155,155,155,1))', color:'#fff'}}>
+          <button className="" style={{display:'flex', justifyContent:'flex-start'}}>
             <span className="page-title">{props.next.frontmatter.title}</span> {" "} &nbsp; &#10095;
           </button>
           </Link>
@@ -631,9 +631,9 @@ const svgUrl = frontmatter.svgImage.publicURL
 {/* <div className='player-wrapper intro' style={{position:'relative', bottom:'0', zIndex:'', height:'100vh', maxHeight:'', overflow:'', filter: 'drop-shadow(0 0 20px #000)',  }}> */}
 
 
-<div className="pagemenu" style={{position:'fixed', bottom:'20px', zIndex:'1',  left:'20px', right:'', display:'flex', justifyContent:'center', width:'', margin:'0 auto', gap:'20px', textShadow:'2px 2px 0 #222', filter:'drop-shadow(0px 0px 5px rgba(155,155,155,1))', color:'#fff' }}>
+<div className="contact" style={{position:'fixed', bottom:'20px', zIndex:'1',  left:'20px', right:'', display:'flex', justifyContent:'center', width:'', margin:'0 auto', gap:'20px'}}>
 
-<label id="menuicon1" htmlFor="openSidebarMenu" className="sidebarIconToggle1" style={{textDecoration:'2px underline #fff', cursor:'pointer'}}>Nav</label>
+<label id="menuicon1" htmlFor="openSidebarMenu" className="sidebarIconToggle1" style={{textDecoration:'2px underline #fff', color:'#fff', cursor:'pointer'}}>Nav</label>
 
 
   {/* <Link state={{modal: true}}  to="/contact/" className=" " style={{margin:'', textDecoration:''}}>Contact</Link> */}
