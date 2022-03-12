@@ -351,10 +351,10 @@ body.homepage .ReactModalPortal .nextbutt {
 
 /* Safari Desktop NO SNAP */
 @supports(font:-apple-system-body) and (not(-webkit-touch-callout:default)){
-	/* .horizontal-scroll-wrapper, .horizontal-scroll {
+	.horizontal-scroll-wrapper, .horizontal-scroll {
 		scroll-snap-type:none !important;
 	}
-	*/
+	
 }
 /* iOS ONLY browsers */
 @supports(font:-apple-system-body) and (-webkit-touch-callout:default){
