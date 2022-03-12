@@ -50,7 +50,7 @@ const InstallDiscount = () => (
 
 
 
-<div id="" className="" style={{ position:'absolute', top:'10vh', zIndex:'', maxWidth:'400px'}}>
+<div id="" className="" style={{ position:'', top:'', zIndex:'', maxWidth:''}}>
 
 
 {/* <ReactPlayer
@@ -129,7 +129,7 @@ const InstallDiscount = () => (
 
 
 
-<div className="container" style={{padding:'0 2rem', border:'0px solid #555',  color:'#fff', textAlign:'center', position:'relative', textShadow:'2px 2px 0 #000', overflow:'hidden', borderRadius:'12px', background:'rgb(0, 0, 0, .5)' }}>
+<div className="" style={{marginTop:'10vh', padding:'2rem', border:'0px solid #555',  color:'#fff', textAlign:'center', position:'relative',  }}>
 
 
 
