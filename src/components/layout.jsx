@@ -16,7 +16,7 @@ import Theme from "../components/theme"
 // import { Link } from "gatsby-plugin-anchor-links"
 // import { StaticImage } from "gatsby-plugin-image"
 
-import Install from './install-discount'
+// import Install from './install-discount'
 // import { navigate } from "gatsby";
 
 export function Layout({ children }) {
@@ -65,19 +65,20 @@ export function Layout({ children }) {
 
       <input type="checkbox" className="openSidebarMenu" id="openSidebarMenu" />
 
-<div id="secondMenu" className="" style={{}}>
-<ul className="sidebarMenuInner post-card" style={{maxWidth:'400px', position:'absolute', left:'0',}}>
-<Install />
-{/* <li className="carto" style={{border:'none', margin:' 0', textAlign:'center'}}>
+      <div id="secondMenu" className="" style={{}}>
+  
+      <ul className="sidebarMenuInner post-card" style={{maxWidth:'400px', position:'absolute', left:'0',}}>
+
+<li className="carto" style={{border:'none', margin:' 0', textAlign:'center'}}>
 Woot
 </li>
 <li className="carto" style={{border:'none', margin:' 0', textAlign:'center'}}>
 This is 2nd menu
-</li> */}
-
+</li>
 </ul>
-</div>
 
+
+      </div>
   <label htmlFor="openSidebarMenu" className="backdrop1" ><input type="checkbox" /></label>
 
 <label id="menuicon" htmlFor="openSidebarMenu" className="sidebarIconToggle">
