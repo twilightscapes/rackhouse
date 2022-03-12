@@ -1,7 +1,7 @@
 ---
 template: blog-post
-title: Test this mofo
-slug: /testthismofo
+title: Test Post 1
+slug: /testpost1
 date: 2022-02-12 01:43
 description: Rack House
 youtuber: ""

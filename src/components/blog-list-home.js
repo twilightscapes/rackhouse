@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-// import React from "react"
+import React from "react"
 // import { Link } from "gatsby"
 // import { RiArrowDownLine, RiArrowRightSLine } from "react-icons/ri"
 
@@ -20,21 +20,11 @@ export default function BlogListHome(props) {
 const PostMaker = ({ data }) => (
 
 
-//   <div className="horizontal-holder" style={{position:'relative'}}>
 
-
-
-
-//  <div className="horizontal-scroll panels" style={{ scrollSnapType: '', maxHeight:'',}}>
-
-
-// <div></div>
 <>
   {data}
 </>
-// </div>
 
-// </div>
 
 
 

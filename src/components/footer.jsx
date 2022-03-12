@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
-
+import GoBack from "../components/goBack"
 // import Theme from "../components/theme"
 import Consent from "../components/Consent"
 import Install from "../components/Install-footer"
@@ -244,6 +244,7 @@ export function Footer() {
 
 <br />
 <br />
+<GoBack />
       </nav>
    
     </footer>

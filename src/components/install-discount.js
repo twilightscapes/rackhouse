@@ -50,8 +50,7 @@ const InstallDiscount = () => (
 
 
 
-<div id="installer" className="popper1" style={{ display:'flex', justifyContent:'center', alignContent:'center', position: 'fixed', top:'10px',
-left:'-90vw', alignItems:'center', background:'transparent', padding:'0', zIndex:'15', maxWidth:'400px'}}>
+<div id="secondMenu" className="" style={{ background:'transparent', padding:'0', zIndex:'', maxWidth:'400px'}}>
 
 
 {/* <ReactPlayer

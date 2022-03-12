@@ -16,7 +16,7 @@ import Theme from "../components/theme"
 // import { Link } from "gatsby-plugin-anchor-links"
 // import { StaticImage } from "gatsby-plugin-image"
 
-import Install from './install-discount'
+// import Install from './install-discount'
 // import { navigate } from "gatsby";
 
 export function Layout({ children }) {
@@ -65,6 +65,20 @@ export function Layout({ children }) {
 
       <input type="checkbox" className="openSidebarMenu" id="openSidebarMenu" />
 
+      <div id="secondMenu" className="" style={{}}>
+  
+      <ul className="sidebarMenuInner post-card" style={{maxWidth:'400px', position:'absolute', left:'0',}}>
+
+<li className="carto" style={{border:'none', margin:' 0', textAlign:'center'}}>
+Woot
+</li>
+<li className="carto" style={{border:'none', margin:' 0', textAlign:'center'}}>
+This is 2nd menu
+</li>
+</ul>
+
+
+      </div>
   <label htmlFor="openSidebarMenu" className="backdrop1" ><input type="checkbox" /></label>
 
 <label id="menuicon" htmlFor="openSidebarMenu" className="sidebarIconToggle">
@@ -74,14 +88,20 @@ export function Layout({ children }) {
 {/* <object className="" id="logo" data={iconimage} type="image/svg+xml" style={{  overflow:'hidden', border:'0px solid red', zIndex:'0', width:'100%', maxWidth:'', height:'', background:'transparent'  }} alt="Animated Logo" title="Animated Logo" >Animated Logo</object> */}
 </div>
   </label>
+
   
+  {/* <Install /> */}
+
+
+
+
    <div id="sidebarMenu" style={{minWidth:'', width:'',}}>
   
 {/* <div className="no-app promocode">
 30% OFF CODE: <span style={{color:'var(--primary-color)', fontWeight:'bold'}}>LoveTheNight</span>
 </div> */}
 
-  <Install />
+  
 
     <ul className="sidebarMenuInner post-card" style={{maxWidth:'400px', position:'absolute', right:'0', display:'', justifyContent:''}}>
 

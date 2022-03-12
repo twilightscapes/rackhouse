@@ -1,7 +1,7 @@
 ---
 template: blog-post
-title: Fuck Year
-slug: /test32
+title: Test Post 2
+slug: /testpost2
 date: 2022-03-11 01:43
 description: Test Description
 youtuber: "iHxmNzMfDj4"

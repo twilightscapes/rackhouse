@@ -53,7 +53,7 @@ const Contact = ({ data }) => {
         />
         </div>
 
-        <div className="wrapper" style={{padding:'0 3%'}}>
+        <div className="wrapper" style={{padding:'0 10%', maxWidth:'900px', margin:'0 auto' }}>
         <form
           className="contact-form"
           action="/thanks"

@@ -608,6 +608,26 @@ body.blogpost .sidebarIconToggle{display: none;}
   background:transparent;
 }
 
+#secondMenu {
+	position: fixed;
+	z-index:50;
+  top:0;
+left:0;
+	padding:0 0 0 0;
+	transform: translateX(-250px);
+	transition: transform 250ms ease-in-out;
+  background:transparent;
+  // overflow:hidden;
+  // border:2px solid purple;
+  width:250px;
+  height:100%;
+  background:transparent;
+  opacity:.6;
+  display:block;
+
+  .sidebarMenuInner{	border-radius: 0 12px 12px 0 !important;}
+}
+
 
 .sidebarMenuInner{
 	margin:0 0 0 0;
@@ -645,6 +665,9 @@ body.blogpost .sidebarIconToggle{display: none;}
 }
 input[type="checkbox"]:checked ~ #sidebarMenu {
 	transform: translateX(100%);
+}
+input[type="checkbox"]:checked ~ #secondMenu {
+	transform: translateX(0);
 }
 input[type=checkbox]:checked ~ .sidebarIconToggle {
 	display:none !important;
@@ -833,6 +856,52 @@ footer{
 	flex-direction: row;
 	align-items: center;
 }
+
+
+
+
+.horizontal-scroll::before{
+  content:' \2329  swipe ';
+  position:absolute;
+  z-index:2;
+  display: inline-block;
+  margin:auto;
+  padding:10px 10px;
+  background:rgba(0, 0, 0, .7);
+  opacity:.7;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  border-radius:12px;
+  bottom:50px; right:30px;
+  color:#fff;
+  transform: rotate(90deg);
+  font-size:clamp(2rem, 3.5vw, 3.8rem);
+  text-shadow:2px 2px 2px #333;
+}
+
+/* .horizontal-scroll-wrapper:hover::before{
+animation: move 1.2s forwards; 
+animation-delay:1s;
+} */
+
+.sliderholder1:hover::before{
+animation: fadeout .5s forwards; 
+}
+
+
+@media (hover: hover) {
+.horizontal-scroll-wrapper::before, .sliderholder1::before{
+  content:' scroll \276F \276F ' !important;
+}
+.horizontal-scroll::before, .sliderholder1::before{
+  content:' scroll \276F \276F ' !important;
+}
+
+}
+
+
+
 // .youtubehide::after{
 // 	content:' ';
 // 	position:fixed;
@@ -1119,14 +1188,7 @@ footer{
 }
 /* HUD CONTROLS */
 
-@media (max-width: 48em) {
-	#controls{
-		// position:absolute;
-		// right:2vw;
-    // bottom:-10% !important;
-    // z-index:10 !important;
-	}
-}
+
 
 .pagination a{
 	color:inherit !important;

@@ -11,7 +11,7 @@ youtubeautostart: "1"
 youtubeloop: ""
 title: Best Steaks on the Coast
 svgImage: /assets/logointro.svg
-showPosts: ""
+showPosts: "1"
 cta:
   ctaText: View Our Menu
   ctaLink: /howitworks/

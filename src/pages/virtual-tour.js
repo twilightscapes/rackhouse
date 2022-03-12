@@ -27,7 +27,7 @@ export default function VirtualTour() {
 
     
 <section className="outer section section--gradient" >
-      <div className="container" style={{padding: '2rem 10%'}}>
+      <div className="container" style={{padding: ''}}>
         
       {/* <div className="mobile"><GoBack /></div> */}
 

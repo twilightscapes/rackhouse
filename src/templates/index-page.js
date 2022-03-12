@@ -10,7 +10,7 @@ import { getSrc } from "gatsby-plugin-image"
 import BlogListHome from "../components/blog-list-home"
 import Newsignup from "../components/newssign"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
-import { RiArrowRightSLine } from "react-icons/ri"
+// import { RiArrowRightSLine } from "react-icons/ri"
 
 import SocialMe from "../components/share"
 
@@ -508,16 +508,26 @@ alt="" src="../../static/assets/HICKORY-SMOKED-OF-WS.jpg" />
 
 
 
+{ShowPosts ? (
+        <BlogListHome data={posts} />
+   ) : (
+    ""
+  )}
+
+ 
+
+<div></div>
 <div className="allin60panel" style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'100vw', height:'100%', margin:'0', background:''}}>
 <div style={{ background:'rgba(0,0,0,0.10)', width:'90vw', position:'relative', top:'', margin:'0 auto', padding:'4% 5%', zIndex:'1', textAlign:'', border:'1px solid #000', borderRadius:'12px', textDecoration:'none', color:'#cccc'}}>
   <Newsignup />
   </div>
 </div>
 
- 
+
+
+
+
 </div>
-
-
 </div>
 
 
@@ -818,7 +828,7 @@ Through NFT
 
 
 {/* end show Posts */}
-{ShowPosts ? (
+{/* {ShowPosts ? (
 
 <div id="posts" name="posts">
   
@@ -840,7 +850,7 @@ Through NFT
 
    ) : (
     ""
-  )}
+  )} */}
 {/* end show Posts */}
 
 
@@ -935,7 +945,7 @@ Virtual Tour
 
 <SocialMe />
 
-<Footer />
+<Footer id="footer" />
     </Layout>
   )
 }

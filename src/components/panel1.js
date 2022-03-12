@@ -91,11 +91,11 @@ function Characters() {
 alt="Todd Lambert Web development for photographers" src="../../static/assets/rackhouse-header.jpg" style={{height:'', position:'absolute', top:'0', zIndex:'-1'}}  />
 
 
-<div className="specialfont" style={{position:'absolute', zIndex:'3', right:'10px', top:'150px' , background:'rgba(0, 0, 0, .5)', padding:'5px', borderRadius:'12px', textShadow:'2px 2px 2px #333', backdropFilter:'blur(4px)'}}>
-            <div style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'1.4rem', }}>Click To Play</div>
-    <ImPlay className="" style={{margin:'0 auto', width:'', fontSize:'30px', filter:'dropShadow(0px 0px 14px #E3272D)'}} />
+<div className="specialfont" style={{position:'relative', zIndex:'3', right:'', top:'' , padding:'20% 0 0 0', textShadow:'2px 2px 2px #333',}}>
+            <div style={{fontWeight:'bold', padding:'2rem', fontSize:'2rem', backdropFilter:'blur(4px)', background:'rgba(0, 0, 0, .5)', borderRadius:'12px', }}>Click To Play
+    <ImPlay className="" style={{margin:'0 auto', width:'', fontSize:'50px', filter:'dropShadow(0px 0px 14px #E3272D)'}} />
             </div>
-
+</div>
    
 
             
@@ -106,7 +106,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/ra
          
           />
 
-<div style={{position:'absolute', top:'0', width:'100vw', height:'100vh', zIndex:'2'}}>
+<div style={{position:'absolute', top:'-20px', width:'100vw', height:'100vh', zIndex:'2'}}>
 <RackLogo className="racklogo"  />
 </div>
 

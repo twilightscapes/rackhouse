@@ -1,8 +1,8 @@
 ---
 template: blog-post
-title: Testing this byotch!
-slug: /test64
-date: 2022-03-11 01:43
+title: Test Post 3
+slug: /testpost3
+date: 2022-03-13 01:43
 description: Test Description
 youtuber: "nJ38P5elTkg"
 youtuber2: ""

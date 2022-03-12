@@ -604,7 +604,7 @@ const svgUrl = frontmatter.svgImage.publicURL
     <Layout className="page">
 <CustomBox style={{}}>
 <Helmet>
-  <body className="blogpost" style={{background:''}} />
+  <body id="body" className="blogpost" style={{background:''}} />
   {/* <script src="https://unpkg.com/embeddable-nfts/dist/nft-card.min.js"></script> */}
 </Helmet>
 
@@ -631,20 +631,18 @@ const svgUrl = frontmatter.svgImage.publicURL
 {/* <div className='player-wrapper intro' style={{position:'relative', bottom:'0', zIndex:'', height:'100vh', maxHeight:'', overflow:'', filter: 'drop-shadow(0 0 20px #000)',  }}> */}
 
 
-<div className="contact" style={{position:'fixed', bottom:'20px', zIndex:'1',  left:'20px', right:'', display:'flex', justifyContent:'center', width:'', margin:'0 auto', gap:'30px'}}>
+<div className="contact" style={{position:'fixed', bottom:'20px', zIndex:'1',  left:'20px', right:'', display:'flex', justifyContent:'center', width:'', margin:'0 auto', gap:'20px'}}>
 
-<label id="menuicon1" htmlFor="openSidebarMenu" className="sidebarIconToggle1" style={{textDecoration:'2px underline #07f8f8', color:'#fff'}}>menu</label>
+<label id="menuicon1" htmlFor="openSidebarMenu" className="sidebarIconToggle1" style={{textDecoration:'2px underline #fff', color:'#fff', cursor:'pointer'}}>Nav</label>
 
 
-  <Link state={{modal: true}}  to="/contact/" className=" " style={{margin:'', textDecoration:''}}>contact</Link>
+  {/* <Link state={{modal: true}}  to="/contact/" className=" " style={{margin:'', textDecoration:''}}>Contact</Link> */}
 
-  <Link to="#original" style={{border:'0px solid', }}>
-  credits &amp; legal
-        </Link>
 
-        {ShareThis ? (
+
+    {ShareThis ? (
 <Link to="#sharethis" style={{}}>
-  share this
+  Share
         </Link>
  ) : (
   ""
@@ -652,12 +650,18 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 {Comments ? (
           <Link to="#comments" style={{}}>
-  comments
+  Comments
         </Link>
        
           ) : (
             ""
           )}
+
+
+<Link to="#footer" style={{border:'0px solid', }}>
+  Footer
+        </Link>
+
 
 </div>
 
@@ -929,7 +933,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-<div id="original" style={{height:'100vh', marginTop:'100vh'}}>
+      <section id="original" style={{height:'100vh', marginTop:'100vh',  background:'rgba(0,0,0,0.30)', display:'grid', placeContent:'center'}}>
 
       {ShowOriginal ? (
           <div style={{position:'relative', width:'100%', maxWidth:'800px', margin:'0 auto', textAlign:'center', display:'flex', flexDirection:'column', fontSize:'100%', borderRadius:'12px' }}>
@@ -953,7 +957,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 <br />
   <GoBack />
-</div>
+</section>
 
 
 
@@ -969,7 +973,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 {ShareThis ? (
 
-<div id="sharethis" style={{height:'100vh', display:'block', width:'80%', padding:'0', margin:'0 auto'}}>
+<section id="sharethis" style={{height:'100vh', marginTop:'',  background:'rgba(0,0,0,0.30)', display:'grid', placeContent:'center'}}>
 
   <br />
 <ShareSocial />
@@ -977,10 +981,9 @@ const svgUrl = frontmatter.svgImage.publicURL
 <GoBack />
 
 
-<div style={{padding:'0 5vw', marginTop:'200px',  color:'inherit !important'}}>
-{(previous || next) && <Pagination {...props} />}
-</div>
-</div>
+
+
+</section>
           ) : (
             ""
           )}
@@ -1009,20 +1012,15 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-      {Comments ? (
+{Comments ? (
 
-<div id="comments" style={{height:'100vh', display:'block', width:'80%', padding:'0', margin:'0 auto'}}>
-  <GoBack />
-  <br />
+<section id="comments" style={{height:'100vh', marginTop:'',  background:'rgba(0,0,0,0.30)', display:'grid', placeContent:'center'}}>
+
 <CommentBox />
 <br />
 <GoBack />
 
-
-<div style={{padding:'0 5vw', marginTop:'200px',  color:'inherit !important'}}>
-{(previous || next) && <Pagination {...props} />}
-</div>
-</div>
+</section>
           ) : (
             ""
           )}
@@ -1078,7 +1076,9 @@ const svgUrl = frontmatter.svgImage.publicURL
    <br />
    <br />
    </CustomBox>
-   <Footer />
+
+   <section id="footer" style={{height:'100vh', marginTop:'',  background:'rgba(0,0,0,0.30)',}}>
+   <Footer /></section>
     </Layout>
 
 
