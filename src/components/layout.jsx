@@ -3,20 +3,21 @@ import { Seo } from "./seo"
 import { Link } from 'gatsby-plugin-modal-routing-3'
 import { ModalRoutingContext } from 'gatsby-plugin-modal-routing-3'
 import { AiOutlineClose } from "react-icons/ai"
-
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 // import { StoreContext } from "../context/store-context"
 // import { Toast } from "./toast"
 import Bug from "../../static/assets/logo.svg"
 import SiteLogo from "../../static/assets/logo.svg"
-
+import Install from './install-discount'
+import Theme from "../components/theme"
 // import { CartButton } from "./cart-button"
 // import SearchIcon from "../../static/assets/search"
-import Theme from "../components/theme"
+
 
 // import { Link } from "gatsby-plugin-anchor-links"
 // import { StaticImage } from "gatsby-plugin-image"
 
-import Install from './install-discount'
+// import Install from './install-discount'
 // import { navigate } from "gatsby";
 
 export function Layout({ children }) {
@@ -33,14 +34,14 @@ export function Layout({ children }) {
   return (
     <div style={{display:''}}> 
 <>
-      <Seo />
+<Seo />
 
-      <ModalRoutingContext.Consumer closeTimeoutMS={300} >
-    {({ modal, closeTo }) => (
-      <div style={{overflow:''}}>
-        {modal ? (
-          <>
-          <div style={{display:'', position:'fixed', top:'3%', right:'3%', padding:'0px', fontSize:'2rem', background:'#111 !important', opacity:'1 !important', zIndex:'55 !important',  filter:' drop-shadow(0px 4px 3px #000)',}}>
+<ModalRoutingContext.Consumer closeTimeoutMS={300} >
+{({ modal, closeTo }) => (
+<div style={{overflow:''}}>
+  {modal ? (
+    <>
+            <div style={{display:'', position:'fixed', top:'3%', right:'3%', padding:'0px', fontSize:'2rem', background:'#111 !important', opacity:'1 !important', zIndex:'55 !important',  filter:' drop-shadow(0px 4px 3px #000)',}}>
           <Link state={{noScroll: true }} to={closeTo} style={{fontSize:'2rem',  textDecoration:'none', lineHeight:'', display:'flex', flexDirection:'column', color:'', cursor:'pointer'}}>
             <AiOutlineClose />
             {/* <span className="TRON">[</span> */}
@@ -48,18 +49,54 @@ export function Layout({ children }) {
             {/* <span className="" style={{fontSize:'70%', textAlign:'center'}}>home</span> */}
           </Link>
           </div>
-          </>
-        ) : (
+    </>
+  ) : (
 ''
-        )}
+  )}
 
-      </div>
-    )}
-  </ModalRoutingContext.Consumer>
+</div>
+)}
+</ModalRoutingContext.Consumer>
 
 
 
-<header name="pagetop" style={{}} >
+
+
+
+<header id="top" name="pagetop" style={{}} >
+
+{/* <ul id="menu" className="menu" style={{position:'fixed', width:'100vw', top:'0', zIndex:'10', display:'flex', justifyContent:'space-around', fontSize:'clamp(.8rem, 2.3vw, 2.5rem)', gap:'10px', textAlign:'center', background:'radial-gradient(#111 14%,#222 140%)', color:'#ccc', boxShadow:'0 0 24px rgba(0,0,0,.9)', padding:'0 .5rem', alignItems:'center'}}>
+      
+      
+<li className="grad" style={{position:'relative',}}>
+        <AnchorLink className="navbar-item" to="/#about" style={{paddingRight:'',}}>
+          About <span className="mobilehide">Us</span> 
+        </AnchorLink>
+        </li>
+      <li className="grad" style={{position:'relative',}}>
+      <AnchorLink className="navbar-item" to="/#capabilities" style={{paddingRight:'',}}>
+      <span className="mobilehide">Our</span> Capabilities 
+      </AnchorLink>
+      </li>
+      <li className="grad" style={{position:'relative', maxHeight:'60px'}}>
+      <AnchorLink to="/#top" name="homereturn" style={{position:'absolute', display:'block', width:'180px', height:'60px', border:'1px solid'}}  aria-label="Link to Home" title="Back to Home">
+      <SiteLogo style={{maxHeight:'60px'}} />
+      </AnchorLink>
+    </li>
+      <li className="grad" style={{position:'relative',}}>
+        <AnchorLink className="navbar-item" to="/#industries" style={{paddingRight:'',}}>
+          Industries <span className="mobilehide">Served</span> 
+        </AnchorLink>
+        </li>
+        <li className="grad" style={{position:'relative',}}>
+        <AnchorLink to="/#contact" className="navbar-item" style={{paddingRight:'',}}>
+          Contact <span className="mobilehide">Us</span>
+        </AnchorLink>
+        </li>
+      
+     
+
+      </ul> */}
 
 
 
@@ -83,7 +120,7 @@ This is 2nd menu
 <label id="menuicon" htmlFor="openSidebarMenu" className="sidebarIconToggle">
 <div style={{textAlign:'center', opacity:'1', textShadow:'2px 2px 10px 2px #000', maxWidth:'500px', color:'#fff', border:'0px solid blue'}}>
 {/* <img className="" src={iconimage} alt="Logo" style={{borderRadius:'12px'}} /> */}
-<Bug className="bug" style={{fontSize:'38px', maxWidth:'', opacity:'1', margin:'0 0 0 0', width:'100%' }}/> 
+<Bug className="bug" style={{fontSize:'38px', maxWidth:'', opacity:'1', margin:'0 0 0 0', width:'100%', display:'' }}/> 
 {/* <object className="" id="logo" data={iconimage} type="image/svg+xml" style={{  overflow:'hidden', border:'0px solid red', zIndex:'0', width:'100%', maxWidth:'', height:'', background:'transparent'  }} alt="Animated Logo" title="Animated Logo" >Animated Logo</object> */}
 </div>
   </label>
@@ -102,79 +139,79 @@ This is 2nd menu
 
   
 
-    <ul className="sidebarMenuInner post-card" style={{maxWidth:'400px', position:'absolute', right:'0', display:'', justifyContent:''}}>
+<ul className="sidebarMenuInner post-card" style={{maxWidth:'400px', position:'absolute', right:'0', display:'', justifyContent:''}}>
 
-    <li className="carto" style={{border:'none', margin:' 0', textAlign:'center'}}>
-    <Link to="/" name="homereturn" title="return to home" style={{position:'absolute', display:'block', width:'180px', height:'180px', border:'0px solid'}}></Link>
+<li className="carto" style={{border:'none', margin:' 0', textAlign:'center'}}>
+<Link to="/" name="homereturn" title="return to home" style={{position:'absolute', display:'block', width:'180px', height:'180px', border:'0px solid'}}></Link>
 <SiteLogo />
- </li>
-
-
-<li className="carto" style={{textAlign:'', pointerEvents:'none'}}>
-      <Link className="navbar-item txtshadow" to="/minutes/">
-
-      Our Menu
-
-        </Link>
-</li>
-
-<li className="carto" style={{textAlign:'', pointerEvents:'none'}}>
-      <Link className="navbar-item txtshadow" to="/minutes/">
-
-      Weekend Brunch
-
-        </Link>
 </li>
 
 
 <li className="carto" style={{textAlign:'', pointerEvents:'none'}}>
-      <Link className="navbar-item txtshadow" to="/minutes/">
+  <Link className="navbar-item txtshadow" to="/minutes/">
 
-      Libations
+  Our Menu
 
-        </Link>
+    </Link>
 </li>
 
 <li className="carto" style={{textAlign:'', pointerEvents:'none'}}>
-      <Link className="navbar-item txtshadow" to="/minutes/">
+  <Link className="navbar-item txtshadow" to="/minutes/">
 
-      Bourbon Society
+  Weekend Brunch
 
-        </Link>
+    </Link>
 </li>
 
 
 <li className="carto" style={{textAlign:'', pointerEvents:'none'}}>
-              <Link className="navbar-item txtshadow" to="/about/">
+  <Link className="navbar-item txtshadow" to="/minutes/">
 
-              About Us
+  Libations
 
-              </Link>
-      </li> 
+    </Link>
+</li>
+
+<li className="carto" style={{textAlign:'', pointerEvents:'none'}}>
+  <Link className="navbar-item txtshadow" to="/minutes/">
+
+  Bourbon Society
+
+    </Link>
+</li>
+
+
+<li className="carto" style={{textAlign:'', pointerEvents:'none'}}>
+          <Link className="navbar-item txtshadow" to="/about/">
+
+          About Us
+
+          </Link>
+  </li> 
 
 
 
 <li className="carto" style={{textAlign:'', pointerEvents:''}}>
-      <Link className="navbar-item txtshadow" to="/minutes/">
+  <Link className="navbar-item txtshadow" to="/minutes/">
 
-      Our Locations
+  Our Locations
 
-        </Link>
+    </Link>
 </li>
 
-      <li className="carto crypto" style={{border:'none', display:'flex', justifyContent:'space-around', verticalAlign:'center', padding:'5px 0 0 0' , background:'rgba(0,0,0,0)' }}>
-  
-      <Theme  style={{padding:'0'}} />
-   {/* <Link className="sherlock" to="/search/" style={{marginRight:'0', marginTop:'5px'}}>
-    <span className="carto"><SearchIcon /></span>
-   </Link>
-   
-   <CartButton quantity={quantity} /> */}
+  <li className="carto crypto" style={{border:'none', display:'flex', justifyContent:'space-around', verticalAlign:'center', padding:'5px 0 0 0' , background:'rgba(0,0,0,0)' }}>
+
+  <Theme  style={{padding:'0'}} />
+{/* <Link className="sherlock" to="/search/" style={{marginRight:'0', marginTop:'5px'}}>
+<span className="carto"><SearchIcon /></span>
+</Link>
+
+<CartButton quantity={quantity} /> */}
 
 
-        </li>
+    </li>
 
-    </ul>
+</ul>
 
   </div>
 

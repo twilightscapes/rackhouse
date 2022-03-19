@@ -1,30 +1,38 @@
-import React from "react";
+// import React from "react"
+import React, { useState, useRef } from "react";
 import { Link, graphql } from "gatsby"
+import ReactPlayer from 'react-player/lazy'
 import { Layout } from "../components/layout"
 import { Footer } from "../components/footer";
 import { Seo } from "../components/seo"
-import { Helmet } from "react-helmet"
+import { ImPlay } from "react-icons/im"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { StaticImage } from "gatsby-plugin-image"
+// import Controls from "../components/Controls";
+import { Helmet } from "react-helmet"
 import { getSrc } from "gatsby-plugin-image"
 import BlogListHome from "../components/blog-list-home"
 import Newsignup from "../components/newssign"
-import { useSiteMetadata } from "../hooks/use-site-metadata"
-// import { RiArrowRightSLine } from "react-icons/ri"
-
 import SocialMe from "../components/share"
+// import Details from "../components/equipment-list"
+// import Contact from "../components/Contact-inc"
 
-// import ReactPlayer from 'react-player/lazy'
-// import { ImPlay } from "react-icons/im"
-// import Controls from "../components/Controls";
-
-
-import Panel1 from "../components/panel1"
 // import FrontLoader from "../../static/assets/grid-loader.svg"
+// import { RiArrowRightSLine } from "react-icons/ri"
+import { useSiteMetadata } from "../hooks/use-site-metadata"
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+// import BackgroundImage from 'gatsby-background-image'
+// import Panel1 from "../components/panel1"
 // import Panel2 from "../pages/shawshank-trailer"
+
+
+
+// import TimeAgo from 'react-timeago'
+// import Countdown from 'react-countdown'
 
 export const pageQuery = graphql`
   query HomeQueryHomeQuery($id: String! ) {
+    
     
     site {
       siteMetadata {
@@ -38,6 +46,12 @@ export const pageQuery = graphql`
         showfooter
       }
 
+
+
+
+      
+
+      
 
     }
     markdownRemark(id: { eq: $id }) {
@@ -63,12 +77,12 @@ export const pageQuery = graphql`
         featuredImage {
           publicURL
           childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
+            gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
           }
         }
         secondaryImage {
           childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+            gatsbyImageData(placeholder: BLURRED, width: 800)
           }
         }
         underlayImage {
@@ -87,29 +101,31 @@ export const pageQuery = graphql`
     }
 
 
-    desktop: file(relativePath: { eq: "curtains.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
-      }
-    }
 
-    
-    menuimage: file(relativePath: { eq: "rackhouse-menu-button.jpg" }) {
+
+
+  
+    capability1: file(relativePath: { eq: "rackhouse-menu-button.jpg" }) {
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED,)
       }
     }
-    libationsimage: file(relativePath: { eq: "rackhouse-libations-button.jpg" }) {
+    capability2: file(relativePath: { eq: "rackhouse-libations-button.jpg" }) {
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
       }
     }
-    bourbonimage: file(relativePath: { eq: "rackhouse-bourbon-header.jpg" }) {
+    capability3: file(relativePath: { eq: "rackhouse-bourbon-header.jpg" }) {
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
       }
     }
 
+
+
+    
+
+    
 
     posts: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
@@ -130,7 +146,7 @@ export const pageQuery = graphql`
             featuredImage {
               publicURL
               childImageSharp {
-                gatsbyImageData( layout: FULL_WIDTH)
+                gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
               }
             }
           }
@@ -140,10 +156,24 @@ export const pageQuery = graphql`
   }
 `
 
+
+
+
+
+
+
+
+
+
 const HomePage = ({ data }) => {
- const MenuImage = data.menuimage.childImageSharp.gatsbyImageData
- const LibationsImage = data.libationsimage.childImageSharp.gatsbyImageData
- const BourbonImage = data.bourbonimage.childImageSharp.gatsbyImageData
+
+
+ const Capability1 = data.capability1.childImageSharp.gatsbyImageData
+ const Capability2 = data.capability2.childImageSharp.gatsbyImageData
+ const Capability3 = data.capability3.childImageSharp.gatsbyImageData
+
+//  const imageData = data.desktop.childImageSharp.fluid
+
   // const { postcount } = useSiteMetadata()
   const { markdownRemark, posts } = data 
   const { frontmatter, html, excerpt } = markdownRemark
@@ -164,11 +194,11 @@ const HomePage = ({ data }) => {
     // const imageData = data.desktop.childImageSharp.fluid
     const { siteUrl } = useSiteMetadata()
 
-    // const YouTubeStart = frontmatter.youtubestart
-    // const YouTubeEnd = frontmatter.youtubeend
-    // const YouTubeMute = frontmatter.youtubemute
-    // const YouTubeControls = frontmatter.youtubecontrols
-    // const YouTubeAutostart = frontmatter.youtubeautostart
+    const YouTubeStart = frontmatter.youtubestart
+    const YouTubeEnd = frontmatter.youtubeend
+    const YouTubeMute = frontmatter.youtubemute
+    const YouTubeControls = frontmatter.youtubecontrols
+    const YouTubeAutostart = frontmatter.youtubeautostart
 
     const ShowFeature = frontmatter.showFeature
     const ShowInfo = frontmatter.showInfo
@@ -187,34 +217,34 @@ const HomePage = ({ data }) => {
     function AddSvg(){
       const svgUrl = "../assets/" + frontmatter.svgImage.relativePath + ""
       return (
-        <object title="Animation: Milky Way rotating over Todd Lambert while he is camping in front of a campfire" className={svgZindex + " " + svgZindex} id="svg1" data={svgUrl} type="image/svg+xml" style={{position:'absolute', top:'', left:'', right:'', bottom:'0', overflow:'hidden', border:'0px solid red', zIndex:'3', width:'100vw', height:'auto',  }} alt="Animation: Milky Way rotating over Todd Lambert while he is camping in front of a campfire" ></object>
+        <object title="Animation: Milky Way rotating over Todd Lambert while he is camping in front of a campfire" className={svgZindex + " " + svgZindex} id="svg1" data={svgUrl} type="image/svg+xml" style={{position:'absolute', bottom:'0', left:'0', right:'0', top:'0', overflow:'hidden', display:'block', border:'2px solid red', zIndex:'', width:'100vw', height:'100vh',  }} alt="Animation: Milky Way rotating over Todd Lambert while he is camping in front of a campfire" ></object>
       )
     }
 
 
 
-    // const [state, setState] = useState({
-    //   playing: true,
-    //   controls: false,
-    //   light: true,
-    //   muted: true,
-    //   loop: true,
-    // });
-    // const playerRef = useRef(null);
+    const [state, setState] = useState({
+      playing: true,
+      controls: false,
+      light: true,
+      muted: true,
+      loop: true,
+    });
+    const playerRef = useRef(null);
     // const controlsRef = useRef(null);
     
-    // const {
-    //   playing,
-    //   controls,
-    //   light,
-    //   muted,
-    //   loop,
-    //   playbackRate,
-    //   pip,
-    //   played,
-    //   seeking,
-    //   volume,
-    // } = state;
+    const {
+      playing,
+      controls,
+      light,
+      muted,
+      loop,
+      // playbackRate,
+      // pip,
+      // played,
+      // seeking,
+      // volume,
+    } = state;
     
     // const handlePlayPause = () => {
     //   setState({ ...state, playing: !state.playing });
@@ -224,7 +254,12 @@ const HomePage = ({ data }) => {
     //   setState({ ...state, muted: !state.muted });
     // };
     
-    // const { iconimage } = useSiteMetadata()
+    const { iconimage } = useSiteMetadata()
+
+ 
+
+
+
 
 const YouTube = frontmatter.youtuber
 
@@ -239,46 +274,45 @@ else{
 function Iframer() {
   
 
-  // const Url = "https://www.youtube.com/embed/" + frontmatter.youtuber + "?controls=" + frontmatter.youtubecontrols + "&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;start=" + frontmatter.youtubestart + "&amp;end=" + frontmatter.youtubeend + "&amp;loop=1&amp;mute=" + frontmatter.youtubemute + "&amp;playsinline=1&amp;playlist=" + frontmatter.youtuber + ""
+  const Url = "https://www.youtube.com/embed/" + frontmatter.youtuber + "?controls=" + frontmatter.youtubecontrols + "&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;start=" + frontmatter.youtubestart + "&amp;end=" + frontmatter.youtubeend + "&amp;loop=1&amp;mute=" + frontmatter.youtubemute + "&amp;playsinline=1&amp;playlist=" + frontmatter.youtuber + ""
   return (
-//     <ReactPlayer
-//     className='react-player66'
-//     url={Url}
+    <ReactPlayer
+    className='react-player66'
+    url={Url}
     
-//     // url={[
-//     //   iframeUrl,
-//     //   YoutuberSuggestion1,
-//     //   YoutuberSuggestion2,
-//     //   YoutuberSuggestion3
-//     // ]}
-//     width="100%"
-//     height="100%"
+    // url={[
+    //   iframeUrl,
+    //   YoutuberSuggestion1,
+    //   YoutuberSuggestion2,
+    //   YoutuberSuggestion3
+    // ]}
+    width="100%"
+    height="100%"
 
-//     config={{
-//       youtube: {
-//         playerVars: { showinfo:1, autoplay:YouTubeAutostart, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:YouTubeMute  }
-//       },
-//     }}
-//     loop
-//     playing
-//     playsinline
-//       playIcon={
-//         <button aria-label="Click To Play" className="clickplay" style={{position:'absolute', zIndex:'5', top:'0', border:'0px solid red', width:'100vw', height:'100%', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
+    config={{
+      youtube: {
+        playerVars: { showinfo:1, autoplay:YouTubeAutostart, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:YouTubeMute  }
+      },
+    }}
+    loop
+    playing
+    playsinline
+      playIcon={
+        <button aria-label="Click To Play" className="clickplay" style={{position:'absolute', zIndex:'5', top:'0', border:'0px solid red', width:'100vw', height:'100%', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
 
-//     <div className="" style={{ textAlign:'center', animation:'fadeIn 3s', width:'80vw', margin:'0 auto'}}>
+    <div className="" style={{ textAlign:'center', animation:'fadeIn 3s', width:'80vw', margin:'0 auto'}}>
     
 
-//       <div style={{position:'relative', maxWidth:'100vw', margin:'4% 0', zIndex:'0', display:'flex', justifyContent:'center', background:'transparent !important',}}>
-// <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'100%', maxWidth:'30vw', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} />
-// </div>
+      <div style={{position:'relative', maxWidth:'100vw', margin:'4% 0', zIndex:'0', display:'flex', justifyContent:'center', background:'transparent !important',}}>
+<img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'100%', maxWidth:'30vw', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} />
+</div>
 
-//       <span style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem'}}>Click To Play</span>
-// <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} />
-//       </div>
-//       </button>}
-//         light="../assets/transparent.png"
-//     />
-""
+      <span style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem'}}>Click To Play</span>
+<ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} />
+      </div>
+      </button>}
+        light="../assets/transparent.png"
+    />
   )
 }
 
@@ -364,30 +398,63 @@ function Iframer() {
 
    image={ siteUrl + getSrc(frontmatter.featuredImage) }
 />
-        
+      
 
 
 
 
-<div id="homestart" className="horizontal-holder allin60panel" style={{position:'relative', height:'80vh', overflow:'hidden' }}>
-
-
-
-
-
-{/* <div id="" className="wrap-element " style={{overflow:'hidden', width:'100vw', height:'', position:'relative', top:'0', zIndex:''}}> */}
+{/* VIDEO URLS */}
+{/* uCf3Q43fC_4 cool train */}
 
 
 
 
 
-{/* <ReactPlayer
-            // ref={playerRef}
+
+
+{ShowFeature ? (
+<>
+<div className="RArrow"><span></span></div>
+<div className="horizontal-holder allin60panel" style={{position:'relative',  overflow:'', color:'#ccc', border:'1px solid transparent'}}>
+
+
+
+<div className="horizontal-scroll panels" style={{}}>
+
+
+
+
+<div className="panelspacer" style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'', height:'50%', paddingTop:'50%', background:''}}></div>
+
+<div id="" className="wrap-element " style={{overflow:'', width:'100vw', height:'85vh', position:'relative', top:'0', zIndex:'', marginBottom:''}}>
+
+
+{/* <div style={{position:'absolute', objectFit:'', top:'0', zIndex:'-1', placeContent:'', background:'#111', width:'100vw', height:'100vh'}}>
+          {Image ? (
+            <GatsbyImage
+              image={Image}
+              loading="eager"
+              alt={frontmatter.title + " - Featured image"}
+              className="featured-image1 layer1"
+              style={{height:'auto', width:'100vw', maxHeight:'', position:'fixed', top:'0', zIndex:'', objectFit:'cover', overflow:'', backgroundSize:'cover', border:'0px solid red !important', background:'#111', aspectRatio:'none'}}
+            />
+            
+          ) : (
+
+   
+            <StaticImage src="../../static/assets/default-og-image.jpg" alt="Twilightscapes Default Image" style={{height:'auto', maxHeight:'100vh', position:'absolute', zIndex:'0', top:'0',border:'0px solid !important', objectFit:'contain',}} />
+  
+          )}
+</div> */}
+
+
+<ReactPlayer
+            ref={playerRef}
             width="100%"
             height="100%"
-   
-            // url={iframeUrl}
-            url="https://www.youtube.com/embed/videoseries?list=PLSld2C-SHcw6iI-8VdTwswUmghftk2chW"
+            style={{position:'absolute', zIndex:'-1'}}
+            url={YouTube}
+            // url="https://www.youtube.com/embed/videoseries?list=PLSld2C-SHcw6iI-8VdTwswUmghftk2chW"
             playing={playing}
             controls={controls}
             light={light}
@@ -404,30 +471,117 @@ function Iframer() {
               },
             }}
 
-          playsinline
+            playsinline
             playIcon={
-              <button aria-label="Click To Play" className="clickplay" style={{position:'', zIndex:'5', bottom:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'columh', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
-  
-          <div className="" style={{ textAlign:'center', animation:'fadeIn 3s'}}>
+              <button aria-label="Click To Play" className="clickplay" style={{position:'absolute', zIndex:'5', top:'0', border:'1px solid transparent', width:'100vw', height:'100%', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'', justifyContent:'center', alignItem:'center', paddingTop:''}}>
+
             
   
-            <div style={{position:'relative', maxWidth:'100vw', margin:'10% 0', zIndex:'', display:'flex', justifyContent:'center', background:'transparent !important',}}>
-    <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'100%', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} />
-  </div>
+            <div style={{position:'fixed', width:'100vw', height:'', top:'5px', margin:'0', zIndex:'1', display:'flex', justifyContent:'center', background:'transparent !important',}}>
+
+            <StaticImage className=""
+alt="Todd Lambert Web development for photographers" src="../../static/assets/rackhouse-header.jpg" style={{height:'', position:'', top:'', zIndex:'-1'}}  />
+
+
+
+
+
+
+
+  </div> 
+
+
+
+
         
-            <span style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem'}}>Click To Play</span>
-    <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} />
-            </div>
+            <div style={{display:'grid', placeContent:'center', fontWeight:'bold', padding:'50% 0 0 0', fontSize:'clamp(2rem, 3.5vw, 3.8rem)', textShadow:'2px 2px 0 #111', width:'100%', position:'absolute', zIndex:'2', top:'', height:'100%', border:'1px solid transparent',}}>
+              
+            <div style={{fontWeight:'bold', padding:'2rem', fontSize:'2rem', backdropFilter:'blur(4px)', background:'rgba(0, 0, 0, .5)', borderRadius:'12px', }}>Click To Play
+
+    <ImPlay style={{margin:'0 auto', width:'', fontSize:'60px'}} /></div>
+    </div>
+
+
+
+
+
+
+            {/* </div> */}
+
+
             </button>}
-
-
-          /> */}
+        //  light="../assets/transparent.png"
+          />
           
 
+
+
+          {/* <div style={{position:'absolute', width:'100vw', height:'100vh', top:'5px', margin:'0', zIndex:'-1', display:'flex', justifyContent:'center', background:'transparent !important',}}>
+  {Svg ? (
+            <AddSvg />
+       
+          ) : (
+            ""
+          )}
+  </div> */}
+
+
+
+
+
+          {/* <div style={{position:'relative', padding:'10% 0', width:'', height:'', zIndex:'3'}}>
+<h1
+    className="lineOne"
+    style={{
+     color: 'white',
+      textAlign: 'center', 
+      letterSpacing: '.0rem',
+      fontSize:'clamp(1rem, 3.5vw, 3.8rem)',
+      filter:'dropShadow(1px 2px 4px rgba(0,0,0,.9))',
+      textShadow:'2px 2px 0 #333'
+    }}
+  >
+    Quality Manufacturing
+  </h1>
+
+<h2
+          className="boom3 normal txtshadow-header lineTwo"
+          style={{
+            color: '#fff',
+            textAlign: 'center', 
+            fontSize:'clamp(1rem, 3.5vw, 3.8rem)',
+            filter:'dropShadow(1px 2px 4px rgba(0,0,0,.9))',
+            textShadow:'2px 2px 0 #333'
+          }}
+        >
+         Precision Parts
+        </h2>
+
+<h3
+          className="boom4 txtshadow-header mobile-txt lineThree"
+          style={{
+           color: 'white',
+            textAlign: 'center',
+            textTransform: 'normal', 
+            fontSize:'clamp(1rem, 3.5vw, 3.8rem)',
+            filter:'dropShadow(1px 2px 4px rgba(0,0,0,.9))',
+            textShadow:'2px 2px 0 #333'
+          }}
+        >
+         Done right AND on time
+        </h3>
+</div> */}
+
+
+
+
+
+
+
+
+
           
-          
-          
-          {/* </div> */}
+          </div>
 
 
 
@@ -438,133 +592,120 @@ function Iframer() {
             played={played}
             onMute={hanldeMute}
             muted={muted}
-          /> */}
-
-          
-<div className="horizontal-scroll panels" style={{}}>
-
-<div className="panelspacer" style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'', height:'50%', paddingTop:'50%', background:''}}></div>
+          />
 
 
-{/* <div id="homestart"><Panel1 /></div> */}
-
-
-
-{/* <div className="donation2" style={{display:'grid',
-  placeContent:'center', width:'100vw', height:'100vh', justifyContent:'center', position:'relative', background:'rgba(0,0,0,0.50)', webkitBackdropFilter:'blur(10px)', backdropFilter:'blur(14px)'}}>
-
-  <h1 className="tronText " style={{fontSize:'7vw', padding:'3vh 5vw 20vh 5vw', position:'', top:'', border:'0px solid', diplay:'', placeContent:'center', maxWidth:'80vw', fontFamily:'inherit'}}><div className="lineOne">All that's cool </div> <div className="lineTwo">in 60 seconds</div><br /><span style={{fontSize:'2rem'}}>allin60.com</span></h1>
-  
-</div> */}
-
-
-
-
-<div className="custom-cursor " style={{margin:'', height:'100%', textDecoration:'none'}}>
-
-  <Panel1 />
-
-
-</div>
+          {/* show feature */}
+        
 
 
 
 
 
 
-<div>
-{/* <Link title=""  to="/pulp-fiction-trailer/" className="navbar-item  button " style={{margin:'', height:'100%', textDecoration:'none'}}> */}
+
+
+
+
+
+        <div>
+
 <StaticImage className=""
 alt="Super Yummy" src="../../static/assets/FILET-SMALL.jpg" />
-{/* </Link> */}
+
 </div>
 
 
 <div>
-{/* <Link title="Shawshank Redemption by Stephen King - All In 60 Seconds"  to="/shawshank-trailer/" className="navbar-item button " style={{margin:'', height:'100%', textDecoration:'none'}}> */}
+
 <StaticImage className=""
 alt="Delicious!" src="../../static/assets/FAROE-ISLAND-SALMON-scaled.jpg" />
-{/* </Link> */}
+
 </div>
 
 
 
 <div>
-{/* <Link title="They Live by John Carpenter - All In 60 Seconds"  to="/they-live/" className="navbar-item  button " style={{margin:'', height:'100%', textDecoration:'none'}}> */}
+
 <StaticImage className=""
 alt="Get Racked at the Rack House" src="../../static/assets/NEW-ZEALAND-RACK.jpg" />
-{/* </Link> */}
+
 </div>
 
 
 
 <div>
-{/* <Link title="They Live by John Carpenter - All In 60 Seconds"  to="/mystery-science-theater-3022/" className="navbar-item  button " style={{margin:'', height:'100%', textDecoration:'none'}}> */}
+
 <StaticImage className=""
 alt="" src="../../static/assets/HICKORY-SMOKED-OF-WS.jpg" />
-{/* </Link> */}
+
 </div>
 
 
 
 
 {ShowPosts ? (
-        <BlogListHome data={posts} />
+        <BlogListHome data={posts} style={{}} />
    ) : (
     ""
   )}
 
- 
+<div>
+</div>
 
-<div></div>
 <div className="allin60panel" style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'100vw', height:'100%', margin:'0', background:''}}>
-<div style={{ background:'rgba(0,0,0,0.10)', width:'90vw', position:'relative', top:'', margin:'0 auto', padding:'4% 5%', zIndex:'1', textAlign:'', border:'1px solid #000', borderRadius:'12px', textDecoration:'none', color:'#cccc'}}>
+<div style={{ width:'90vw', position:'relative', top:'', margin:'20px auto', padding:'4% 5%', zIndex:'3', textAlign:'', borderRadius:'12px', textDecoration:'none', color:'#cccc'}}>
   <Newsignup />
   </div>
 </div>
 
-
-
-
-
-</div>
 </div>
 
 
+</div>
+</>
+) : (
+  ""
+)}
 
 
-{/* <div className="specialfont" style={{display:'flex', justifyContent:'center', alignSelf:'center', width:'100vw', margin:'0', padding:'1rem 20%', maxWidth:'', position:'relative', top:'0', zIndex:'2',}}> */}
+
+
+
+
+
+<div id="intro" name="container21" className="container21" style={{position:'relative', zIndex:'1', paddingTop:'0'}}>
+
+<div className="" style={{textAlign:'center', padding:'1rem', marginTop:'0' }}>
 <a className="button actionJacksons specialfont" aria-label="Order Online Now" title="Order Online Now" rel="noreferrer" target="_blank" href="https://www.toasttab.com/rackhousegulfport/v3/" style={{ textDecoration:'none', padding:'.5rem', textShadow:'1px 1px 0 #333', borderRadius:'8px', fontSize:'clamp(1rem, 2vw, 2.8rem)', textAlign:'center', display:'flex', justifyContent:'center', maxWidth:'', margin:'1rem 30%'}}>
 Order Online Now
 </a>
-{/* </div> */}
-
-
-
-<div name="container21" className="container21" style={{marginTop:'',}}>
+ </div>
 
 {/* show feature */}
         {ShowFeature ? (
             
        
+          
+
+
+        
 <section style={{ display:'',}}>
   <article>
 
-  <div className='stack-layout' style={{ display:'', position:'relative', top:'0', zIndex:'0', height:'', overflow:'hidden', filter: 'drop-shadow(0 0 20px #000)' }}>
+  <div className='stack-layout' style={{ display:'', position:'relative', top:'0', zIndex:'0', height:'40vh', overflow:'hidden', filter: 'drop-shadow(0 0 20px #000)' }}>
+
+
 
 
 
 {Image ? (
-            <GatsbyImage loading="eager"
+            <GatsbyImage
               image={Image}
               alt={frontmatter.title + " - Featured image"}
               className="featured-image1 layer1"
-              style={{height:'auto', width:'100vw', maxHeight:'', position:'', top:'', zIndex:'0', objectFit:'contain', overflow:'', border:'0px solid red !important'}}
+              style={{height:'auto', width:'100vw', maxHeight:'', position:'absolute', top:'', zIndex:'0', objectFit:'contain', overflow:'', border:'0px solid red !important'}}
             />
-
-            // <StaticImage loading="eager" src="../../static/assets/rackhouse-barrel.jpg" alt="Default Image" style={{height:'auto', maxHeight:'100vh', position:'relative', zIndex:'0', top:'0', border:'0px solid !important', objectFit:'cover',}} />
-
-            // <img src="assets/rackhouse-barrel.jpg" alt="" style={{height:'auto', maxHeight:'100vh', position:'absolute', zIndex:'0', top:'0',border:'0px solid !important', objectFit:'contain',}} />
             
           ) : (
 
@@ -574,7 +715,23 @@ Order Online Now
           )}
 
 
+<div className="specialfont" style={{position:'absolute', top:'5%', width:'100%', display:'flex', justifyContent:'space-between', gap:'20px', padding:'10%', border:'0px solid', zIndex:'5', color:'#fff'}}>
+<div style={{fontSize:'clamp(1rem, 3vw, 3.8rem)', textShadow:'1px 1px 1px #111', width:'50%'}}>
+1301 26th Avenue
+<br />
+Gulfport, MS
+<br />
+<a className="call" href="tel:+2282062744">228-206-2744</a>
+</div>
 
+<div style={{fontSize:'clamp(.9rem, 3vw, 3.8rem)', textShadow:'1px 1px 1px #111', width:'50%', textAlign:'right'}}>
+Open Daily At 11am
+<br />
+Sat &amp; Sun Brunch
+<br />
+Happy Hour 3-6pm
+</div>
+  </div>
 
 
 
@@ -590,7 +747,12 @@ Order Online Now
 
  
 
-
+  {/* {Svg ? (
+            <AddSvg />
+       
+          ) : (
+            ""
+          )} */}
 
 
 
@@ -611,13 +773,48 @@ Order Online Now
 
 
   
-{YouTube ? (
+{/* {YouTube ? (
             <Iframer />
        
           ) : (
             ""
-          )}
+          )} */}
 
+
+
+
+      </div>
+  </article>
+</section>
+
+) : (
+  ""
+)}
+{/* end show feature */}
+
+
+
+
+
+
+{/* <section style={{ display:'',}}>
+  <article>
+
+  <div className='stack-layout' style={{ display:'', position:'relative', top:'0', zIndex:'0', height:'', overflow:'hidden', filter: 'drop-shadow(0 0 20px #000)' }}>
+
+
+    {Image ? (
+  <GatsbyImage
+              image={Image}
+              loading="eager"
+              alt={frontmatter.title + " - Featured image"}
+              className="featured-image1 layer1"
+              style={{ width:'100%', height:'100vh', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}}
+            />
+
+          ) : (
+          ""
+          )}
 
 
 <div className="specialfont" style={{position:'absolute', bottom:'5%', width:'100%', display:'flex', justifyContent:'space-between', gap:'20px', padding:'10%', border:'0px solid', zIndex:'5', color:'#fff'}}>
@@ -638,23 +835,15 @@ Happy Hour 3-6pm
 </div>
   </div>
 
+  </div>
 
 
-      </div>
-
-
-  </article>
-</section>
-
-) : (
-  ""
-)}
-{/* end show feature */}
+</article>
+</section> */}
 
 
 
 
-<br /><br />
 
 {/* show Info */}
 {ShowInfo ? (
@@ -662,16 +851,16 @@ Happy Hour 3-6pm
        
 
 
-<section style={{ display:'', height:'', overflow:''}}>
+<section style={{ display:'', height:'', overflow:'', marginTop:'6%'}}>
   <article>
-<div className="flexbutt" style={{display:'flex', gap:'10px'}}>
-      <div className="flexcheek " style={{padding:'1rem 2rem 0 2rem', maxHeight:'90vh',}}>
+<div className="flexbutt" style={{display:'flex', gap:'30px'}}>
+      <div className="flexcheek " style={{padding:'0 2rem 0 2rem', maxHeight:'90vh',}}>
 
 
-          <h1 className="title1" style={{textAlign:'left', marginLeft:'1rem'}}>
-            {/* {frontmatter.title} */}
+      <h1 className="title1" style={{fontSize:'clamp(2rem, 4vw, 2.5rem)', textAlign:'left', marginLeft:''}}>
+            {frontmatter.title}
             {/* Today's Popular Subjects <br /> */}
-            The Rack House
+            {/* The Rack House */}
           </h1>
           {/* <h2
             className="tagline1"
@@ -687,17 +876,17 @@ Happy Hour 3-6pm
 
 
           <div
-          style={{padding:'0 8% 0 4.5%', fontSize:'clamp(1rem, 2vw, 2.8rem)',}}
+          style={{padding:'0', fontSize:'clamp(1rem, 2vw, 2.8rem)',}}
             className="description"
             dangerouslySetInnerHTML={{ __html: html }}
           />
 
 
-{/*   
-  <br />
-          <Link
+  
+
+          {/* <Link state={{modal: true}} 
             to={frontmatter.cta.ctaLink}
-            className="button fire actionJackson"
+            className="button fire actionJackson specialfont"
             style={{
               cursor:'pointer',
               width:'80%',
@@ -705,15 +894,15 @@ Happy Hour 3-6pm
               margin:'0 auto',
               display:'flex',
               alignSelf:'center',
-              color:'#ccc'
+              color:'#ccc',
+              fontSize:'130%'
             }}
           >
             {frontmatter.cta.ctaText}
-            <span className="icon -right">
-              <RiArrowRightSLine />
-            </span>
+   
 
             
+
           </Link> */}
 
          
@@ -732,6 +921,14 @@ to="#experiences" title="See the new EXPERIENCES™" /> */}
 
 
 
+{/* <span className="actionJackson txtshadow"> <span className="icon -right">
+              <FaHandPointDown />
+            </span> &nbsp;&nbsp;All New EXPERIENCES &nbsp;&nbsp;<span className="icon -right">
+              <FaHandPointDown />
+            </span></span> */}
+          
+
+
       </div>
 
 
@@ -739,12 +936,12 @@ to="#experiences" title="See the new EXPERIENCES™" /> */}
         
 
 
-      <div className="flexcheek" style={{position:'relative', maxHeight:'50vh', overflow:'', marginBottom:'', borderRadius:'0 0 12px 12px'}}>
+      <div className="flexcheek" style={{position:'relative', maxHeight:'', overflow:'', marginBottom:'', borderRadius:'0 0 12px 12px'}}>
  
  
 
 
- <div style={{margin:'0 30px', zIndex:'', borderRadius:'12px', maxHeight:'50vh', overflow:'', position:'relative', display:'', justifyContent:'', alignItems:'', flexDirection:'column'}}>
+ <div style={{margin:'0 30px', zIndex:'', borderRadius:'12px', maxHeight:'', overflow:'', position:'relative', display:'', justifyContent:'', alignItems:'', flexDirection:'column'}}>
    
 
 
@@ -755,8 +952,8 @@ to="#experiences" title="See the new EXPERIENCES™" /> */}
             <GatsbyImage
               image={SecondaryImage}
               alt={frontmatter.title + " - Featured image"}
-              className="post-card mobilehide"
-              style={{border:'0px solid red', width:'100%', height:'', maxHeight:'70vh',  borderRadius:'12px !important', position:'absolute', backgroundSize:'cover', objectFit:'cover', top:'0', zIndex:'0'}}
+              className="post-card"
+              style={{border:'0px solid red', width:'100%', height:'', maxHeight:'',  borderRadius:'12px', position:'', backgroundSize:'', objectFit:'', top:'0', zIndex:'0'}}
             />
           ) : (
             ""
@@ -820,9 +1017,7 @@ Through NFT
 
 
 
-<div style={{textAlign:'center', fontSize:'5vw', margin:'10vh 0 0 0'}}>
-  {/* Latest Minutes: */}
-  </div>
+{/* <div style={{textAlign:'center', fontSize:'5vw', margin:'10vh 0 0 0'}}>Latest Minutes:</div> */}
 
 
 
@@ -856,14 +1051,25 @@ Through NFT
 
  </div>{/* end scooch */}
 
-
-
-
-
-
+      
 
  
- <div className="flexbutt noexit print" style={{padding:'0 4%',
+
+
+
+
+
+
+
+
+
+
+<div id="capabilities" className="" style={{position:'relative', zIndex:'2', textAlign:'', padding:'0 2%', fontSize:'clamp(1rem, 2vw, 2.8rem)', margin:'20px auto 0 auto', maxWidth:'1600px'}}>
+
+
+
+
+<div className="flexbutt noexit print" style={{padding:'0',
 position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px', margin:'0 auto 2rem auto', }}>
 
 
@@ -873,11 +1079,11 @@ position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px
 
 
 
-<div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'flex-start', pointerEvents:'none'}}>
-    <a className="noexit" href="https://toddlambert.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>
-    {MenuImage ? (
+<div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'flex-start', pointerEvents:'', fontSize:'clamp(1rem, 1vw, 2.8rem)',}}>
+    <AnchorLink className="" to="#iso" style={{textDecoration:'none', textAlign:'center', color:'inherit',}}>
+    {Capability1 ? (
             <GatsbyImage
-              image={MenuImage}
+              image={Capability1}
               alt="Image Alt Text"
               className=""
               style={{borderRadius:'8px'}}
@@ -885,18 +1091,18 @@ position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px
           ) : (
             ""
           )}
-    </a>
+    </AnchorLink>
     <br />
     Our menu is steep in the traditions of the great steakhouses of America, however at virtually every step we have added our own "Rack House style" flair. We focus on providing a fantastic steak.
     </div>
 
 
     
-    <div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'flex-start', pointerEvents:'none'}}>
-    <a className="noexit" href="https://urbanfetish.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit',}}>
-    {LibationsImage ? (
+    <div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'flex-start', pointerEvents:'', fontSize:'clamp(1rem, 1vw, 2.8rem)',}}>
+    <AnchorLink className="" to="#about" style={{textDecoration:'none', color:'inherit',}}>
+    {Capability2 ? (
             <GatsbyImage
-              image={LibationsImage}
+              image={Capability2}
               alt="Image Alt Text"
               className=""
               style={{borderRadius:'8px'}}
@@ -904,18 +1110,18 @@ position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px
           ) : (
             ""
           )}
-    </a>
+    </AnchorLink>
     <br />
     Our mezzanine level of the Rack House was designed to be a place to sit back in a comfy couch, leather chair, or at the bar with friends and enjoy a unique atmosphere and great libations.
     </div>
 
 
 
-    <div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'flex-start', pointerEvents:'none'}}>
-    <a className="noexit" href="https://vidsocks.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit'}}>
-    {BourbonImage ? (
+    <div className="flexcheek network" style={{height:'', margin:'', display:'flex', flexDirection:'column', justifyContent:'flex-start', pointerEvents:'', fontSize:'clamp(1rem, 1vw, 2.8rem)',}}>
+    <AnchorLink className="" to="#equipmentlist" style={{textDecoration:'none', color:'inherit'}}>
+    {Capability3 ? (
             <GatsbyImage
-              image={BourbonImage}
+              image={Capability3}
               alt="Image Alt Text"
               className=""
               style={{borderRadius:'8px'}}
@@ -923,7 +1129,7 @@ position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px
           ) : (
             ""
           )}
-    </a>
+    </AnchorLink>
     <br />
     Join the Bourbon Society and you get to enjoy plenty of perks such as a personalized decanter, exclusive access to coveted bourbons, monthly tastings and so much more!
     </div>
@@ -931,11 +1137,20 @@ position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px
 
 </div>
 
+</div>
+
+
+
+
+
+
+
+
 
 
 
 <div className="specialfont" style={{textAlign:'center', fontSize:'5vw', margin:'10vh auto 0 auto', maxWidth:'80vw'}}>
-Virtual Tour
+Virtual Tour<br />
   <Link state={{modal: true}} to="/virtual-tour/" className="" style={{margin:'', textDecoration:'none'}}>
   <StaticImage src="../../static/assets/virtual-tour.jpg" alt="Twilightscapes Default Image" style={{height:'auto', position:'', zIndex:'', top:'',border:'6px solid !important', borderRadius:'12px', objectFit:'contain',}} />
 </Link>
@@ -945,10 +1160,17 @@ Virtual Tour
 
 <SocialMe />
 
-<Footer id="footer" />
+
+
+
+
+
+
+<Footer />
     </Layout>
   )
 }
 
 export default HomePage
   
+

@@ -1,176 +1,36 @@
-
-
-#sidebarMenu {
-	height: 75vh;
-	position: fixed;
-	z-index:3;
-	right: 0;
-	top:0;
-	display:flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	padding:75vh 0 0 0;
-	transform: translateX(100vw);
-	transition: transform 250ms ease-in-out;
-}
-/* #sidebarMenu button.menutheme div:nth-child(2){
-	display: none !important;
-} */
-/* .sidebarMenuInner{
-	margin:0 0 0 0;
-	padding:75vh 0 0 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	background-color:#111;
-	background-color:rgba(32, 140, 146, 0.493);
-	border-left:1px solid rgba(255, 255, 255, 0.1);
-	border-radius: 12px 0 0 12px !important;
-	min-width: 220px;
-	background-size: 140% 200%;
-}
-.sidebarMenuInner {
-	transition: all .8s ease-in-out;
-	background-color: #111;
-}
-.sidebarMenuInner li{
-	list-style: none;
-	color: #fff;
-	font-weight: bold;
-	padding: 5px 20px;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.10);
-}
-.sidebarMenuInner li span{
-	display: block;
-	font-size: 14px;
-}
-.sidebarMenuInner li a{
-	font-weight: bold;
-	cursor: pointer;
-	text-decoration: none;
-} */
-
-
-
-
-input[type="checkbox"]:checked ~ #sidebarMenu {
-	transform: translateX(100%);
-}
-input[type=checkbox]:checked ~ .sidebarIconToggle {
-	display:none !important;
-}
-input[type=checkbox] {
-	transition: all 0.3s;
-	box-sizing: border-box;
-	display: none;
-}
-.sidebarIconToggle {
-	transition: all 0.3s;
-	box-sizing: border-box;
-	cursor: pointer;
-	position: fixed;
-	z-index: 3;
-	bottom: 20vh;
-	right: 2%;
-	color: #999;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	justify-self:flex-start;
-	border:0px solid white;
-	text-shadow:1px 1px 0px #000;
-	padding:1rem;
-}
-/* .sidebarIconToggle:hover{
-	color: var(--primary);
-	text-shadow:1px 1px 0px #000;
-} */
-/* .sidebarIconToggle span{
-	content:(" ");
-	border:0px solid var(--primary-color);
-	display: flex;
-	height:200px;
-	width:200px;
+.button {
+	display: inline-flex;
+	align-items: center;
+	color:#ccc;
+	background: linear-gradient(180deg, rgb(26, 26, 34) 1%, rgb(17, 17, 17) 99%);
+	align-self: center;
+	padding: 15px 20px;
+	border-radius: 8px;
+	border:1px solid rgb(88, 87, 104);
+	align-items: center;
+	height:auto !important;
 	justify-content: center;
-	flex-direction: column;
-	position: absolute;
-	top:-15px;
-	left:-70px;
-	z-index: 5;
-	text-align: center;
-} */
-/* .sidebarIconToggle div span1{
-	width:200px;
-	justify-content: center;
-	flex-direction: column;
-	right:0;
-	bottom:0;
-	z-index: 3;
-	text-align: center;
-	animation-delay: 1.5s;
+	font-weight: bold;
+	font-size: 120%;
+	text-shadow: 2px 2px 2px black;
+	margin:2vh 1vw;
 }
-.homepage .sidebarIconToggle div span{
-	border-radius: 20px;
-	animation-delay: 4s;
-	color:var(--primary-color);
-} */
-/* .spinner {
-	transition: all 0.3s;
-	box-sizing: border-box;
-	position: absolute;
-	height: 5px;
-	width: 55px;
-	background-color: var(--primary);
+@media (max-width: 48rem) {
+	.button {
+		font-size:92% !important
 }
-.horizontal {
-	transition: all 0.3s;
-	box-sizing: border-box;
-	position: relative;
-	float: left;
-	margin-top: 5px;
-	box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
-.diagonal.part-1 {
-	position: relative;
-	transition: all 0.3s;
-	box-sizing: border-box;
-	float: left;
-	box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.5);
+.button:hover{
+	color:#fff;
+	box-shadow: 0 0px 12px #222;
 }
-.diagonal.part-2 {
-	transition: all 0.3s;
-	box-sizing: border-box;
-	position: relative;
-	float: left;
-	margin-top: 5px;
-	box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.5);
+.button.disabled {
+	display: inline-flex;
+	color:#fff !important;
+	background: linear-gradient(180deg, rgb(34, 26, 32) 1%, #111 99%);
+	border:1px solid rgb(104, 87, 102);
+	font-weight: bold;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px black;
+	background:#080808;
 }
-input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
-	transition: all 0.3s;
-	box-sizing: border-box;
-	opacity: 0;
-	box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.5);
-}
-input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
-	transition: all 0.3s;
-	box-sizing: border-box;
-	transform: rotate(135deg);
-	margin-top: 8px;
-	box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.5);
-}
-input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
-	transition: all 0.3s;
-	box-sizing: border-box;
-	transform: rotate(-135deg);
-	margin-top: -14px;
-} */
-/* .header{
-	background:transparent !important;
-	width:auto;
-} */
-/* .modal-btn{
-	box-shadow:none;
-}
-.modal-btn:hover{
-	background:#222;
-} */

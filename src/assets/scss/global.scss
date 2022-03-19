@@ -8,6 +8,7 @@ body {
 	*/
 	width:100vw;
 	scroll-behavior: smooth;
+	// padding-top:45px;
 }
 
 // body.homepage{
@@ -15,17 +16,20 @@ body {
 //   overflow-x: hidden !important;
 // }
 
-body.blogpost{
-  overflow-y: hidden !important;
-  overflow-x: hidden !important;
-}
+// body.blogpost{
+//   overflow-y: hidden !important;
+//   overflow-x: hidden !important;
+// }
 
+// body{position:relative;}
+// body:after{content: (''); background-image: url('../../../static/assets/hytron-bg.svg'); height: 100vh; width:100%; background-size: cover; position:fixed; top:0; left:0; z-index:-1; }
 
 #posts article{
 	margin-bottom:4vh;
 }
-h1,h2,h3,h4,.h1,.h2,.h3,.h4, #menu, .header .menu-icon:before, input.special, .intro:after, .intro:before, .scrolldown, .font, .gatsby-image-wrapper, .full-width-image:after, .sidebarMenuInner li a{
+h1,h2,h3,h4,.h1,.h2,.h3,.h4, #menu, .header .menu-icon:before, input.special, .intro:after, .intro:before, .scrolldown, .font, .gatsby-image-wrapper, .full-width-image:after, .sidebarMenuInner li a, .horizontal-scroll::before, .sliderholder1::before {
 	font-family: LibreBaskerville,lucida grande,lucida sans unicode,Tahoma,Sans-Serif !important;
+	font-style: italic;
 }
 @media (prefers-reduced-motion: reduce) {
 	* {
@@ -67,8 +71,37 @@ h1,h2,h3,h4,.h1,.h2,.h3,.h4, #menu, .header .menu-icon:before, input.special, .i
 }
 
 
+.lineOne {
+	transition-delay:.7s; 
+	transition:.7s ease in;
+	animation: txtFlyIn .7s linear;
+  }
+  .lineTwo {
+	  transition-delay:1s; 
+	  transition:1s ease in;
+	  animation: txtFlyIn 1s linear;
+  }
+  .lineThree {
+	  transition-delay:1.3s; 
+	  transition:1.3s ease in;
+	  animation: txtFlyIn 1.3s linear;
+  }
 
 
+  @keyframes movingBG {
+	0% { background-position: 0 0; }
+	50% { background-position: 90% 0; }
+	100% { background-position: 0 0; }
+  }
+  
+  @keyframes fadeIn{
+	0% { opacity:0;}
+	100% { opacity:1;}
+  }
+  @keyframes txtFlyIn{
+	0% { transform:translateX(-100%); }
+	100% { transform:translateX(0%); }
+  }
 
 .txtshadow{
 	text-shadow: 2px 2px 2px black;
@@ -98,22 +131,16 @@ p{
 	outline:1px rgb(0, 0, 0);
 }
 .button {
-padding: 15px;
-margin: 20px;
 	display: inline-flex;
 	align-items: center;
-	color:#fff !important;
+	color:#ccc;
 	background: linear-gradient(180deg, rgb(34, 26, 32) 1%, #111 99%);
 	align-self: center;
 	padding: 15px 20px;
-	border-radius: var(--radius-md);
 	border:1px solid rgb(104, 87, 102);
-	font-weight: var(--bold);
 	align-items: center;
-	height: var(--size-input);
-	height:auto !important;
+	height:auto ;
 	justify-content: center;
-	transition: var(--transition);
 	font-weight: bold;
 	font-size: 120%;
 	text-shadow: 2px 2px 2px black;
@@ -125,7 +152,8 @@ margin: 20px;
 }
 }
 .button:hover{
-	box-shadow: 0 0px 22px var(--primary-color);
+	color:'#fff' !important;
+	box-shadow: 0 0px 12px #ccc;
 }
 .button.disabled {
 	display: inline-flex;
@@ -258,18 +286,20 @@ p{
 }
 .specialfont{
 	font-family:LibreBaskerville;
+	font-style: italic;
 	line-height:100% !important;
 	font-size: clamp(2.5rem, 5vw, 5rem);
 }
 .specialfont2{
-	font-family:TronType;
+	font-family:LibreBaskerville;
 	line-height:100% !important;
+	font-style: italic !important;
 }
 
 .ReactModal__Overlay{
 	z-index: 3 !important;
 }
-.ReactModalPortal header, .ReactModalPortal footer, .ReactModalPortal div.toppad, .ReactModalPortal .fluff, .ReactModalPortal .audio, .ReactModalPortal .headline, .ReactModalPortal .intro:before, .ReactModalPortal .intro:after, .ReactModalPortal .clickplays *, .ReactModalPortal .contact {
+.ReactModalPortal header, .ReactModalPortal footer, .ReactModalPortal div.toppad, .ReactModalPortal .fluff, .ReactModalPortal .audio, .ReactModalPortal .headline, .ReactModalPortal .intro:before, .ReactModalPortal .intro:after, .ReactModalPortal .clickplays *, .ReactModalPortal .contact, .ReactModalPortal .navbar-item {
 	display: none !important;
 	/* overflow-y: hidden !important;
 	overflow-x: hidden !important;
@@ -301,24 +331,29 @@ body.homepage .ReactModalPortal .nextbutt {
 }
 .ReactModal__Overlay--after-open{
 	opacity: 1;
+	background:rgba(22, 24, 24, 0.8) !important;
+	text-shadow:1px 1px 0 #111;
+	color:#fff;
 }
 .ReactModal__Overlay--before-close{
 	opacity: 0;
 }
 .ReactModal__Overlay{
-	background-color:transparent !important;
-	background: rgba(6, 70, 90, 0.87);
+	// background:rgba(18, 20, 20, .2) !important;
+	background:transparent !important;
 	backdrop-filter: blur(22px);
 }
 .ReactModal__Content{
 	padding:0 !important;
-	background:transparent !important;
+	background:rgba(18, 20, 20, 0.7) !important;
+	// background:transparent !important;
 	margin:0 auto ;
 	border:none !important;
 	box-shadow: 0px 1px 10px 10px rgba(0, 0, 0, 0.5);
 	box-shadow: none !important;
+	inset:0 0 0 0 !important;
+	// color:#fff;
 }
-
 
 
 
@@ -343,7 +378,7 @@ body.homepage .ReactModalPortal .nextbutt {
 		scroll-snap-type: y mandatory !important;
 	}
 	.RArrow span::before{
-		content:"\2329 swipe" !important;
+		content:"swipe \21E1" !important;
 	}
 }
 
@@ -388,8 +423,21 @@ body.homepage .ReactModalPortal .nextbutt {
 	border:1px solid #666 !important;
 	padding:10px !important;
 	border-radius:8px;
-	opacity: .5;
+	opacity: .8;
 }
+
+.form input, .form textarea, .form select, .select, .upload {
+    border:0; outline:0;
+    padding: .5em !important;
+    margin-bottom: 1.3em;
+    width: 100%;
+	background:#333;
+	color:#fff !important;
+	border:1px solid #666 !important;
+	padding:10px !important;
+    }
+
+
 textarea {
 	min-height: 200px;
 }
@@ -406,6 +454,70 @@ input:focus, textarea:focus {
 	border-radius: 12px;
 	background:#ccc;
 }
+
+
+
+.label {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  }
+
+
+.label input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+  }
+
+/* Create a custom radio button */
+.checkmark {
+	position: absolute;
+	top: 10px;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+	border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .label:hover input ~ .checkmark {
+	background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .label input:checked ~ .checkmark {
+	background-color: #2196F3;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+  }
+
+  /* Show the indicator (dot/circle) when checked */
+.label input:checked ~ .checkmark:after {
+	display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .label .checkmark:after {
+	   top: 9px;
+	  left: 9px;
+	  width: 8px;
+	  height: 8px;
+	  border-radius: 50%;
+	  background: white;
+  }
 
 
 .drop-shadow {
@@ -595,18 +707,33 @@ a [aria-current]:hover{
 
 
 
-body.blogpost .sidebarIconToggle{display: none;}
+// body.blogpost .sidebarIconToggle{display: none;}
 
+
+// #sidebarMenu {
+// 	position: fixed;
+// 	z-index:5;
+// 	right: 0;
+// 	padding:0 0 0 0;
+// 	transform: translateX(100vw);
+// 	transition: transform 250ms ease-in-out;
+//   background:transparent;
+// }
 
 #sidebarMenu {
+	height: 75vh;
 	position: fixed;
-	z-index:5;
+	z-index:3;
 	right: 0;
-	padding:0 0 0 0;
+	top:0;
+	display:flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding:75vh 0 0 0;
 	transform: translateX(100vw);
 	transition: transform 250ms ease-in-out;
-  background:transparent;
 }
+
 
 #secondMenu {
 	position: fixed;
@@ -751,8 +878,8 @@ footer{
 	color:#fff !important;
 	position:relative;
 	bottom:0 ;
-	z-index: 2;
-	opacity: 1;
+	// z-index: 2;
+	opacity: .8;
 	background: linear-gradient(0deg,#111,#222,#000,#111);
 	background-size: 300% 300%;
 	/* animation: gradient 12s ease infinite;
@@ -859,6 +986,36 @@ footer{
 
 
 
+.react-tabs__tab{
+	display: inline-block;
+	margin-bottom: 10px;
+	padding: 12px 5px;
+	border: 0px solid #ccc;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	cursor: pointer;	
+  transition: all 0.3s;
+  border-radius:0;
+  text-decoration: underline;
+}
+.react-tabs__tab:hover {
+	/* color: #333; */
+  color:0;
+}
+
+.react-tabs__tab-list {
+  /* border-bottom: 1px solid #aaa; */
+  margin: 0 0;
+  padding: 0;
+  clear:both;
+  display:flex;
+  justify-content:space-between;
+  }
+
+  .react-tabs__tab--selected, .react-tabs__tab{background:transparent !important; border: none !important; color:inherit !important;}
+
+
 
 .horizontal-scroll::before{
   content:' \2329  swipe ';
@@ -876,8 +1033,10 @@ footer{
   bottom:50px; right:30px;
   color:#fff;
   transform: rotate(90deg);
-  font-size:clamp(2rem, 3.5vw, 3.8rem);
+  font-size:clamp(1.3rem, 2.5vw, 2.8rem);
   text-shadow:2px 2px 2px #333;
+  animation: fadeout 4s forwards;
+	animation-delay:4s;
 }
 
 /* .horizontal-scroll-wrapper:hover::before{
@@ -931,6 +1090,16 @@ animation: fadeout .5s forwards;
 // }
 
 
+@keyframes fadeout {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
 @keyframes move {
   0% {
     opacity: 1;
@@ -976,20 +1145,22 @@ animation: fadeout .5s forwards;
 		scroll-snap-type: y mandatory;
 	}
 	.RArrow span::before{
-		content:"\2329 swipe" !important;
+		content:"swipe \21E1" !important;
 	}
 }
 .RArrow span::before{
-	content:"scroll \232a";
-	background:rgba(3, 212, 212, 0.2);
+	content:"scroll \21E3";
+	// background:rgba(3, 212, 212, 0.2);
 }
 .RArrow{
 	position:absolute;
-	z-index: 1;
+	z-index: 5;
 	text-transform:uppercase;
-	bottom:20px;
+	top:88vh;
+	left:20px;
 	text-align:center;
 	animation: fadeout 4s forwards;
+	animation-delay:4s;
 }
 .RArrow span{
 	font-size:18px;
@@ -1066,6 +1237,7 @@ animation: fadeout .5s forwards;
 .horizontal-holder{
 	position:relative;
 	overflow:hidden;
+	height:80vh;
 }
 .horizontal-scroll{
 	position: relative;
@@ -1109,7 +1281,13 @@ animation: fadeout .5s forwards;
 	.horizontal-scroll{
 		width: calc(100% + 1px);
 		transform: rotate(-90deg) translateY(-100%);
+		// max-height:300px;
 	}
+	.horizontal-holder{
+		height:280px !important;
+	}
+	.wrap-element{height:280px !important;}
+
 }
 
 
@@ -1304,51 +1482,9 @@ animation: fadeout .5s forwards;
 // 	width: clamp(400px, 88vw, 900px);
 // }
 
-.button {
-	padding: 15px;
-	display: inline-flex;
-	align-items: center;
-	color:rgb(236, 228, 228) !important;
-	text-decoration: none;
-	background: linear-gradient(180deg, rgb(34, 26, 32) 1%, #111 99%);
-	align-self: center;
-	// padding: var(--space-sm) var(--space-xl);
-	border-radius: 8px;
-	border:1px solid rgb(104, 87, 102);
-	font-weight: var(--bold);
-	align-items: center;
-	height: var(--size-input);
-	justify-content: center;
-	transition: var(--transition);
-	font-weight: bold;
-	font-size: 100%;
-	text-shadow: 2px 2px 2px black;
-	// box-shadow: 2px 4px 7px #000;
-	// filter: drop-shadow(0px 0px 10px rgba(155,155,155,.5));
-	transition: background 0.3s linear;
-	&.-outline {
-		color: var(--primary-color);
-		background: #fff;
-		&:hover {
-			box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
-			background: #f2f2f2;
-		}
-	}
-	& + .button {
-		margin-left: 20px;
-	}
-	.icon {
-		display: inline-flex;
-		&.-right {
-			margin-left: var(--margin);
-		}
-		&.-left {
-			margin-right: var(--margin);
-		}
-	}
-}
 
-Contact page.contact-page {
+
+.contact-page {
 	.wrapper {
 		max-width: 768px;
 		margin: 0 auto;
@@ -1494,16 +1630,15 @@ ul {
 }
 ul li {
   display: inline-block;
-  margin-left: 20px;
 }
-a {
-  color: var(--primary-color) !important;
-  text-decoration: none;
-  &:hover {
-      color: var(--text-color-inverted) !important;
-  }
+// a {
+//   color: var(--primary-color) !important;
+//   text-decoration: none;
+//   &:hover {
+//       color: var(--text-color-inverted) !important;
+//   }
 
-a[aria-current="page"] {
-  color: rgba(255, 255, 255, 1);
-}
-}
+// a[aria-current="page"] {
+//   color: rgba(255, 255, 255, 1);
+// }
+// }

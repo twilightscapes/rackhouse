@@ -71,7 +71,7 @@ const Pagination = props => (
 
 
   <div className="pagination" sx={styles.pagination} style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'100vw', height:'50vh', color:'#ccc'}}>
-    <h1>TRON In 60 Seconds - Minutes:</h1>
+    <h1>Archive of Posts:</h1>
     <ul style={{background:'#222', width:'80vw', position:'relative', top:'', margin:'0 auto', padding:'0 10%', zIndex:'1', textAlign:'', borderRadius:'12px', textDecoration:'none'}}>
       {!props.isFirst && (
         <li style={{}}>
@@ -197,7 +197,7 @@ class BlogIndex extends React.Component {
 {/* <div id="contentscroll" name="container2" className="container" style={{display:'', justifySelf:'', width:'100%', maxWidth:'100%', height:'', border:'0px solid #000 !important', margin:'0', marginTop:'0', padding:'4%'}}> */}
 
 
-<div className="horizontal-holder allin60panel" style={{position:'relative'}}>
+<div className="horizontal-holder allin60panel" style={{position:'relative', height:'100vh'}}>
 
 {/* <h1 className="headline neonText" style={{fontSize:'250%', textAlign:'center', margin:'0', padding:'0'}}>Archive</h1> */}
 {/* VidSock - The World's First Multimedia 3D Blog for creating, hosting and marketing the next generation of NFTs. */}

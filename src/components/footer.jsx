@@ -242,9 +242,7 @@ export function Footer() {
 
 
 
-<br />
-<br />
-<GoBack />
+
       </nav>
    
     </footer>
@@ -258,5 +256,4 @@ export function Footer() {
     
   )
 }
-
 

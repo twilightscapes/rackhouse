@@ -6,7 +6,7 @@ featuredImage: /assets/rackhouse-barrel.jpg
 secondaryImage: /assets/inside-dining-vert.jpg
 underlayImage: /assets/transparent.png
 showInfo: true
-youtuber: ""
+youtuber: "https://youtu.be/14zqZsUzplg"
 youtubeautostart: "1"
 youtubeloop: ""
 title: Best Steaks on the Coast

@@ -22,7 +22,7 @@ import { Footer } from "../components/footer"
 // import { SRLWrapper } from "simple-react-lightbox"
 import {CopyToClipboard} from 'react-copy-to-clipboard'
 import ReactPlayer from 'react-player/lazy'
-
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 import YouTubed from "../pages/youtube"
 import { Seo } from "../components/seo"
 import { Layout } from "../components/layout"
@@ -629,7 +629,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 {/* <div className='player-wrapper intro' style={{position:'relative', bottom:'0', zIndex:'', height:'100vh', maxHeight:'', overflow:'', filter: 'drop-shadow(0 0 20px #000)',  }}> */}
-
+<div id="top"></div>
 
 <div className="pagemenu" style={{position:'fixed', bottom:'20px', zIndex:'1',  left:'20px', right:'', display:'flex', justifyContent:'center', width:'', margin:'0 auto', gap:'20px', textShadow:'2px 2px 0 #222', filter:'drop-shadow(0px 0px 5px rgba(155,155,155,1))', color:'#fff' }}>
 
@@ -638,29 +638,32 @@ const svgUrl = frontmatter.svgImage.publicURL
 
   {/* <Link state={{modal: true}}  to="/contact/" className=" " style={{margin:'', textDecoration:''}}>Contact</Link> */}
 
+  <AnchorLink to="#top" style={{}}>
+  Top
+        </AnchorLink>
 
 
     {ShareThis ? (
-<Link to="#sharethis" style={{}}>
+<AnchorLink to="#sharethis" style={{}}>
   Share
-        </Link>
+        </AnchorLink>
  ) : (
   ""
 )}
 
 {Comments ? (
-          <Link to="#comments" style={{}}>
+          <AnchorLink to="#comments" style={{}}>
   Comments
-        </Link>
+        </AnchorLink>
        
           ) : (
             ""
           )}
 
 
-<Link to="#footer" style={{border:'0px solid', }}>
+<AnchorLink to="#footer" style={{border:'0px solid', }}>
   Footer
-        </Link>
+        </AnchorLink>
 
 
 </div>
@@ -712,7 +715,7 @@ const svgUrl = frontmatter.svgImage.publicURL
               image={FrontImage}
               alt={frontmatter.title + " - Featured image"}
               className="featured-image1 layer1"
-              style={{ width:'100vw',  top:'0', zIndex:'-2',  border:'2px solid red !important', paddingBottom:'',}}
+              style={{ width:'100vw',  top:'0', zIndex:'-2', border:'0px solid red !important', paddingBottom:'',}}
             />
 
           ) : (
@@ -846,9 +849,9 @@ const svgUrl = frontmatter.svgImage.publicURL
             <GatsbyImage
               image={UnderlayImage}
               alt={frontmatter.title + " - image"}
-              className="mcboaty"
+              className="mcboaty1"
               style={{height:'auto', width:'100%', maxHeight:'100%', overflow:'hidden', position:'absolute', bottom:'0', zIndex:'',
-             objectFit:'contain', border:'0px solid red !important'}}
+             objectFit:'contain', border:'0px solid red !important', background:'transparent'}}
             />
             
           ) : (
@@ -856,7 +859,7 @@ const svgUrl = frontmatter.svgImage.publicURL
           )}
 
           
-<object className="" id="svg1" data={svgUrl} type="image/svg+xml" style={{position:'absolute', top:'', left:'', right:'', bottom:'0', overflow:'', border:'0px solid red', zIndex:'', aspectRatio:'', width:'100vw', background:'transparent', objectFit:'cover'   }} alt="animated content" title="animated content" ></object>
+
 
 
 
@@ -873,6 +876,8 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 </div>
 
+
+<object className="" id="svg1" data={svgUrl} type="image/svg+xml" style={{position:'absolute', top:'', left:'', right:'', bottom:'0', overflow:'', border:'0px solid red', zIndex:'', aspectRatio:'', width:'100vw', background:'transparent', objectFit:'cover'   }} alt="animated content" title="animated content" ></object>
 
 
 
@@ -911,7 +916,9 @@ const svgUrl = frontmatter.svgImage.publicURL
             <Iframer3 />
           )}
 
-
+{/* <AnchorLink className="" to="#sharethis" style={{position:'absolute', top:'0', zIndex:'60'}}>
+                About Us 
+              </AnchorLink> */}
 <div style={{padding:'0 5vw', color:'inherit !important'}}>
       {(previous || next) && <Pagination {...props} />}
       </div>
@@ -1055,7 +1062,7 @@ const svgUrl = frontmatter.svgImage.publicURL
 
 
 
-<div style={{padding:'0 0', borderTop:'0px solid', margin:'0 0', textAlign:'center', fontSize:'1.5rem', minWidth:'50%', width:'100%', maxWidth:'', border:'0px solid yellow'}}>
+{/* <div style={{padding:'0 0', borderTop:'0px solid', margin:'0 0', textAlign:'center', fontSize:'1.5rem', minWidth:'50%', width:'100%', maxWidth:'', border:'0px solid yellow'}}>
 
 
       <div
@@ -1064,7 +1071,7 @@ const svgUrl = frontmatter.svgImage.publicURL
       />    
   
  
-</div>
+</div> */}
 
       
 
@@ -1078,7 +1085,8 @@ const svgUrl = frontmatter.svgImage.publicURL
    </CustomBox>
 
    <section id="footer" style={{height:'100vh', marginTop:'',  background:'rgba(0,0,0,0.30)',}}>
-   <Footer /></section>
+   <Footer />
+   <GoBack /></section>
     </Layout>
 
 

@@ -2,10 +2,10 @@
 import * as React from "react"
 // import { navigate } from 'gatsby-link'
 // import { FaEnvelope } from 'react-icons/fa';
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 import CookieConsent from "react-cookie-consent";
 // import ScrollAnimation from 'react-animate-on-scroll'
-
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const Consent = () => (
 
@@ -15,14 +15,14 @@ const Consent = () => (
     id="sitepref"
 	debug={false}
 	location="none"
-	style={{ opacity:'1', padding:'0 3%', margin:'0 auto', border:'0px solid white', position:'relative', top:'0', zIndex:'0', display:'flex', alignSelf:'center', width:'50vw', justifyContent:'center', color:'#fff', background:'',
+	style={{ opacity:'.8', padding:'10px 30px', margin:'0 10%', border:'0px solid white', borderRadius:'12px', position:'fixed', bottom:'20vh', zIndex:'2', display:'flex', alignItems:'center', alignContent:'center', width:'80%', justifyContent:'center', color:'#fff', background:'#111',
    }}
 	enableDeclineButton={false}
 	declineButtonText="No Cookies"
     declineButtonStyle={{fontSize: "13px", }}
     
     buttonText="Accept"
-	buttonStyle={{justifyContent:'center', textAlign:'center', fontSize: "16px", fontWeight:'bold', borderRadius:'5px', color:'',   top:'10px',  position:'relative', margin:'0 0 0 0', padding:'.8rem 1rem', background:'transparent', border:'1px solid',
+	buttonStyle={{justifyContent:'center', textAlign:'center', fontSize: "", fontWeight:'bold', borderRadius:'5px', color:'', top:'',  position:'relative', margin:'0 0 0 0', padding:'.5rem 2rem', background:'transparent', border:'1px solid',
     // filter:'drop-shadow(1px 1px 10rem #fff)',
     boxShadow:' 0px 1px 6px 1px black',
     backdropFilter: 'blur(10px)',
@@ -36,10 +36,10 @@ const Consent = () => (
 >
 
 
-    <div style={{color:'inherit', padding:'0 0 0 0', fontSize:'100%', textAlign:'center',}}>
+    <div style={{color:'inherit', padding:'1rem .2rem', fontSize:'clamp(.6rem, 1.8vw, 3rem)%', textAlign:'center', display:'grid', placeContent:'center', justifyContent:'center'}}>
      We use cookies to optimize our website.{" "}<br />
-    <span style={{ fontSize: "75%", color:'inherit' }}>
-   <a className="donotsell" href="/privacy/">Do Not Sell My Personal Information</a>
+    <span style={{ fontSize: "65%", color:'inherit', textDecoration:'underline' }}>
+   <AnchorLink state={{modal: true}} className="donotsell" to="/privacy#ccpa">Do Not Sell My Personal Information</AnchorLink> | <Link state={{modal: true}} to="/cookie-policy/" style={{color:'#fff',}}>Cookie Policy</Link>
     </span>
     </div>
     
