@@ -446,7 +446,7 @@ function Iframer() {
   
           )}
 </div> */}
-
+ 
 
 <ReactPlayer
             ref={playerRef}
@@ -516,14 +516,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/ra
 
 
 
-          {/* <div style={{position:'absolute', width:'100vw', height:'100vh', top:'5px', margin:'0', zIndex:'-1', display:'flex', justifyContent:'center', background:'transparent !important',}}>
-  {Svg ? (
-            <AddSvg />
-       
-          ) : (
-            ""
-          )}
-  </div> */}
+
 
 
 
@@ -577,7 +570,14 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/ra
 
 
 
-
+{/* <div style={{position:'fixed', width:'100vw', height:'100vh', top:'5px', margin:'0', zIndex:'3', display:'flex', justifyContent:'center', background:'transparent !important',}}>
+  {Svg ? (
+            <AddSvg />
+       
+          ) : (
+            ""
+          )}
+  </div> */}
 
 
           
@@ -597,7 +597,6 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/ra
 
           {/* show feature */}
         
-
 
 
 
