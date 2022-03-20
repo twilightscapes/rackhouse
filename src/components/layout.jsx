@@ -8,7 +8,7 @@ import { AiOutlineClose } from "react-icons/ai"
 // import { Toast } from "./toast"
 import Bug from "../../static/assets/logo.svg"
 import SiteLogo from "../../static/assets/logo.svg"
-import Install from './install-discount'
+// import Install from './install-discount'
 import Theme from "../components/theme"
 // import { CartButton } from "./cart-button"
 // import SearchIcon from "../../static/assets/search"
@@ -102,18 +102,18 @@ export function Layout({ children }) {
 
       <input type="checkbox" className="openSidebarMenu" id="openSidebarMenu" />
 
-<div id="secondMenu" className="" style={{marginTop:'5rem'}}>
+{/* <div id="secondMenu" className="" style={{marginTop:'5rem'}}>
 <ul className="sidebarMenuInner post-card" style={{}}>
 <Install />
-{/* <li className="carto" style={{border:'none', margin:' 0', textAlign:'center'}}>
+<li className="carto" style={{border:'none', margin:' 0', textAlign:'center'}}>
 Woot
 </li>
 <li className="carto" style={{border:'none', margin:' 0', textAlign:'center'}}>
 This is 2nd menu
-</li> */}
+</li>
 
 </ul>
-</div>
+</div> */}
 
   <label htmlFor="openSidebarMenu" className="backdrop1" ><input type="checkbox" /></label>
 
