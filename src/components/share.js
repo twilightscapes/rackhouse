@@ -50,9 +50,6 @@ const CustomBox = styled.div`
 }
 
 
-
-
-
 `
 
 

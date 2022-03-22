@@ -58,7 +58,7 @@ const NewsletterPage = () => (
               <br />
               <span className="txtshadow" style={{fontSize:'95%'}}>Get exclusive deals and perks</span>
 
-             <div className="signbox" style={{display:'flex', gap:'10px'}}>
+             <div className="signbox" style={{}}>
              
              
 
@@ -78,7 +78,7 @@ const NewsletterPage = () => (
               className="button actionJackson specialfont"
               
               type="submit"
-              style={{marginTop:'-8px', fontSize:'clamp(1rem, 1.5vw, 1.5rem)', whiteSpace:'nowrap'}}
+              style={{marginTop:'', fontSize:'clamp(1rem, 1.5vw, 1.5rem)', whiteSpace:'nowrap'}}
             >
              I like deals and perks&nbsp;{" "}
               <span className="icon -right">
@@ -90,7 +90,7 @@ const NewsletterPage = () => (
             </div>
 
 
-            <div style={{fontSize: '70%', padding: '0px 3%', margin:'30px 0 10px 0', textAlign: 'center', color:'#ccc'}}>
+            <div style={{fontSize: '', padding: '0px 3%', margin:'5px 0 10px 0', textAlign: 'center', color:'#ccc'}}>
             <Link to="/privacy/" className="" style={{textAlign: 'center', padding: '15px',  textDecoration: 'underline', border:'0px solid yellow'}}>privacy policy (NO SPAM!)</Link>
            
             </div>
