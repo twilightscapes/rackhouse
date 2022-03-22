@@ -4,49 +4,7 @@ import * as React from "react"
 import styled from "styled-components"
 
 const CustomBox = styled.div`
-.resp-sharing-button__link,
-.resp-sharing-button__icon {
-  display: inline-block
-}
 
-.resp-sharing-button__link {
-  text-decoration: none;
-  margin: 0 .5rem;
-}
-
-.resp-sharing-button {
-  border-radius: 5px;
-  transition: 25ms ease-out;
-  padding: 0;
-}
-
-.resp-sharing-button__icon svg {
-  width: 10vw;
-  height: 10vh;
-  // margin-right: 0.4em;
-  vertical-align: top
-}
-
-.resp-sharing-button__link span{display:none;}
-.resp-sharing-button__link:hover{filter: brightness(85%);}
-
-.resp-sharing-button--small svg {
-  margin: 0;
-  vertical-align: middle
-}
-
-/* Non solid icons get a stroke */
-.resp-sharing-button__icon {
-  stroke: #fff;
-  fill: none
-}
-
-/* Solid icons get a fill */
-.resp-sharing-button__icon--solid,
-.resp-sharing-button__icon--solidcircle {
-  fill: #333;
-  stroke: none
-}
 
 
 `
