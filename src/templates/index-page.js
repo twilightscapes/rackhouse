@@ -856,11 +856,11 @@ Happy Hour 3-6pm
       <div className="flexcheek " style={{padding:'0 2rem 0 2rem', maxHeight:'90vh',}}>
 
 
-      <h1 className="title1" style={{fontSize:'clamp(2rem, 4vw, 2.5rem)', textAlign:'left', marginLeft:''}}>
+      <span className="specialfont2" style={{fontSize:'clamp(2rem, 4vw, 2.5rem)', textAlign:'left', marginLeft:''}}>
             {/* {frontmatter.title} */}
             {/* Today's Popular Subjects <br /> */}
             The Rack House
-          </h1>
+          </span>
           {/* <h2
             className="tagline1"
             sx={{
