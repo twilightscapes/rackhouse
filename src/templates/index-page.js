@@ -703,6 +703,7 @@ Order Online
               image={Image}
               alt={frontmatter.title + " - Featured image"}
               className="featured-image1 layer1"
+              placeholder="blurred" loading="eager"
               style={{height:'auto', width:'100vw', maxHeight:'', position:'absolute', top:'', zIndex:'0', objectFit:'contain', overflow:'', border:'0px solid red !important'}}
             />
             

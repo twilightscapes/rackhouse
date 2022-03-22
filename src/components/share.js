@@ -38,14 +38,14 @@ const CustomBox = styled.div`
 
 /* Non solid icons get a stroke */
 .resp-sharing-button__icon {
-  stroke: #555;
+  stroke: #333;
   fill: none
 }
 
 /* Solid icons get a fill */
 .resp-sharing-button__icon--solid,
 .resp-sharing-button__icon--solidcircle {
-  fill: #555;
+  fill: #333;
   stroke: none
 }
 
