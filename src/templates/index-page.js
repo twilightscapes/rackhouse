@@ -714,7 +714,7 @@ Order Online
           )}
 
 
-<div className="specialfont" style={{position:'absolute', top:'5%', width:'100%', display:'flex', justifyContent:'space-between', gap:'20px', padding:'10%', border:'0px solid', zIndex:'5', color:'#fff'}}>
+<div className="specialfont" style={{position:'absolute', top:'0', width:'100%', display:'flex', justifyContent:'space-between', gap:'20px', padding:'5% 5%', border:'0px solid', zIndex:'5', color:'#fff'}}>
 <div style={{fontSize:'clamp(1rem, 3vw, 3.8rem)', textShadow:'1px 1px 1px #111', width:'50%'}}>
 1301 26th Avenue
 <br />
@@ -856,7 +856,7 @@ Happy Hour 3-6pm
       <div className="flexcheek " style={{padding:'0 2rem 0 2rem', maxHeight:'90vh',}}>
 
 
-      <span className="specialfont2" style={{fontSize:'clamp(2rem, 4vw, 2.5rem)', textAlign:'left', marginLeft:''}}>
+      <span className="specialfont2" style={{fontSize:'clamp(2rem, 4vw, 2.5rem)', textAlign:'left', marginLeft:'1rem'}}>
             {/* {frontmatter.title} */}
             {/* Today's Popular Subjects <br /> */}
             The Rack House
@@ -875,7 +875,7 @@ Happy Hour 3-6pm
 
 
           <div
-          style={{padding:'0', fontSize:'clamp(1rem, 2vw, 2.8rem)',}}
+          style={{padding:'1rem', fontSize:'clamp(1rem, 2vw, 2.8rem)',}}
             className="description"
             dangerouslySetInnerHTML={{ __html: html }}
           />
