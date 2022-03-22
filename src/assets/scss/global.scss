@@ -30,6 +30,7 @@ body {
 h1,h2,h3,h4,.h1,.h2,.h3,.h4, #menu, .header .menu-icon:before, input.special, .intro:after, .intro:before, .scrolldown, .font, .gatsby-image-wrapper, .full-width-image:after, .sidebarMenuInner li a, .horizontal-scroll::before, .sliderholder1::before {
 	font-family: LibreBaskerville,lucida grande,lucida sans unicode,Tahoma,Sans-Serif !important;
 	// font-style: italic;
+	font-weight: 700 !important;
 }
 @media (prefers-reduced-motion: reduce) {
 	* {
@@ -289,11 +290,13 @@ p{
 	// font-style: italic;
 	line-height:100% !important;
 	font-size: clamp(2.5rem, 5vw, 5rem);
+	font-weight: bold;
 }
 .specialfont2{
 	font-family:LibreBaskerville;
 	line-height:100% !important;
 	// font-style: italic !important;
+	font-weight: bold;
 }
 
 .ReactModal__Overlay{
