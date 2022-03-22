@@ -494,11 +494,11 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/ra
 
 
         
-            <div style={{display:'grid', placeContent:'center', fontWeight:'bold', padding:'50% 0 0 0', fontSize:'clamp(2rem, 3.5vw, 3.8rem)', textShadow:'2px 2px 0 #111', width:'100%', position:'absolute', zIndex:'2', top:'', height:'100%', border:'1px solid transparent',}}>
+            <div style={{display:'grid', placeContent:'center', fontWeight:'bold', padding:'50% 0 0 0', fontSize:'clamp(1rem, 3vw, 3rem)', textShadow:'2px 2px 0 #111', width:'100%', position:'absolute', zIndex:'2', top:'', height:'100%', border:'1px solid transparent',}}>
               
-            <div style={{fontWeight:'bold', padding:'2rem', fontSize:'2rem', backdropFilter:'blur(4px)', background:'rgba(0, 0, 0, .5)', borderRadius:'12px', }}>Click To Play
+            <div style={{fontWeight:'bold', padding:'2rem', backdropFilter:'blur(4px)', background:'rgba(0, 0, 0, .5)', borderRadius:'12px', }}>Click To Play
 
-    <ImPlay style={{margin:'0 auto', width:'', fontSize:'60px'}} /></div>
+    <ImPlay style={{margin:'0 auto', width:'', fontSize:'40px'}} /></div>
     </div>
 
 
