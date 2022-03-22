@@ -11,7 +11,7 @@ const CustomBox = styled.div`
 
 .resp-sharing-button__link {
   text-decoration: none;
-  margin: 0;
+  margin: 0 .5rem;
 }
 
 .resp-sharing-button {
