@@ -77,7 +77,7 @@ export const pageQuery = graphql`
         featuredImage {
           publicURL
           childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+            gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED,)
           }
         }
         secondaryImage {
@@ -87,7 +87,7 @@ export const pageQuery = graphql`
         }
         underlayImage {
           childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+            gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED,)
           }
         }
         cta {
@@ -704,6 +704,7 @@ Order Online
               alt={frontmatter.title + " - Featured image"}
               className="featured-image1 layer1"
               placeholder="blurred" loading="eager"
+              layout="constrained"
               style={{height:'auto', width:'100vw', maxHeight:'', position:'absolute', top:'', zIndex:'0', objectFit:'contain', overflow:'', border:'0px solid red !important'}}
             />
             
@@ -953,6 +954,8 @@ to="#experiences" title="See the new EXPERIENCES™" /> */}
               image={SecondaryImage}
               alt={frontmatter.title + " - Featured image"}
               className="post-card"
+              layout="constrained"
+              placeholder="blurred"
               style={{border:'0px solid red', width:'100%', height:'', maxHeight:'',  borderRadius:'12px', position:'', backgroundSize:'', objectFit:'', top:'0', zIndex:'0'}}
             />
           ) : (
@@ -1152,7 +1155,7 @@ position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px
 <div className="specialfont" style={{textAlign:'center', fontSize:'5vw', margin:'10vh auto 0 auto', maxWidth:'80vw'}}>
 Virtual Tour<br />
   <Link state={{modal: true}} to="/virtual-tour/" className="" style={{margin:'', textDecoration:'none'}}>
-  <StaticImage src="../../static/assets/virtual-tour.jpg" alt="Twilightscapes Default Image" style={{height:'auto', position:'', zIndex:'', top:'',border:'6px solid !important', borderRadius:'12px', objectFit:'contain',}} />
+  <StaticImage src="../../static/assets/virtual-tour.jpg" alt="Twilightscapes Default Image" placeholder="blurred" layout="constrained" style={{height:'auto', position:'', zIndex:'', top:'',border:'6px solid !important', borderRadius:'12px', objectFit:'contain',}} />
 </Link>
 </div>
 <br /><br />
