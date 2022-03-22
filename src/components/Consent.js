@@ -5,7 +5,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import CookieConsent from "react-cookie-consent";
 // import ScrollAnimation from 'react-animate-on-scroll'
-import { AnchorLink } from "gatsby-plugin-anchor-links"
+// import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const Consent = () => (
 
@@ -15,7 +15,7 @@ const Consent = () => (
     id="sitepref"
 	debug={false}
 	location="none"
-	style={{ opacity:'.8', padding:'10px 30px', margin:'0 10%', border:'0px solid white', borderRadius:'12px', position:'relative', bottom:'', zIndex:'5', display:'flex', alignItems:'center', alignContent:'center', width:'80%', justifyContent:'center', color:'#fff', background:'#111',
+	style={{ opacity:'.8', padding:'10px 30px', margin:'0 auto', border:'1px solid white', borderRadius:'12px', position:'relative', bottom:'', zIndex:'5', display:'flex', alignItems:'center', alignContent:'center', maxWidth:'450px', justifyContent:'center', color:'#fff', background:'#222',
    }}
 	enableDeclineButton={false}
 	declineButtonText="No Cookies"
@@ -36,10 +36,10 @@ const Consent = () => (
 >
 
 
-    <div style={{color:'inherit', padding:'1rem .2rem', fontSize:'clamp(.6rem, 1.8vw, 3rem)%', textAlign:'center', display:'grid', placeContent:'center', justifyContent:'center'}}>
+    <div style={{color:'inherit', padding:'1rem .5rem', fontSize:'clamp(.6rem, 1.8vw, 3rem)%', textAlign:'center', display:'grid', placeContent:'center', justifyContent:'center', maxWidth:'350px', margin:'0 auto'}}>
      We use cookies to optimize our website.{" "}<br />
     <span style={{ fontSize: "65%", color:'inherit', textDecoration:'underline' }}>
-   <AnchorLink state={{modal: true}} className="donotsell" to="/privacy#ccpa">Do Not Sell My Personal Information</AnchorLink> | <Link state={{modal: true}} to="/cookie-policy/" style={{color:'#fff',}}>Cookie Policy</Link>
+   <Link state={{modal: true}} className="donotsell" to="/privacy#ccpa">Do Not Sell My Personal Information</Link> | <Link state={{modal: true}} to="/cookie-policy/" style={{color:'#fff',}}>Cookie Policy</Link>
     </span>
     </div>
     
