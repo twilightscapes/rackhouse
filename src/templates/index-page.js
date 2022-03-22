@@ -677,7 +677,7 @@ alt="" src="../../static/assets/HICKORY-SMOKED-OF-WS.jpg" />
 
 <div className="" style={{textAlign:'center', padding:'1rem', marginTop:'0' }}>
 <a className="button actionJacksons specialfont" aria-label="Order Online Now" title="Order Online Now" rel="noreferrer" target="_blank" href="https://www.toasttab.com/rackhousegulfport/v3/" style={{ textDecoration:'none', padding:'.5rem', textShadow:'1px 1px 0 #333', borderRadius:'8px', fontSize:'clamp(1rem, 2vw, 2.8rem)', textAlign:'center', display:'flex', justifyContent:'center', maxWidth:'', margin:'1rem 30%'}}>
-Order Online Now
+Order Online
 </a>
  </div>
 
@@ -857,9 +857,9 @@ Happy Hour 3-6pm
 
 
       <h1 className="title1" style={{fontSize:'clamp(2rem, 4vw, 2.5rem)', textAlign:'left', marginLeft:''}}>
-            {frontmatter.title}
+            {/* {frontmatter.title} */}
             {/* Today's Popular Subjects <br /> */}
-            {/* The Rack House */}
+            The Rack House
           </h1>
           {/* <h2
             className="tagline1"
@@ -1091,8 +1091,8 @@ position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px
             ""
           )}
     </AnchorLink>
-    <br />
-    Our menu is steep in the traditions of the great steakhouses of America, however at virtually every step we have added our own "Rack House style" flair. We focus on providing a fantastic steak.
+   
+   <p style={{padding:'1rem'}}>Our menu is steep in the traditions of the great steakhouses of America, however at virtually every step we have added our own "Rack House style" flair. We focus on providing a fantastic steak.</p>
     </div>
 
 
@@ -1110,8 +1110,8 @@ position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px
             ""
           )}
     </AnchorLink>
-    <br />
-    Our mezzanine level of the Rack House was designed to be a place to sit back in a comfy couch, leather chair, or at the bar with friends and enjoy a unique atmosphere and great libations.
+
+    <p style={{padding:'1rem'}}>Our mezzanine level of the Rack House was designed to be a place to sit back in a comfy couch, leather chair, or at the bar with friends and enjoy a unique atmosphere and great libations.</p>
     </div>
 
 
@@ -1129,8 +1129,8 @@ position:'relative', height:'', width:'', overflow:'', display:'flex', gap:'20px
             ""
           )}
     </AnchorLink>
-    <br />
-    Join the Bourbon Society and you get to enjoy plenty of perks such as a personalized decanter, exclusive access to coveted bourbons, monthly tastings and so much more!
+    
+    <p style={{padding:'1rem'}}>Join the Bourbon Society and you get to enjoy plenty of perks such as a personalized decanter, exclusive access to coveted bourbons, monthly tastings and so much more!</p>
     </div>
 
 
