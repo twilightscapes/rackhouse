@@ -21,7 +21,7 @@ import {
   RiMediumFill,
   RiBehanceFill,
 } from "react-icons/ri"
-import { FaWordpress, FaVk, FaHeart } from "react-icons/fa"
+import { FaWordpress, FaVk } from "react-icons/fa"
 
 
 import { Link } from "gatsby"
@@ -207,7 +207,7 @@ export function Footer() {
       <div className="" style={{textAlign:'center'}}>
 
 
-      <Link state={{modal: true}} to="/contact/" className="button fire specialfont" style={{margin:'2rem 2rem', textDecoration:'none', fontSize:'clamp(1rem, 2vw, 2.8rem)', padding:'1rem 2rem', borderRadius:'8px'}}>Contact Us - We&nbsp;<FaHeart />&nbsp;Feedback!</Link>
+      <Link state={{modal: true}} to="/contact/" className="button fire specialfont" style={{margin:'2rem 2rem', textDecoration:'none', fontSize:'clamp(1rem, 2vw, 2.8rem)', padding:'1rem 2rem', borderRadius:'8px'}}>Contact Us - We &#9825; Feedback!</Link>
 
  <div >
      
